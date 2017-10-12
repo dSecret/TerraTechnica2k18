@@ -1,0 +1,15 @@
+{
+  "short_name": "Terra Technica",
+  "name": "'TerraTechnica2k18' - The official technical fest of National Institute of Delhi,New Delhi",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
