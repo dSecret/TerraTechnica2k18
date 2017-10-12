@@ -1,0 +1,50 @@
+#main { width:600px; margin:50px auto; }
+#atom { width:600px; height:600px; /*border:1px solid red;*/ -webkit-perspective: 1000; position:relative; }
+
+#nucleus { position:absolute; top:50%; left:50%; margin: -50px 0 0 -50px; width:100px; height:100px; border-radius:100px; -webkit-border-radius:100px; -moz-border-radius:100px; background: -webkit-gradient(radial, 35 30, 20, 50 50, 51, from(#A7D30C), color-stop(0.8, #019F62), to(rgba(1, 159, 98,.3)))}
+
+.orbit { position:absolute; top:0; left:0; width:600px; height:600px; border-radius:600px; -webkit-border-radius:600px; -moz-border-radius:600px; border:2px solid #ccc; -webkit-transform-style: preserve-3d; -webkit-transform: rotateX(80deg) rotateY(20deg);}
+
+#atom .orbit:nth-child(2) {-webkit-transform: rotateX(80deg) rotateY(70deg)}
+#atom .orbit:nth-child(3) {-webkit-transform: rotateX(80deg) rotateY(-20deg)}
+#atom .orbit:nth-child(4) {-webkit-transform: rotateX(80deg) rotateY(-50deg)}
+
+#atom .orbit:nth-child(2) .path, #atom .orbit:nth-child(2) .electron {-webkit-animation-delay: -1.0s}
+#atom .orbit:nth-child(3) .path, #atom .orbit:nth-child(3) .electron {-webkit-animation-delay: -1.5s}
+#atom .orbit:nth-child(4) .path, #atom .orbit:nth-child(4) .electron {-webkit-animation-delay: -0.5s}
+
+.path { 
+	width:600px; 
+	height:600px; 
+	position:relative;
+	 -webkit-transform-style: preserve-3d;
+	  -webkit-animation-name: pathRotate; 
+	  -webkit-animation-duration: 7s; 
+	  -webkit-animation-iteration-count: infinite; 
+	  -webkit-animation-timing-function: linear; 
+	}
+
+.electron {  position: absolute; 
+			 top:-15px; 
+			 left:50%;
+			 margin-left:-5px; 
+			 width:30px; 
+			 height:30px; 
+			 border-radius:50%;
+			 background:#ff0000; 
+			 -webkit-animation-name:
+			 electronFix; -webkit-animation-duration: 7s;
+			 -webkit-animation-iteration-count: infinite; 
+			 -webkit-animation-timing-function: linear; 
+		 }
+
+@-webkit-keyframes pathRotate { 
+		from { -webkit-transform: rotateZ(0deg);} 
+		to { -webkit-transform: rotateZ(360deg); } 
+	}
+
+@-webkit-keyframes electronFix {
+		 from { -webkit-transform: rotateX(90deg) rotateY(0deg); } 
+		 to { -webkit-transform: rotateX(90deg) rotateY(-360deg); } 
+		}
+
