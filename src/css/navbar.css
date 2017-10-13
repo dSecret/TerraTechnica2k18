@@ -1,0 +1,16 @@
+.navbar-cont{
+	width:100vw;
+	background-color:lightblue ;
+	position: relative;
+	top:0;
+	left:0;
+}
+.title{
+	font-size:50px;
+	font-style: 'Roboto',sans-serif;
+}
+.trigger{
+	position: absolute;
+	right:40px;
+	top:10px;
+}
