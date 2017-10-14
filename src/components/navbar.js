@@ -28,8 +28,10 @@ class NavBar extends Component {
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}
         >
-          <MenuItem onClick={this.handleClose}>Menu Item</MenuItem>
-          <MenuItem onClick={this.handleClose}>Menu Item 2</MenuItem>
+          <div className="options-cont">
+            <MenuItem onClick={this.handleClose}>Menu Item</MenuItem>
+            <MenuItem onClick={this.handleClose}>Menu Item 2</MenuItem>
+          </div>
         </Drawer>
       </div>
     );

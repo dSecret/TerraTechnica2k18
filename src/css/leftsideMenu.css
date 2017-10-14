@@ -1,0 +1,38 @@
+.leftsideMenu-wrapper{
+	margin:40% 10% ; 
+	margin-top:0;
+	text-align:center;
+	background-color: #FAD961;
+	background-image: linear-gradient(-40deg, #FAD961 0%, #F76B1C 100%);
+	border-radius:2%;
+	min-height: 60vh;
+}
+.parent-leftsideMenu{
+	font-family: 'Anton', sans-serif;
+	font-size:40px;
+	padding-top: 40px;
+	margin-bottom: 40px;
+	letter-spacing:4px;
+}
+.child-leftsideMenu{
+	font-family:'Bree Serif',serif;
+	font-size:35px;
+	text-decoration:underline; 
+	letter-spacing: 2px;
+	transition:0.1s;
+}
+.child-leftsideMenu:hover{
+	font-size:36px;
+	color:white;
+}
+@media only screen and (min-width:7in) and (max-width:12in){
+	.leftsideMenu-wrapper{
+		margin:20px 1%;
+		margin-top:0;
+	}
+}
+@media only screen and (max-width:7in){
+	.leftsideMenu-wrapper{
+		margin:20px 1%;
+	}
+}

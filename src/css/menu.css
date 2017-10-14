@@ -18,9 +18,9 @@
 #atom .orbit:nth-child(3) {-webkit-transform: rotateX(81deg) rotateY(-20deg)}
 #atom .orbit:nth-child(4) {-webkit-transform: rotateX(78deg) rotateY(-50deg)}
 
-#atom .orbit:nth-child(2) .path, #atom .orbit:nth-child(2) .electron {-webkit-animation-delay: -3.0s}
-#atom .orbit:nth-child(3) .path, #atom .orbit:nth-child(3) .electron {-webkit-animation-delay: -3.5s}
-#atom .orbit:nth-child(4) .path, #atom .orbit:nth-child(4) .electron {-webkit-animation-delay: -1.5s}
+#atom .orbit:nth-child(2) .path, #atom .orbit:nth-child(2) .electron {-webkit-animation-delay: -12.0s}
+#atom .orbit:nth-child(3) .path, #atom .orbit:nth-child(3) .electron {-webkit-animation-delay: -15.5s}
+#atom .orbit:nth-child(4) .path, #atom .orbit:nth-child(4) .electron {-webkit-animation-delay: -12.5s}
 
 .path { 
 	width:400px; 
@@ -28,7 +28,7 @@
 	position:relative;
 	 -webkit-transform-style: preserve-3d;
 	  -webkit-animation-name: pathRotate; 
-	  -webkit-animation-duration: 7s; 
+	  -webkit-animation-duration: 20s; 
 	  -webkit-animation-iteration-count: infinite; 
 	  -webkit-animation-timing-function: linear; 
 	}
@@ -42,7 +42,7 @@
 			 border-radius:50%;
 			 background:#ff0000; 
 			 -webkit-animation-name:
-			 electronFix; -webkit-animation-duration: 7s;
+			 electronFix; -webkit-animation-duration: 20s;
 			 -webkit-animation-iteration-count: infinite; 
 			 -webkit-animation-timing-function: linear; 
 		 }
