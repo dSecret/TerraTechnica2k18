@@ -13,7 +13,7 @@ import NotFound from './notfound.js'
 // Pages Modules
 import Home from './pages/home/home'
 import Events from './pages/events/events'
-
+import Team from './pages/team/team.js'
 // Parent Component
 class App extends Component {
   render() {
@@ -23,6 +23,7 @@ class App extends Component {
                     <Router history={browserHistory}>
                        <Route path="/" component={Home}/>
                        <Route path="/events" component={Events}/>
+                       <Route path="/team" component={Team}/>
                        <Route path="*" component={NotFound}/>
                     </Router>
              </MuiThemeProvider>
