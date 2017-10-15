@@ -17,22 +17,22 @@ class NavBar extends Component {
   handleClose = () => this.setState({open: false});
   render() {
     return (
-       <div>
-       	<AppBar title="TerraTechnica"
-       		onLeftIconButtonTouchTap={this.handleToggle}
-       	>
-		</AppBar>
-        <Drawer
-          docked={false}
-          width={400}
-          open={this.state.open}
-          onRequestChange={(open) => this.setState({open})}
-        >
-          <div className="options-cont">
-            <MenuItem onClick={this.handleClose}>Menu Item</MenuItem>
-            <MenuItem onClick={this.handleClose}>Menu Item 2</MenuItem>
-          </div>
-        </Drawer>
+       <div style={{position:"fixed",left:"0px",top:"0px",width:"100vw",zIndex:"5"}}>
+           	<AppBar title="TerraTechnica"
+           		onLeftIconButtonTouchTap={this.handleToggle}
+           	>
+    		    </AppBar>
+           <Drawer
+              docked={false}
+              width={400}
+              open={this.state.open}
+              onRequestChange={(open) => this.setState({open})}
+           >
+              <div className="options-cont">
+                <MenuItem onClick={this.handleClose}>Menu Item</MenuItem>
+                <MenuItem onClick={this.handleClose}>Menu Item 2</MenuItem>
+              </div>
+          </Drawer>
       </div>
     );
   }

@@ -20,6 +20,7 @@ class App extends Component {
     return (
       <div className="App">
              <MuiThemeProvider>
+                    <NavBar/>
                     <Router history={browserHistory}>
                        <Route path="/" component={Home}/>
                        <Route path="/events" component={Events}/>
