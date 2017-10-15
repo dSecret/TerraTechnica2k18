@@ -7,6 +7,9 @@
 	min-height:200px;
 	position:relative;
 	background-color: white;
+	font-family: 'Roboto',sans-serif;
+	border-radius:5px;
+	box-shadow:0 2px 4px 2px  lightgrey;
 	
 }
 .profile-card-img-cont{
@@ -14,11 +17,12 @@
 	width:100px;
 	height:100px;
 	top:-50px;
-	left:20px;
+	left:15px;
 	border-radius:50%;
 	overflow: hidden;
-	padding:5px;
-	background-color:red;
+	padding:2px;
+	background-color:white;
+	z-index:2;
 }
 .profile-card-img{
 	height: 100%;
@@ -26,10 +30,10 @@
 	border-radius: 50%;
 }
 .profile-card-content-cont{
-	margin-top: 55px;
+	margin-top: 0px;
 	background-color: white;
 	min-height:200px;
-	padding:4%;
+	border-radius:4px;
 }
 @media only screen and (min-width:7in) and (max-width:12in){
 	.profile-card-cont{
