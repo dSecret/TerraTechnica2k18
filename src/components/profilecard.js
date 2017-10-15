@@ -12,11 +12,15 @@ import '../css/team.css';
 
 // custom modules impor
 
+const CardTitleStyle={paddingLeft:"129px",
+                      paddingTop:"5px",
+                      backgroundColor: 'lightgrey',
+                    }
+
 class ProfileCard extends Component {
   render() {
     return (
       <div className="Events">
-        Convenyor<Divider />
           <div className="profile-card-cont">
               <div className="profile-card-img-cont">
                     <img src={require('../static/manavatar.png')} alt="" className="profile-card-img"/>
@@ -25,7 +29,7 @@ class ProfileCard extends Component {
                       <Card>
                         <CardTitle title="Shantanu Patil" 
                                     subtitle="Convenyor" 
-                                    style={{paddingLeft:"129px",paddingTop:"5px",backgroundColor: 'lightgrey'}}
+                                    style={CardTitleStyle}
                                     subtitleStyle={{fontSize:"20px",fontFamily:"'Nova Flat', cursive"}}
                         />
                        <CardText style={{padding:"0px"}}>
