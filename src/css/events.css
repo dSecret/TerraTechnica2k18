@@ -1,6 +1,60 @@
 .Events{
-	width:100%;
+	width:100vw;
+	padding-top: 100px;
+	font-family: 'Roboto',sans-serif;
 }
+.route-title-cont{
+	width:100px;
+	margin:0 auto;
+	background-color:black;
+	color:white;
+	text-align: center;
+	padding:10px;
+	font-size:20px;
+	font-weight:bolder;
+	letter-spacing:2px;
+}
+.trig-ff-cont{
+	
+}
+.trig-ff{
+	display: inline-block;
+	margin:30px;
+}
+.trig-ff-title{
+	font-size:15px;
+
+}
+.trig-wrapper{
+		margin: 0 auto;
+}
+.trig{
+	width:14px;
+	height:14px;
+	border-radius:50%;
+	display: inline-block;
+	margin:5px;
+	border:1px solid black;
+	vertical-align: middle;
+}
+
+/*#trig1,#trig2{
+	background-color: black;
+}*/
+.trig-active{
+	width:10px;
+	height:10px;
+	margin:2px;
+	border-radius:50%;
+	background-color:transparent;
+}
+#trig0{
+	background-color: red;
+}
+#trig00{
+	background-color: red;
+}
+/*old css properties*/
 
 .cont-sidebars{
 	margin-top: 40px;

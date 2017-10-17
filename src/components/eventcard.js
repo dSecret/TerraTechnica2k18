@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
+import {Card,  CardMedia, CardTitle} from 'material-ui/Card';
 import Divider from 'material-ui/Divider';
+
+
+
+
+
+
 // css impoorts
 import '../css/events.css';
 
-// custom modules impor
+// custom modules import
+
+
 
 class EventsCard extends Component {
+
+ 
+
   render() {
     return (
       <div className="Events">
@@ -28,6 +38,7 @@ class EventsCard extends Component {
           </div>
       </div>
     );
+
   }
 }
 

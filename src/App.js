@@ -8,18 +8,20 @@ import './App.css';
 
 // Components Modules
 import NavBar from './components/navbar'
-import NotFound from './notfound.js'
-
+import Footer from './components/footer'
 // Pages Modules
 import Home from './pages/home/home'
 import Events from './pages/events/events'
 import Team from './pages/team/team.js'
+import NotFound from './notfound.js'
+
 // Parent Component
 class App extends Component {
   render() {
     return (
       <div className="App">
              <MuiThemeProvider>
+                  <div>
                     <NavBar/>
                     <Router history={browserHistory}>
                        <Route path="/" component={Home}/>
@@ -27,6 +29,8 @@ class App extends Component {
                        <Route path="/team" component={Team}/>
                        <Route path="*" component={NotFound}/>
                     </Router>
+                    <Footer/>
+                  </div>
              </MuiThemeProvider>
       </div>
     );
