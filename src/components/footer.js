@@ -30,8 +30,8 @@ class Footer extends Component {
                                             frameborder="0" 
                                             style={{border:"0"}} 
                                             allowfullscreen
-                                    >
-                                    </iframe>
+                  >
+                  </iframe>
               </div>
           </div>
           <div className="footer-follow-cont">
