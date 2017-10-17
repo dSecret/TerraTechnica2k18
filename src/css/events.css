@@ -1,6 +1,7 @@
 .Events{
-	width:100vw;
+	width:70vw;
 	padding-top: 100px;
+	margin-left:15vw;
 	font-family: 'Roboto',sans-serif;
 }
 .route-title-cont{
@@ -14,26 +15,35 @@
 	font-weight:bolder;
 	letter-spacing:2px;
 }
+.trig-ff-wrapper{
+	background-color: white;
+	margin-bottom:30px;
+}
 .trig-ff-cont{
-	
+	padding: 30px 0;
 }
 .trig-ff{
 	display: inline-block;
 	margin:30px;
 }
 .trig-ff-title{
-	font-size:15px;
-
+	font-size:20px;
+	display:inline-block;
+	background-color:lightgrey;
+	text-decoration:underline;
+	padding:4px 8px;
 }
 .trig-wrapper{
 		margin: 0 auto;
+		background-color: lightgrey;
+		padding:10px 0;
 }
 .trig{
-	width:14px;
-	height:14px;
+	width:18px;
+	height:18px;
 	border-radius:50%;
 	display: inline-block;
-	margin:5px;
+	margin:8px 15px;
 	border:1px solid black;
 	vertical-align: middle;
 }
@@ -42,11 +52,12 @@
 	background-color: black;
 }*/
 .trig-active{
-	width:10px;
-	height:10px;
+	width:14px;
+	height:14px;
 	margin:2px;
 	border-radius:50%;
 	background-color:transparent;
+	transition: 1s;
 }
 #trig0{
 	background-color: red;
@@ -54,70 +65,22 @@
 #trig00{
 	background-color: red;
 }
-/*old css properties*/
+.swipe-view-cont{
+	background-color:white;
+}
 
-.cont-sidebars{
-	margin-top: 40px;
-}
-.leftSide{
-	width:37vw;
-	min-height: 20vh;
-	
-	display:inline-block;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	margin:0;
-	vertical-align: top;
-}
-.rightSide{
-	width:62vw;
-	min-height: 20vh;
-	background-color: white;
-	display:inline-block;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	margin:0;
-	border-radius: 2%;
-
-}
-.event-card-cont{
-	margin:10px 2.5% 10px 2.5%;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	display: inline-block;
-	width:45%;
-	
-}
-.event-card-img{
-	border-radius:5px;
-}
-@media only screen and (min-width:7in) and (max-width:12in){
-	.event-card-cont{
-		margin:10px 5%;
-		width:90%;
-	}
-	.leftSide{
-		width:40%;
-	}
-	.rightSide{
-		width:43%;
-	}
-}
 @media only screen and (max-width:7in){
-	.leftSide{
-		width:100vw;
-		min-height: 20vh;
-		display:block;
+	.Events{
+		width:97vw;
+		margin-left:1.5vw;
 	}
-	.rightSide{
-		width:100vw;
-		min-height:20vh;
-		display: block;
-		padding-top: 20px;
-	}
-	.event-card-cont{
-	margin:10px 1% 10px 1%;
-	width:98%;
-	
+	.trig-ff{
+	margin:5px;
+}
+}
+@media only screen and (min-width:7in) and (max-width:11in){
+	.Events{
+		width:90vw;
+		margin-left:5vw;
 	}
 }

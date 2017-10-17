@@ -1,0 +1,21 @@
+.EventsCard{
+	width:100%;
+}
+.event-card-cont{
+	margin:10px 2.5% 10px 2.5%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	display: inline-block;
+	width:45%;
+	
+}
+.event-card-img{
+	border-radius:5px;
+}
+@media only screen and  (max-width:8in){
+	.event-card-cont{
+		margin:10px 5%;
+		width:90%;
+	}
+	
+}

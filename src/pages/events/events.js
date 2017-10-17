@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import '../../css/events.css';
 
 import EventsCard from '../../components/eventcard.js'
-import LeftsideMenu from '../../components/leftsideMenu.js'
 
 
-import {Tabs, Tab} from 'material-ui/Tabs';
 // From https://github.com/oliviertassinari/react-swipeable-views
 import SwipeableViews from 'react-swipeable-views';
 
@@ -16,6 +14,7 @@ const styles = {
     paddingTop: 16,
     marginBottom: 12,
     fontWeight: 400,
+    marginLeft:'30%',
   },
   slide: {
     padding: 10,
@@ -39,7 +38,7 @@ class Events extends Component {
         this.setState({
           slideIndex:index
         })
-
+        // settle the e1 e11 definition by getElementsByClassName in future
         var e1=document.getElementById('trig'+this.state.prevIndex).style
         var e11=document.getElementById('trig'+this.state.prevIndex+this.state.prevIndex).style
         var e2=document.getElementById('trig'+index).style
@@ -66,25 +65,9 @@ class Events extends Component {
          }
     }
   render() {
-    // return (
-    //   <div className="Events" style={{paddingTop: '100px'}}>
-    //       <div className="cont-sidebars">
-    //         		<div className="leftSide">
-    //                   <div className="in-leftside">
-    //                       <LeftsideMenu/>
-    //                   </div>
-    //         		</div>
-    //         		<div className="rightSide">
-    //                 			<EventsCard/>
-    //         		</div>
-    //       </div>
-            
-    //   </div>
-    // );
     return(
       <div className="Events">
-            
-           <div style={{width:"100%",backgroundColor: 'white'}}>
+           <div style={{width:"100%"}}>
               <div className="trig-ff-wrapper">
                     <div className="route-title-cont">EVENTS</div>
                     <div className="trig-ff-cont" align="center">
@@ -125,23 +108,26 @@ class Events extends Component {
                           </div>
                     </div>
               </div>
-
-              <SwipeableViews
-                index={this.state.slideIndex}
-                onChangeIndex={this.handleChange}
-                enableMouseEvents={true}
-              >
-                <div>
-                  <h2 style={styles.headline}>Tabs with slide effect</h2>
-                  Swipe to see the next slide.<br />
-                </div>
-                <div style={styles.slide}>
-                  slide n°2
-                </div>
-                <div style={styles.slide}>
-                  slide n°3
-                </div>
-              </SwipeableViews>
+              <div className="swipe-view-cont">
+                  <SwipeableViews
+                    index={this.state.slideIndex}
+                    onChangeIndex={this.handleChange}
+                    enableMouseEvents={true}
+                    animateHeight={true}
+                  >
+                    <div>
+                      <h2 style={styles.headline}>Robotics Events</h2>
+                      Swipe to see the other events.<br />
+                    </div>
+                    <div style={styles.slide}>
+                      <h2 style={styles.headline}>Coding Events</h2>
+                      <EventsCard/>
+                    </div>
+                    <div style={styles.slide}>
+                      <h2 style={styles.headline}>Gaming Events</h2>
+                    </div>
+                  </SwipeableViews>
+              </div>
           </div>
       </div>
       );
