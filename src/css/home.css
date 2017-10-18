@@ -1,6 +1,34 @@
 .Home{
 	width:100vw;
 }
+#trapezoid {
+    border-bottom: 150px solid rgba(0,0,0,0.7);
+    border-left: 100px solid transparent ;
+    border-right: 50px solid transparent;
+    color:white;
+    width: 100%;
+    transform: rotate(-180deg);
+    position: absolute;
+    left:0;
+    top:0;
+    z-index:-1;
+    height:100%;
+}
+.tt-title{
+	position:relative;
+	margin-left:30%;
+	padding-left:53px;
+	padding-right:100px;
+	z-index:1;
+	color:white;
+	width:100%;
+    font-size:68px;
+    font-family: 'Concert One', cursive;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    word-break: break-all;
+}
+
 .wel-msg-wrapper{
 	width:100%;
 	height:100vh;
@@ -9,17 +37,28 @@
 	padding-top: 100px;
 }
 .wel-msg-cont{
-	padding-left:15%;
 	padding-top:20vh;
 }
-h2 {
-  font: 50px 'Roboto', sans-serif;
-  color: white;
-  line-height:0.4;
+
+.sposor-about_fest{
+		margin-top:20vh;
+
 }
-p {
-  font: 25px  'Roboto', sans-serif;
-  color: lightgrey;
-  line-height:0.4;
-  margin-left:50px;
+.sponsor-anim-title{
+		font-family:'Roboto',sans-serif;
+		font-size: 30px;
+		color:white;
+}
+.sponsor-anim{
+		width:300px;
+		background-color: white;
+}
+.about_fest{
+	font-size:20px !important; 
+	margin-left:40px;
+}
+@media only screen and (max-width:10in){
+	.tt-title{
+		margin-left:15%;
+	}
 }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
-import AppBar from 'material-ui/AppBar';
 
 import '../css/navbar.css';
 
@@ -28,22 +27,32 @@ class NavBar extends Component {
                     )
       })
     return (
-       <div>
+       <div style={{zIndex:"100"}}>
             <div className="expand-form form-css">
+                <div className="mobile-top-title" style={{float:"left",margin:"0 0 0 20px"}}>
+                          TerraTechnica
+                </div>
                       {menuOptions}
             </div>
             <div className="short-form form-css" onClick={this.handleToggle}>
+
                       <MenuButton/>
             </div>      
            <Drawer
               docked={false}
-              width={400}
+              width={250}
               open={this.state.open}
               onRequestChange={(open) => this.setState({open})}
            >
               <div className="options-cont">
-                <MenuItem onClick={this.handleClose}>Menu Item</MenuItem>
-                <MenuItem onClick={this.handleClose}>Menu Item 2</MenuItem>
+                    <div className="menu-logo-cont">
+                      <img className="menu-logo" src={require('../static/tt.jpg')}/>
+                      <img className="menu-logo" src={require('../static/nitdlogo.gif')}/>
+                    </div>
+                    <MenuItem onClick={this.handleClose}>Home</MenuItem>
+                    <MenuItem onClick={this.handleClose}>Events</MenuItem>
+                    <MenuItem onClick={this.handleClose}>Team</MenuItem>
+                    <MenuItem onClick={this.handleClose}>Contacts</MenuItem>
               </div>
           </Drawer>
       </div>

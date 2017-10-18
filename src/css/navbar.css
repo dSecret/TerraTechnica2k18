@@ -5,6 +5,7 @@
 	transition:0.5s;
 	max-height:50px;
 	overflow:hidden;
+	z-index: 500;
 }
 .expand-form{
 	width:100vw;
@@ -44,19 +45,23 @@
 	position: relative;
 	top:0;
 	left:0;
+	z-index: 100;
 }
 .title{
 	font-size:50px;
 	font-style: 'Roboto',sans-serif;
 }
-.trigger{
-	position: absolute;
-	right:40px;
-	top:10px;
-}
 .options-cont{
-	background-color: lightblue;
-	text-align:  center;
-	height:80vh;
-	padding-top:20vh;
+	height:100vh;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.menu-logo-cont{
+	background-color:#2196F3;
+}
+.menu-logo{
+	border-radius:50%;
+	width:100px;
+	height:100px;
+	margin:20px 12.5px;
 }
