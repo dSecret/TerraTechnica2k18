@@ -9,16 +9,17 @@
 	padding-top: 100px;
 }
 .wel-msg-cont{
-	background-color: rgba(0,0,0,0.8);
-	text-align: center;
+	padding-left:15%;
+	padding-top:20vh;
 }
 h2 {
-  font: 400 100px/1 'Berkshire Swash', Helvetica, sans-serif;
-  color: #2b2b2b;
-  text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+  font: 50px 'Roboto', sans-serif;
+  color: white;
+  line-height:0.4;
 }
 p {
-  font: 50px  'Roboto', sans-serif;
+  font: 25px  'Roboto', sans-serif;
   color: lightgrey;
-  text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+  line-height:0.4;
+  margin-left:50px;
 }

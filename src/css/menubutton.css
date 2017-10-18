@@ -1,0 +1,36 @@
+#Button-wrapper{
+	width:40px;
+	border:2px solid maroon;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin:10px;
+	border-radius:6px;
+	cursor: pointer;
+}
+.layer{
+	border:1px solid white;
+	height:0;
+	margin:4px 4px;
+	transform:2s;
+}
+
+
+
+#Button-wrapper:hover .layer-2{
+	width:10px;
+	transform: rotateZ(-75deg) translate(0px,4px);
+	-ms-transform: rotateZ(-75deg) translate(0px,4px);
+	-webkit-transform: rotateZ(-75deg) translate(0px,4px);
+}
+#Button-wrapper:hover .layer-3{
+	width:60%;
+	transform: translate(5px,-5px);
+	-ms-transform: translate(5px,-5px);
+	-webkit-transform: translate(5px,-5px);	
+}
+#Button-wrapper:hover  .layer-4{
+	width:10px;
+	transform: rotateZ(-75deg) translate(5px,7px);
+	-ms-transform: rotateZ(-75deg) translate(5px,7px);
+	-webkit-transform: rotateZ(-75deg) translate(5px,7px);
+}

@@ -5,6 +5,8 @@ import AppBar from 'material-ui/AppBar';
 
 import '../css/navbar.css';
 
+import MenuButton from './menubutton'
+
 class NavBar extends Component {
 
   constructor(props) {
@@ -15,13 +17,24 @@ class NavBar extends Component {
   handleToggle = () => this.setState({open: !this.state.open});
 
   handleClose = () => this.setState({open: false});
+  
+
+
   render() {
+      var menuOptions = ['Home','Events','Team','Contacts']
+          menuOptions=menuOptions.map((item,index)=>{
+                  return(
+                        <span className="nav-options">{item}</span>
+                    )
+      })
     return (
-       <div style={{position:"fixed",left:"0px",top:"0px",width:"100vw",zIndex:"5"}}>
-           	<AppBar title="TerraTechnica"
-           		onLeftIconButtonTouchTap={this.handleToggle}
-           	>
-    		    </AppBar>
+       <div>
+            <div className="expand-form form-css">
+                      {menuOptions}
+            </div>
+            <div className="short-form form-css" onClick={this.handleToggle}>
+                      <MenuButton/>
+            </div>      
            <Drawer
               docked={false}
               width={400}

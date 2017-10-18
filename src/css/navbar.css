@@ -1,3 +1,43 @@
+.form-css{
+	background-color:rgba(0,0,0,0.5);
+	position: fixed;
+	top:0px;
+	transition:0.5s;
+	max-height:50px;
+	overflow:hidden;
+}
+.expand-form{
+	width:100vw;
+	left:0;
+	text-align: right;
+}
+.short-form{
+	width:00vw;
+	right:0;
+}
+.nav-options{
+	display: inline-block;
+	margin:0px;
+	padding:20px 5px;
+	color:white;
+	font-family: 'Roboto',sans-serif;
+	width:100px;
+	text-align: center;
+	user-select: none;
+	cursor: pointer;
+}
+.nav-options:hover{
+	background-color:black;
+}
+@media only screen and (max-width:13in){
+	.expand-form{
+		width:0vw;
+	}
+	.short-form{
+		width:100vw;
+	}
+}
+/*Old CSS props*/
 .navbar-cont{
 	width:100vw;
 	background-color:lightblue ;
