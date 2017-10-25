@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import { Link} from 'react-router'
 
 import '../css/navbar.css';
 
@@ -23,7 +24,7 @@ class NavBar extends Component {
       var menuOptions = ['Home','Events','Team','Contacts']
           menuOptions=menuOptions.map((item,index)=>{
                   return(
-                        <span className="nav-options">{item}</span>
+                        <Link to={'/events'}><span className="nav-options">{item}</span></Link>
                     )
       })
     return (
@@ -49,10 +50,18 @@ class NavBar extends Component {
                       <img className="menu-logo" src={require('../static/tt.jpg')}/>
                       <img className="menu-logo" src={require('../static/nitdlogo.gif')}/>
                     </div>
-                    <MenuItem onClick={this.handleClose}>Home</MenuItem>
-                    <MenuItem onClick={this.handleClose}>Events</MenuItem>
-                    <MenuItem onClick={this.handleClose}>Team</MenuItem>
-                    <MenuItem onClick={this.handleClose}>Contacts</MenuItem>
+                    <Link to={'/'}>
+                      <MenuItem onClick={this.handleClose}>Home</MenuItem>
+                    </Link>
+                     <Link to={'/events'}>
+                      <MenuItem onClick={this.handleClose}>Events</MenuItem>
+                    </Link>
+                     <Link to={'/team'}>
+                      <MenuItem onClick={this.handleClose}>Team</MenuItem>
+                    </Link>
+                     <Link to={'/contacts'}>
+                      <MenuItem onClick={this.handleClose}>Contacts</MenuItem>
+                    </Link>
               </div>
           </Drawer>
       </div>

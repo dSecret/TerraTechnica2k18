@@ -3,6 +3,7 @@
   width:120vw;
   overflow-x: hidden;
   background-color: black;
+  background:url('./static/unnamed.jpg') 0 0/100vw 100vh no-repeat;
 }
 
 

@@ -9,12 +9,15 @@ import './App.css';
 // Components Modules
 import NavBar from './components/navbar'
 import Footer from './components/footer'
+import OpenMenu from './components/openmenu'
 // Pages Modules
 import Home from './pages/home/home'
 import Events from './pages/events/events'
 import Team from './pages/team/team.js'
 import NotFound from './notfound.js'
+import OpenEvent from './pages/events/event/openevent.js'
 
+import MenuButton from './components/menubutton'
 // Parent Component
 class App extends Component {
   render() {
@@ -22,11 +25,13 @@ class App extends Component {
       <div className="App">
              <MuiThemeProvider>
                   <div>
-                    <NavBar/>
+                    <MenuButton/>
+                    <OpenMenu/>
                     <Router history={browserHistory}>
                        <Route path="/" component={Home}/>
                        <Route path="/events" component={Events}/>
                        <Route path="/team" component={Team}/>
+                       <Route path="/events/:id" component={OpenEvent}/>
                        <Route path="*" component={NotFound}/>
                     </Router>
                     <Footer/>
