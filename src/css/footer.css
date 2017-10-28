@@ -1,5 +1,5 @@
 .footer-wrapper{
-	margin-top:50px;
+	margin-top:200px;
 	width:100vw;
 	font-family: 'Roboto',sans-serif;
 }
@@ -25,7 +25,7 @@
 	font-family: 'Roboto',sans-serif;
 	text-align: center;
 	padding:20px;
-	color:white;
+	color:black;
 }
 .left-footer-title{
 	color:grey;

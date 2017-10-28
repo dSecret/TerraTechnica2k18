@@ -35,20 +35,34 @@ class Home extends Component {
     }
 
     handleLeft = () => {
+
+              if(this.state.curTrans>-1920){   
                 this.setState({
-                  curTrans: this.state.curTrans -250
+                  curTrans: this.state.curTrans -384
                 })
-                document.getElementById('mysvg').style.transform=`translate(${this.state.curTrans}px,0px)`,
-                document.getElementById('svg-over').style.transform=`translate(${this.state.curTrans}px,0px)`
+                document.getElementById('mysvg').style.transform
+                      =`translate(${this.state.curTrans}px,0px)`,
+                document.getElementById('svg-over').style.transform
+                      =`translate(${this.state.curTrans}px,0px)`
+               }
+                
     };
     handleRight = () => {
+              if(this.state.curTrans<0){ 
                 this.setState({
-                  curTrans: this.state.curTrans +250
-                })
-                document.getElementById('mysvg').style.transform=`translate(${this.state.curTrans}px,0px)`,
-                document.getElementById('svg-over').style.transform=`translate(${this.state.curTrans}px,0px)`
-              
-              
+                    curTrans: this.state.curTrans +384
+                  })
+                  // if(this.state.curTrans!==-1920){ 
+                        document.getElementById('mysvg').style.transform
+                          =`translate(${this.state.curTrans}px,0px)`,
+                        document.getElementById('svg-over').style.transform
+                          =`translate(${this.state.curTrans}px,0px)`
+                      // }
+                }
+    };
+    scrollNext = ()=>{
+      console.log('next')
+       console.log(document.getElementById('Home').scrollHeight);
     };
   render() {
     return (
@@ -74,24 +88,27 @@ class Home extends Component {
                             </div>
                         </div>
                         <button onClick={this.handleLeft}>Left</button>
-                        <button onClick={this.handleRight}>Right</button>
+                        <button onClick={this.handleRight}>Right</button><br/>
+                        <a href="#about" >Next</a>
                     </div>
-                    <div className="sposor-about_fest" align="center">
-                        <div className="sponsor-anim-title">Sponsored By
-                        </div>
-                        <div className="sponsor-anim">
-                              <AutoPlaySwipeableViews interval={1500}>
-                                  <div>
-                                      <h2 style={styles.headline}>Sponsor 1</h2>
-                                  </div>
-                                  <div style={styles.slide}>
-                                  <h2 style={styles.headline}>Sponsor 2</h2>
-                                  </div>
-                                  <div style={styles.slide}>
-                                       <h2 style={styles.headline}>Sponsor 3</h2>
-                                  </div>
-                              </AutoPlaySwipeableViews>
-                        </div>
+                    {/*<div className="sposor-about_fest" align="center">
+                                            <div className="sponsor-anim-title">Sponsored By
+                                            </div>
+                                            {<div className="sponsor-anim">
+                                                                          <AutoPlaySwipeableViews interval={1500}>
+                                                                              <div>
+                                                                                  <h2 style={styles.headline}>Sponsor 1</h2>
+                                                                              </div>
+                                                                              <div style={styles.slide}>
+                                                                              <h2 style={styles.headline}>Sponsor 2</h2>
+                                                                              </div>
+                                                                              <div style={styles.slide}>
+                                                                                   <h2 style={styles.headline}>Sponsor 3</h2>
+                                                                              </div>
+                                                                          </AutoPlaySwipeableViews>
+                                                                    </div>}
+                                        </div>*/}
+                    <div id="about">
                     </div>
                 </div>
             </div>
