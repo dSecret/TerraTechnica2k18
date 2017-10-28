@@ -4,7 +4,6 @@ import '../../css/home.css';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 
-import Menu from '../../components/menu.js'
 
 import {Swipeable,defineSwipe} from 'react-touch';
 
@@ -89,7 +88,9 @@ class Home extends Component {
                         </div>
                         <button onClick={this.handleLeft}>Left</button>
                         <button onClick={this.handleRight}>Right</button><br/>
-                        <a href="#about" >Next</a>
+                        <div class="about-but" id="navDown">
+                          <a href="#about" ><span></span></a>
+                        </div>
                     </div>
                     {/*<div className="sposor-about_fest" align="center">
                                             <div className="sponsor-anim-title">Sponsored By

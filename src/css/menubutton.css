@@ -7,6 +7,9 @@
 	border-radius:6px;
 	cursor: pointer;
 	display: inline-block;
+	position: fixed;
+	top:10px;
+	right:10px;
 }
 .mobile-top-title{
 	font-size: 40px;
