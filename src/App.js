@@ -25,8 +25,8 @@ class App extends Component {
       <div className="App">
              <MuiThemeProvider>
                   <div>
-                    <MenuButton/>
-                    <OpenMenu/>
+                    
+                    
                     <Router history={browserHistory}>
                        <Route path="/" component={Home}/>
                        <Route path="/events" component={Events}/>
