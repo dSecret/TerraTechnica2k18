@@ -3,9 +3,10 @@ import '../../css/home.css';
 
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-
-
 import {Swipeable,defineSwipe} from 'react-touch';
+
+// import custom modules
+import About from '../../components/about'
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -67,8 +68,8 @@ class Home extends Component {
     return (
       <div className="Home">
             <div className="wel-msg-wrapper">
-                <div className="wel-msg-cont" align="center">
-                    <div className="svg-wrapper">
+                <div className="wel-msg-cont">
+                    <div className="svg-wrapper"  align="center">
                         <div id="svg-parent">
                             <div id="svg-div">
                                 <img  draggable="false" 
@@ -110,6 +111,7 @@ class Home extends Component {
                                                                     </div>}
                                         </div>*/}
                     <div id="about">
+                      <About/>
                     </div>
                 </div>
             </div>
