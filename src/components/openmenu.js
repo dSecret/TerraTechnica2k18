@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link} from 'react-router'
+import {Link} from 'react-router'
 
 // components imports
 // css imports
@@ -10,11 +10,11 @@ class OpenMenu extends Component {
     var menuOptions = ['Home','Events','Team','Contacts']
         menuOptions=menuOptions.map((item,index)=>{
             return(
-                        <Link to={'/events'}>
+                      <div>  <Link to="/team">
                           <span className="navigate-opt">
                             {item}
                           </span>
-                        </Link>
+                        </Link></div>
               )
       })
     function  closemenu(){
@@ -42,6 +42,8 @@ class OpenMenu extends Component {
            <div class="close-but-cont">
               <div class="close-but">
                   <button  onClick={closemenu}>Close</button>
+                  <div><Link to="/team">Team</Link></div>
+                  <div> <Link to="/events">Events</Link></div>
               </div>
             </div>
             <table id="right-table">

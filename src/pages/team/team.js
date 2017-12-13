@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {Link} from 'react-router'
 
 // components imports
 import Profilecard from '../../components/profilecard.js'
@@ -60,6 +60,7 @@ class Team extends Component {
      <div className="Events">
           <div className="trig-ff-wrapper">
                     <div className="route-title-cont">Team</div>
+                    <div> <Link to="/events">Events</Link></div>
               </div>
           <div className="trig-wrapper" align="center">
                     <div className="trigg1" onClick={this.handleClick.bind(this, 0)}>
