@@ -35,7 +35,7 @@ class App extends Component {
                        <Route path="/events/:id" component={OpenEvent}/>
                        <Route path="*" component={NotFound}/>
                     </Router>
-                    <Footer/>
+                    {/*<Footer/>*/}
                   </div>
              </MuiThemeProvider>
       </div>

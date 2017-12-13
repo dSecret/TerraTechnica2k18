@@ -1,0 +1,90 @@
+.home-title{
+	top:0vh;
+	left:0px;
+  height:100vh;
+  width:100vw;
+  color:white;
+	font-family: 'Orbitron', sans-serif;
+	font-weight:900px;
+	letter-spacing:10px;
+  /*z-index:-1;*/
+	/*text-decoration: underline;*/
+	
+  position:relative;
+}
+.home-title div{
+  position:absolute;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  text-align: center;
+  font-size:80px;
+  /*overflow-x:hidden;*/
+  /*background-color:black;*/
+}
+#let1{
+  width:80px;
+  height:80px;
+  top:0;
+  left:20px;
+  margin-top:20vh;
+  animation-name: let1;
+  animation-duration:4s;
+}
+@keyframes let1 {
+    from {margin-top:-80px;}
+    to   {margin-top:20vh;}
+}
+
+#let2{
+  width:80px;
+  height:80px;
+  top:20vh;
+  left:0px;
+  margin-left:100px;
+  animation-name: let2;
+  animation-duration:3s;
+}
+@keyframes let2 {
+    from {margin-left:-80px;}
+    to   {margin-left:100px;}
+}
+
+#let3{
+  width:80px;
+  height:80px;
+  top:0;
+  left:180px;
+  margin-top:20vh;
+  animation-name: let1;
+  animation-duration:3s;
+}
+@keyframes let3 {
+    from {margin-top:-80px;}
+    to   {margin-top:20vh;}
+}
+#let4{
+  width:80px;
+  height:80px;
+  top:20vh;
+  left:0px;
+  margin-left:260px;
+  animation-name: let4;
+  animation-duration:4s;
+}
+@keyframes let4 {
+    from {margin-left:-80px;}
+    to   {margin-left:260px;}
+}
+#let5{
+  width:80px;
+  height:80px;
+  top:0;
+  left:340px;
+  margin-top:20vh;
+  animation-name: let5;
+  animation-duration:4s;
+}
+@keyframes let5 {
+    from {margin-top:-80px;}
+    to   {margin-top:20vh;}
+}

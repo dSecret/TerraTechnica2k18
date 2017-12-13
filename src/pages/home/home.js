@@ -7,6 +7,8 @@ import {Swipeable,defineSwipe} from 'react-touch';
 
 // import custom modules
 import About from '../../components/about'
+import TitleAnim from '../../components/titleAnim'
+
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -67,57 +69,14 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
-            <div className="wel-msg-wrapper">
-                <div className="wel-msg-cont">
-                    <div className="svg-wrapper"  align="center">
-                        <div id="svg-parent">
-                            <div id="svg-div">
-                                <img  draggable="false" 
-                                      id="mysvg" 
-                                      src={require('../../static/map2com.svg')}
-                                />
-                            </div>
-                            <div >
-                                <Swipeable  config={swipe} 
-                                          onSwipeLeft={this.handleLeft} 
-                                          onSwipeRight={this.handleRight}
-                                >
-                                    <div id="svg-over">
-                                    </div>
-                                </Swipeable>
-                            </div>
-                        </div>
-                        <button onClick={this.handleLeft}>Left</button>
-                        <button onClick={this.handleRight}>Right</button><br/>
-                        <div class="about-but" id="navDown">
-                          <a href="#about" ><span></span></a>
-                        </div>
-                    </div>
-                    {/*<div className="sposor-about_fest" align="center">
-                                            <div className="sponsor-anim-title">Sponsored By
-                                            </div>
-                                            {<div className="sponsor-anim">
-                                                                          <AutoPlaySwipeableViews interval={1500}>
-                                                                              <div>
-                                                                                  <h2 style={styles.headline}>Sponsor 1</h2>
-                                                                              </div>
-                                                                              <div style={styles.slide}>
-                                                                              <h2 style={styles.headline}>Sponsor 2</h2>
-                                                                              </div>
-                                                                              <div style={styles.slide}>
-                                                                                   <h2 style={styles.headline}>Sponsor 3</h2>
-                                                                              </div>
-                                                                          </AutoPlaySwipeableViews>
-                                                                    </div>}
-                                        </div>*/}
-                    <div id="about">
-                      <About/>
-                    </div>
-                </div>
-            </div>
+          <TitleAnim/>
       </div>
     );
   }
 }
 
 export default Home;
+
+                    {/*    <div class="about-but" id="navDown">
+                          <a href="#about" ><span></span></a>
+                        </div>*/}
