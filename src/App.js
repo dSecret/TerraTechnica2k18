@@ -7,6 +7,7 @@ import './App.css';
 
 
 // Components Modules
+import Basic from './basic.js'
 import NavBar from './components/navbar'
 import Footer from './components/footer'
 import OpenMenu from './components/openmenu'
@@ -26,13 +27,13 @@ class App extends Component {
       <div className="App">
              <MuiThemeProvider>
                   <div>
-                    <MenuButton/>
-                    <OpenMenu/>
                     <Router history={browserHistory}>
-                       <Route path="/" component={Home}/>
-                       <Route path="/events" component={Events}/>
-                       <Route path="/team" component={Team}/>
-                       <Route path="/events/:id" component={OpenEvent}/>
+                      <Route path="/home"component={Basic}>
+                           <Route path="/" component={Home}/>
+                           <Route path="/events" component={Events}/>
+                           <Route path="/team" component={Team}/>
+                           <Route path="/events/:id" component={OpenEvent}/>
+                       </Route>
                        <Route path="*" component={NotFound}/>
                     </Router>
                     {/*<Footer/>*/}

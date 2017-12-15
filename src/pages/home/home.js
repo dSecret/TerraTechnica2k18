@@ -4,7 +4,6 @@ import '../../css/home.css';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import {Swipeable,defineSwipe} from 'react-touch';
-
 // import custom modules
 import About from '../../components/about'
 import TitleAnim from '../../components/titleAnim'
@@ -70,6 +69,7 @@ class Home extends Component {
     return (
       <div className="Home">
           <TitleAnim/>
+          
       </div>
     );
   }

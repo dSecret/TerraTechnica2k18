@@ -7,12 +7,20 @@ import '../css/openmenu.css';
 
 class OpenMenu extends Component {
   render() {
-    var menuOptions = ['Home','Events','Team','Contacts']
+    var menuOptions = [ {tit:'Home',linki:'/'},
+                        {tit:'Events',linki:'/events'},
+                        {tit:'Contacts',linki:'/contacts'},
+                        {tit:'Team',linki:'/team'},
+                        {tit:'Workshops',linki:'/workshops'},
+                        {tit:'GuestLectures',linki:'/gl'},
+                      ]
         menuOptions=menuOptions.map((item,index)=>{
             return(
-                      <div>  <Link to="/team">
-                          <span className="navigate-opt">
-                            {item}
+                      <div>  <Link to={item.linki}>
+                          <span className="navigate-opt"
+                                onClick={closemenu}
+                          >
+                            {item.tit}
                           </span>
                         </Link></div>
               )
@@ -42,8 +50,6 @@ class OpenMenu extends Component {
            <div class="close-but-cont">
               <div class="close-but">
                   <button  onClick={closemenu}>Close</button>
-                  <div><Link to="/team">Team</Link></div>
-                  <div> <Link to="/events">Events</Link></div>
               </div>
             </div>
             <table id="right-table">

@@ -40,13 +40,13 @@ class Events extends Component {
         })
         // settle the e1 e11 definition by getElementsByClassName in future
         var e1=document.getElementById('trig'+this.state.prevIndex).style
-        var e11=document.getElementById('trig'+this.state.prevIndex+this.state.prevIndex).style
+        // var e11=document.getElementById('trig'+this.state.prevIndex+this.state.prevIndex).style
         var e2=document.getElementById('trig'+index).style
-        var e21=document.getElementById('trig'+index+index).style
+        // var e21=document.getElementById('trig'+index+index).style
 
         
         e1.backgroundColor= 'transparent'
-        e11.backgroundColor= 'transparent'
+        // e11.backgroundColor= 'transparent'
          
         this.setState({
           // preserve the last index for toggling purpose
@@ -55,13 +55,13 @@ class Events extends Component {
         // providing different colors to different switches
          if(index===0){
             e2.backgroundColor='red'
-            e21.backgroundColor='red'
+            // e21.backgroundColor='red'
          }else if(index===1){
             e2.backgroundColor='green'
-            e21.backgroundColor='green'
+            // e21.backgroundColor='green'
          }else{
             e2.backgroundColor='lightblue'
-            e21.backgroundColor='lightblue'
+            // e21.backgroundColor='lightblue'
          }
     }
   render() {
@@ -70,7 +70,7 @@ class Events extends Component {
            <div style={{width:"100%"}}>
               <div className="trig-ff-wrapper">
                     <div className="route-title-cont">EVENTS</div>
-                    <div className="trig-ff-cont" align="center">
+                    {/*<div className="trig-ff-cont" align="center">
                         <div className="trig-ff">
                             <div className="trig" onClick={this.handleClick.bind(this, 0)}>
                                   <div className="trig-active"  id="trig00" >
@@ -92,7 +92,7 @@ class Events extends Component {
                             </div>
                             <span className="trig-ff-title">Gaming</span>
                         </div>
-                    </div>
+                    </div>*/}
               </div>
               <div className="trig-wrapper" align="center">
                     <div className="trig" onClick={this.handleClick.bind(this, 0)}>
