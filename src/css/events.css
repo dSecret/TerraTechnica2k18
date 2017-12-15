@@ -1,23 +1,22 @@
 .Events{
-	width:70vw;
-	padding-top:10px;
-	margin-left:15vw;
+	width:80vw;
+	padding-top:100px;
+	margin-left:10vw;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	/*padding:10px;*/
 	font-family: 'Roboto',sans-serif;
-}
-.route-title-cont{
-	width:100px;
-	margin:0 auto;
-	background-color:black;
-	color:white;
-	text-align: center;
-	padding:10px;
-	font-size:20px;
-	font-weight:bolder;
-	letter-spacing:2px;
 }
 .trig-ff-wrapper{
 	background-color: white;
 	margin-bottom:30px;
+	font-size:45px;
+	letter-spacing:1px;
+	font-weight:0;
+	border-radius:5px;
+	text-align: center;
+	padding:5px 0;
+	/*color:transparent;*/
 }
 .trig-ff-cont{
 	padding: 30px 0;

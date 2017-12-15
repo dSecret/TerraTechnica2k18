@@ -36,7 +36,7 @@ class App extends Component {
                        </Route>
                        <Route path="*" component={NotFound}/>
                     </Router>
-                    {/*<Footer/>*/}
+                    <Footer/>
                   </div>
              </MuiThemeProvider>
       </div>

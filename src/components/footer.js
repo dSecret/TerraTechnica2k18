@@ -38,7 +38,7 @@ class Footer extends Component {
                 Follow us On
           </div>
           <div className="copyright">
-            Copyright 2018.<br/> Made with {`<3`} by Team ShadowRoot, BootError & dDark 
+            Copyright 2018.<br/> Made with {`<3`} by Team BootError & dDark 
           </div>
         </div>
     );

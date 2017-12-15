@@ -14,7 +14,7 @@ const styles = {
     paddingTop: 16,
     marginBottom: 12,
     fontWeight: 400,
-    marginLeft:'30%',
+    marginLeft:'2.5%',
   },
   slide: {
     padding: 10,
@@ -69,30 +69,7 @@ class Events extends Component {
       <div className="Events">
            <div style={{width:"100%"}}>
               <div className="trig-ff-wrapper">
-                    <div className="route-title-cont">EVENTS</div>
-                    {/*<div className="trig-ff-cont" align="center">
-                        <div className="trig-ff">
-                            <div className="trig" onClick={this.handleClick.bind(this, 0)}>
-                                  <div className="trig-active"  id="trig00" >
-                                  </div>
-                            </div>
-                            <span className="trig-ff-title">Robotics</span>
-                        </div>
-                        <div className="trig-ff">
-                            <div className="trig" onClick={this.handleClick.bind(this, 1)}>
-                                  <div className="trig-active"  id="trig11" >
-                                  </div>
-                            </div>
-                            <span className="trig-ff-title">Coding</span>
-                        </div>
-                        <div className="trig-ff">
-                            <div className="trig" onClick={this.handleClick.bind(this, 2)}>
-                                  <div className="trig-active"  id="trig22" >
-                                  </div>
-                            </div>
-                            <span className="trig-ff-title">Gaming</span>
-                        </div>
-                    </div>*/}
+                   Events
               </div>
               <div className="trig-wrapper" align="center">
                     <div className="trig" onClick={this.handleClick.bind(this, 0)}>
@@ -115,9 +92,9 @@ class Events extends Component {
                     enableMouseEvents={true}
                     animateHeight={true}
                   >
-                    <div>
+                    <div style={styles.slide}>
                       <h2 style={styles.headline}>Robotics Events</h2>
-                      Swipe to see the other events.<br />
+                        <EventsCard/>
                     </div>
                     <div style={styles.slide}>
                       <h2 style={styles.headline}>Coding Events</h2>
@@ -125,6 +102,7 @@ class Events extends Component {
                     </div>
                     <div style={styles.slide}>
                       <h2 style={styles.headline}>Gaming Events</h2>
+                        <EventsCard/>
                     </div>
                   </SwipeableViews>
               </div>

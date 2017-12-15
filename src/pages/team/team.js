@@ -59,9 +59,8 @@ class Team extends Component {
     return (
      <div className="Events">
           <div className="trig-ff-wrapper">
-                    <div className="route-title-cont">Team</div>
-                    <div> <Link to="/events">Events</Link></div>
-              </div>
+                    Team
+          </div>
           <div className="trig-wrapper" align="center">
                     <div className="trigg1" onClick={this.handleClick.bind(this, 0)}>
                           <div className="trigg1-active"  id="trigg10" >
