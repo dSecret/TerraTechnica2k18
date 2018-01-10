@@ -21,23 +21,28 @@ class NavBar extends Component {
 
 
   render() {
-      var menuOptions = ['Home','Events','Team','Contacts']
+      var menuOptions = [{"tit":'Home',"lin":'/'},{"tit":'Events',"lin":'/events'},
+                          {"tit":'Team',"lin":'/team'},{"tit":'Contacts',"lin":'/contacts'}
+                      ]
           menuOptions=menuOptions.map((item,index)=>{
                   return(
-                        <Link to={'/events'}><span className="nav-options">{item}</span></Link>
+                        <Link to={item.lin} className="nav-options">
+                            <span className="nav-options-in">{item.tit}</span>
+                        </Link>
                     )
       })
     return (
        <div style={{zIndex:"100"}}>
             <div className="expand-form form-css">
-                <div className="mobile-top-title" style={{float:"left",margin:"0 0 0 20px"}}>
-                          TerraTechnica
+                <div className="mobile-top-title" style={{float:"left",margin:"0 0 0 20px","height":"100%"}}>
+                          <img src={require('../static/logo.png')} alt="" className="toplogo"/>
+                          {/*<img src={require('../static/nitdlogo.gif')} alt="" className="seclogo"/>*/}
                 </div>
                       {menuOptions}
             </div>
             <div className="short-form form-css" onClick={this.handleToggle}>
 
-                      <MenuButton/>
+                      {/*<MenuButton/>*/}
             </div>      
            <Drawer
               docked={false}

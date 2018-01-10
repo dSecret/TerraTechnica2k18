@@ -3,9 +3,11 @@ import React, { Component } from 'react';
 
 
 // Components Modules
+import NavBar from './components/navbar'
 import OpenMenu from './components/openmenu'
 import MenuButton from './components/menubutton'
 // Pages Modules
+import './css/basic.css'
 
 
 
@@ -14,9 +16,10 @@ class Basic extends Component {
   render() {
     return (
       <div className="Basic">
-                    <MenuButton/>
-                    <OpenMenu/>
-                    <div>
+                    {/*<MenuButton/>*/}
+                    {/*<OpenMenu/>*/}
+                    <NavBar/>
+                    <div className="Basicwrap">
                         {this.props.children}
                     </div>
       </div>

@@ -68,7 +68,7 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
-          <TitleAnim/>
+          {/*<TitleAnim/>*/}
           
       </div>
     );

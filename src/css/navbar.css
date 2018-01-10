@@ -1,9 +1,17 @@
+.toplogo{
+	height:100%;
+	/*width:150px;*/
+}
+.seclogo{
+	height:50px;
+	width:100px;
+}
 .form-css{
-	background-color:rgba(0,0,0,0.5);
+	/*background-color:rgba(0,0,0,0.2);*/
 	position: fixed;
 	top:0px;
 	transition:0.5s;
-	max-height:50px;
+	height:14vh;
 	overflow:hidden;
 	z-index: 500;
 }
@@ -11,14 +19,22 @@
 	width:100vw;
 	left:0;
 	text-align: right;
+	padding-right:10%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 .short-form{
 	width:00vw;
 	right:0;
 }
+.nav-options-in{
+	transform:rotateZ(-0deg);
+	display: inline-block;
+	font-size:130%;
+}
 .nav-options{
 	display: inline-block;
-	margin:0px;
+	margin:20px 0 0 0;
 	padding:20px 5px;
 	color:white;
 	font-family: 'Roboto',sans-serif;
@@ -26,9 +42,27 @@
 	text-align: center;
 	user-select: none;
 	cursor: pointer;
+	transform:skew(-10deg);
+	background-color:rgba(0,0,0,0.5);
+	/*box-sizing: border-box;*/
+	/*-moz-box-sizing: border-box;*/
+	/*border-left:none;*/
+	/*animation-name: example;*/
+    /*animation-duration:2s;*/
+    /*transition: 0.5s;*/
 }
 .nav-options:hover{
 	background-color:black;
+	border-top:2px solid white;
+	border-left:2px solid white;
+}
+@keyframes example {
+    from {
+			border-left:none;
+		}
+    to {
+		border-left:2px solid white;
+		}
 }
 @media only screen and (max-width:13in){
 	.expand-form{
