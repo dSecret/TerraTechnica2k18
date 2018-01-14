@@ -1,62 +1,33 @@
 import React, { Component } from 'react';
-import {Card,  CardMedia, CardTitle} from 'material-ui/Card';
-import Divider from 'material-ui/Divider';
-
-
-
-
-
 
 // css impoorts
 import '../css/eventscard.css';
+import Background from '../static/images3.jpg';
+import { Link} from 'react-router'
 
 // custom modules import
-
+var sectionStyle={
+  backgroundImage:`url(${Background}`
+}
 
 
 class EventsCard extends Component {
-
- 
-
   render() {
     return (
-      <div className="EventsCard">
-      		<div className="event-card-cont">
-	            <Card>
-				         <CardMedia overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />} >
-				            <img src={require('../static/ece.png')} alt="" className="event-card-img"/>
-				          </CardMedia>
-				      </Card>
-			    </div>
-          <div className="event-card-cont">
-              <Card>
-                 <CardMedia overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />} >
-                    <img src={require('../static/ece.png')} alt="" className="event-card-img"/>
-                  </CardMedia>
-              </Card>
-          </div>
-          <div className="event-card-cont">
-              <Card>
-                 <CardMedia overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />} >
-                    <img src={require('../static/ece.png')} alt="" className="event-card-img"/>
-                  </CardMedia>
-              </Card>
-          </div>
-          <div className="event-card-cont">
-              <Card>
-                 <CardMedia overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />} >
-                    <img src={require('../static/ece.png')} alt="" className="event-card-img"/>
-                  </CardMedia>
-              </Card>
-          </div>
-          <div className="event-card-cont">
-              <Card>
-                 <CardMedia overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />} >
-                    <img src={require('../static/ece.png')} alt="" className="event-card-img"/>
-                  </CardMedia>
-              </Card>
-          </div>
-      </div>
+      <Link to={this.props.lin}>
+        <div className="EventsCard comEC" style={sectionStyle}>
+            <div className="icon-wrap comEC">
+              <div className="comEC">
+                <div className="comEC animDiv">
+                  <img src="https://image.flaticon.com/icons/svg/237/237416.svg" className="Cardicon"/>
+                </div>
+              </div>
+            </div>
+            <div className="title-wrap comEC">
+                {this.props.title}
+            </div>
+        </div>
+      </Link>
     );
 
   }

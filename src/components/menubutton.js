@@ -10,16 +10,8 @@ class MenuButton extends Component {
 
    
     function  openmenu(){
-         var first=document.getElementById('first-child')
-          var second=document.getElementById('second-child')
           var mydiv=document.getElementById('openmenu-cont')
-          var leftTab=document.getElementById('left-table-div')
-          var rightTab=document.getElementById('right-table-div')
-        mydiv.style.width='100vw'
-        first.style.width='50vw'
-        second.style.width='50vw'
-        leftTab.style.width='100%'
-        rightTab.style.width='100%'
+        mydiv.style.width='300px'
     }
 
     return (

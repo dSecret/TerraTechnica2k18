@@ -1,7 +1,28 @@
 .team{
 	width:100vw;
-	padding-top:100px;
+	/*padding-top:100px;*/
+	/*height:100%;*/
+	overflow:hidden;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
+.trig-wrapper{
+	position: fixed;
+	top:14;
+	right:100px;
+	background-color: rgba(0,211,211,0.7);
+	z-index:100;
+	padding:10px 30px;
+	border-radius:5px;
+	color:white;
+	font-family:'Roboto',sans-serif;
+	font-size:22px;
+	font-weight:bold;
+	display: flex;
+	justify-content:flex-end;
+	/*width:100vw;*/
+}
+
 .trigg1{
 	width:18px;
 	height:18px;
@@ -22,34 +43,54 @@
 #trigg10{
 	background-color: black;
 }
-
+.swipe-view-cont{
+	width:100vw;
+}
+.sLide{
+	width:100vw;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-family: 'Roboto',sans-serif;
+	display:flex;
+	align-items:center;
+  	justify-content:space-around;
+  	flex-wrap: wrap;
+}
 /*css for profile.js*/
 .ProfileCard{
-	width:100%;
-	margin-bottom:20px;
+	width:450px;
+	height:350px;
+	margin:30px 20px 30px 20px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
+	overflow:hidden;
+	padding:0px 0px 0px 0%;
+	border-radius:6px;
+	/*background-color: green;*/
 }
 .profile-card-cont{
-	margin:60px 2.5% 10px 2.5%;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	display: inline-block;
-	width:45%;
-	min-height:200px;
+	width:100%;
+	min-height:100%;
 	position:relative;
 	background-color: white;
 	font-family: 'Roboto',sans-serif;
-	border-radius:6px;
 	box-shadow: 0px 0px 4px #888888;
+	top:50px;
 }
-
-@media only screen and  (max-width:8in){
-	.profile-card-cont{
-		margin:60px 0% 5px 0%;
+.cmnTeam{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+@media only screen and  (max-width:7in){
+	.trig-wrapper{
 		width:100%;
-		display: block;
-		padding-top: 0;
+		right:0;
+		justify-content:flex-start;
+	}
+	.trigg1{
+		margin:1px 8px;
 	}
 	
 }
@@ -73,7 +114,6 @@
 .profile-card-content-cont{
 	margin-top: 0px;
 	background-color: white;
-	min-height:200px;
 	border-radius:6px;
 	overflow: hidden;
 }

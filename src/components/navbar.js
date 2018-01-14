@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
 import { Link} from 'react-router'
 
 import '../css/navbar.css';
 
 import MenuButton from './menubutton'
+import Openmenu from './openmenu'
 
 class NavBar extends Component {
 
@@ -21,54 +20,48 @@ class NavBar extends Component {
 
 
   render() {
-      var menuOptions = [{"tit":'Home',"lin":'/'},{"tit":'Events',"lin":'/events'},
-                          {"tit":'Team',"lin":'/team'},{"tit":'Contacts',"lin":'/contacts'}
+    var menuOptions = [ {tit:'Home',linki:'/'},
+                        {tit:'Events',linki:'/events'},
+                        {tit:'ContactUs',linki:'/contactus'},
+                        {tit:'Team',linki:'/team'},
+                        {tit:'Workshops',linki:'/workshops'},
+                        {tit:'Lectures',linki:'/gl'},
                       ]
           menuOptions=menuOptions.map((item,index)=>{
                   return(
-                        <Link to={item.lin} className="nav-options">
-                            <span className="nav-options-in">{item.tit}</span>
-                        </Link>
+                          <Link to={item.linki}>
+                            <button className="draw meet  navbut">{item.tit}</button>
+                          </Link>
                     )
       })
     return (
-       <div style={{zIndex:"100"}}>
-            <div className="expand-form form-css">
+       <div className="NavBar">
+            <div className="rel-wrap">
+              <div className="logo-wrap">
+                    <img src={require('../static/logo.png')} alt="" className="toplogo"/>
+                    <img src={require('../static/nitdd.png')} alt="" className="seclogo"/>
+              </div>
+              <div className="options-wrap" id="fullform">
+                    {menuOptions}
+              </div>
+              <div  id="shortform" className="options-wrap">
+                    {/*<button onClick={this.handleToggle}>Menu</button>*/}
+                    <MenuButton/>
+                    <Openmenu/>
+              </div>
+            </div>
+
+{/*           <div className="expand-form form-css">
                 <div className="mobile-top-title" style={{float:"left",margin:"0 0 0 20px","height":"100%"}}>
                           <img src={require('../static/logo.png')} alt="" className="toplogo"/>
-                          {/*<img src={require('../static/nitdlogo.gif')} alt="" className="seclogo"/>*/}
+                          {<img src={require('../static/nitdlogo.gif')} alt="" className="seclogo"/>}
                 </div>
                       {menuOptions}
             </div>
             <div className="short-form form-css" onClick={this.handleToggle}>
 
-                      {/*<MenuButton/>*/}
-            </div>      
-           <Drawer
-              docked={false}
-              width={250}
-              open={this.state.open}
-              onRequestChange={(open) => this.setState({open})}
-           >
-              <div className="options-cont">
-                    <div className="menu-logo-cont">
-                      <img className="menu-logo" src={require('../static/tt.jpg')}/>
-                      <img className="menu-logo" src={require('../static/nitdlogo.gif')}/>
-                    </div>
-                    <Link to={'/'}>
-                      <MenuItem onClick={this.handleClose}>Home</MenuItem>
-                    </Link>
-                     <Link to={'/events'}>
-                      <MenuItem onClick={this.handleClose}>Events</MenuItem>
-                    </Link>
-                     <Link to={'/team'}>
-                      <MenuItem onClick={this.handleClose}>Team</MenuItem>
-                    </Link>
-                     <Link to={'/contacts'}>
-                      <MenuItem onClick={this.handleClose}>Contacts</MenuItem>
-                    </Link>
-              </div>
-          </Drawer>
+                      {<MenuButton/>}
+            </div>*/}      
       </div>
     );
   }

@@ -18,7 +18,8 @@ import Events from './pages/events/events'
 import Team from './pages/team/team.js'
 import NotFound from './notfound.js'
 import OpenEvent from './pages/events/event/openevent.js'
-
+import Contact from './pages/contact/contact.js'
+import Canvas from './components/canvas.js'
 
 // Parent Component
 class App extends Component {
@@ -33,12 +34,14 @@ class App extends Component {
                            <Route path="/events" component={Events}/>
                            <Route path="/team" component={Team}/>
                            <Route path="/events/:id" component={OpenEvent}/>
+                           <Route path="/contactus" component={Contact}/>
+
                        </Route>
                        <Route path="*" component={NotFound}/>
                     </Router>
-                    {/*<Footer/>*/}
                   </div>
              </MuiThemeProvider>
+             <Canvas/>
       </div>
     );
   }

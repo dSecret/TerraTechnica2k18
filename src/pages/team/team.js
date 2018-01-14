@@ -17,7 +17,7 @@ const styles = {
     marginLeft:30,
   },
   slide: {
-    padding: 10,
+    padding:0,
   },
 };
 
@@ -57,11 +57,10 @@ class Team extends Component {
 
   render() {
     return (
-     <div className="Events">
-          <div className="trig-ff-wrapper">
-                    Team
-          </div>
-          <div className="trig-wrapper" align="center">
+     <div className="team">
+          <div className="trig-wrapper cmnTeam" >
+                    <span>TEAM</span>
+                    <span style={{"flex":1}}></span>
                     <div className="trigg1" onClick={this.handleClick.bind(this, 0)}>
                           <div className="trigg1-active"  id="trigg10" >
                           </div>
@@ -84,15 +83,21 @@ class Team extends Component {
                   >
                     <div style={styles.slide}>
                       <h2 style={styles.headline}>Core Team</h2>
-                        <Profilecard/>
+                        <div className="sLide cmnTeam">
+                          <Profilecard/><Profilecard/><Profilecard/><Profilecard/>
+                        </div>
                     </div>
                     <div style={styles.slide}>
-                      <h2 style={styles.headline}>Administration</h2>
-                        <Profilecard/>
+                      <h2 style={styles.headline}>Core Team</h2>
+                        <div className="sLide cmnTeam">
+                          <Profilecard/><Profilecard/><Profilecard/><Profilecard/>
+                        </div>
                     </div>
                     <div style={styles.slide}>
-                      <h2 style={styles.headline}>Photography and Landscaping</h2>
-                        <Profilecard/>
+                        <h2 style={styles.headline}>Core Team</h2>
+                        <div className="sLide cmnTeam">
+                          <Profilecard/><Profilecard/><Profilecard/><Profilecard/>
+                        </div>
                     </div>
                   </SwipeableViews>
               </div>

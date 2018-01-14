@@ -69,7 +69,7 @@ class Home extends Component {
     return (
       <div className="Home">
           {/*<TitleAnim/>*/}
-          
+          <div className="earth-wrap"></div>
       </div>
     );
   }

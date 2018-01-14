@@ -28,7 +28,7 @@ class ProfileCard extends Component {
               </div>
               <div className="profile-card-content-cont">
                       <Card>
-                        <CardTitle title="Shantanu Patil" 
+                        <CardTitle  title="Shantanu Patil" 
                                     subtitle="Convener" 
                                     style={CardTitleStyle}
                                     subtitleStyle={{fontSize:"20px",fontFamily:"'Nova Flat', cursive"}}
@@ -54,108 +54,8 @@ class ProfileCard extends Component {
                               </List>
                        </CardText>
                       </Card>
-              </div>
-          </div>
-          <div className="profile-card-cont" align="left">
-              <div className="profile-card-img-cont">
-                    <img src={require('../static/manavatar.png')} alt="" className="profile-card-img"/>
-              </div>
-              <div className="profile-card-content-cont">
-                      <Card>
-                        <CardTitle title="Shantanu Patil" 
-                                    subtitle="Convener" 
-                                    style={CardTitleStyle}
-                                    subtitleStyle={{fontSize:"20px",fontFamily:"'Nova Flat', cursive"}}
-                        />
-                       <CardText style={{padding:"0px"}}>
-                              <List>
-                                <ListItem
-                                  leftIcon={<CommunicationCall color={indigo500} />}
-                                  rightIcon={<CommunicationChatBubble />}
-                                  primaryText="(650) 555 - 1234"
-                                  secondaryText="Mobile"
-                                  disabled="true"
-                                />
-                              </List>
-                              <Divider inset={true} />
-                              <List>
-                                <ListItem
-                                  leftIcon={<CommunicationEmail color={indigo500} />}
-                                  primaryText="aliconnors@example.com"
-                                  secondaryText="Personal"
-                                  disabled="true"
-                                />
-                              </List>
-                       </CardText>
-                      </Card>
-              </div>
-          </div>
-          <div className="profile-card-cont" align="left">
-              <div className="profile-card-img-cont">
-                    <img src={require('../static/manavatar.png')} alt="" className="profile-card-img"/>
-              </div>
-              <div className="profile-card-content-cont">
-                      <Card>
-                        <CardTitle title="Shantanu Patil" 
-                                    subtitle="Convener" 
-                                    style={CardTitleStyle}
-                                    subtitleStyle={{fontSize:"20px",fontFamily:"'Nova Flat', cursive"}}
-                        />
-                       <CardText style={{padding:"0px"}}>
-                              <List>
-                                <ListItem
-                                  leftIcon={<CommunicationCall color={indigo500} />}
-                                  rightIcon={<CommunicationChatBubble />}
-                                  primaryText="(650) 555 - 1234"
-                                  secondaryText="Mobile"
-                                  disabled="true"
-                                />
-                              </List>
-                              <Divider inset={true} />
-                              <List>
-                                <ListItem
-                                  leftIcon={<CommunicationEmail color={indigo500} />}
-                                  primaryText="aliconnors@example.com"
-                                  secondaryText="Personal"
-                                  disabled="true"
-                                />
-                              </List>
-                       </CardText>
-                      </Card>
-              </div>
-          </div>
-          <div className="profile-card-cont" align="left">
-              <div className="profile-card-img-cont">
-                    <img src={require('../static/manavatar.png')} alt="" className="profile-card-img"/>
-              </div>
-              <div className="profile-card-content-cont">
-                      <Card>
-                        <CardTitle title="Shantanu Patil" 
-                                    subtitle="Convener" 
-                                    style={CardTitleStyle}
-                                    subtitleStyle={{fontSize:"20px",fontFamily:"'Nova Flat', cursive"}}
-                        />
-                       <CardText style={{padding:"0px"}}>
-                              <List>
-                                <ListItem
-                                  leftIcon={<CommunicationCall color={indigo500} />}
-                                  rightIcon={<CommunicationChatBubble />}
-                                  primaryText="(650) 555 - 1234"
-                                  secondaryText="Mobile"
-                                  disabled="true"
-                                />
-                              </List>
-                              <Divider inset={true} />
-                              <List>
-                                <ListItem
-                                  leftIcon={<CommunicationEmail color={indigo500} />}
-                                  primaryText="aliconnors@example.com"
-                                  secondaryText="Personal"
-                                  disabled="true"
-                                />
-                              </List>
-                       </CardText>
-                      </Card>
+                      <div className="title-cont">
+                      </div>
               </div>
           </div>
       </div>
