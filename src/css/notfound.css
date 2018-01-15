@@ -1,0 +1,28 @@
+.NotFound{
+	width:100vw;
+	height:100vh;
+	display:flex;
+	align-items:center;
+  	justify-content:center;
+  	flex-wrap: wrap;
+  	background-color:white;
+  	font-family: 'Roboto',sans-serif;
+}
+.NotFound div{
+	width:400px;
+	background-color:white;
+	box-shadow:0 0 4px 1;
+	-moz-box-shadow:0 0 4px 1;
+
+}
+.NotFound p{
+	color:grey;
+}
+.NotFound h4{
+	color:black;
+}
+@media only screen and (max-width:7in){
+	.NotFound div{
+		width:300px;
+	}
+}

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Card, CardTitle, CardText} from 'material-ui/Card';
 import Divider from 'material-ui/Divider';
 
 import {List, ListItem} from 'material-ui/List';
@@ -27,7 +26,7 @@ class ProfileCard extends Component {
                     <img src={require('../static/manavatar.png')} alt="" className="profile-card-img"/>
               </div>
               <div className="profile-card-content-cont">
-                      <Card>
+{/*                      <Card>
                         <CardTitle  title="Shantanu Patil" 
                                     subtitle="Convener" 
                                     style={CardTitleStyle}
@@ -53,8 +52,30 @@ class ProfileCard extends Component {
                                 />
                               </List>
                        </CardText>
-                      </Card>
-                      <div className="title-cont">
+                      </Card>*/}
+                      <div className="card-title">
+                          <span className="main-tit">Naruto Uzumaki</span>
+                          <span className="sub-tit">Hokage</span>
+                      </div>
+                      <div>
+                          <List>
+                            <ListItem
+                              leftIcon={<CommunicationCall color={indigo500} />}
+                              rightIcon={<CommunicationChatBubble />}
+                              primaryText="(650) 555 - 1234"
+                              secondaryText="Mobile"
+                              disabled="true"
+                            />
+                          </List>
+                          <Divider inset={true} />
+                          <List>
+                            <ListItem
+                              leftIcon={<CommunicationEmail color={indigo500} />}
+                              primaryText="aliconnors@example.com"
+                              secondaryText="Personal"
+                              disabled="true"
+                            />
+                          </List>                      
                       </div>
               </div>
           </div>

@@ -1,0 +1,22 @@
+.Workshops{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  height:100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  overflow: hidden;
+  width:100vw;
+}
+.earth-wrap{
+  width:320px;
+  height:320px;
+  border-radius: 50%;
+  border:2px solid white;
+  font-family:'Nova Flat', cursive;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  color:lightgrey;
+  font-size:29px;
+}

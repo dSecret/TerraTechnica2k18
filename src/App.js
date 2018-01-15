@@ -20,7 +20,8 @@ import NotFound from './notfound.js'
 import OpenEvent from './pages/events/event/openevent.js'
 import Contact from './pages/contact/contact.js'
 import Canvas from './components/canvas.js'
-
+import Lectures from './pages/Lectures/lectures'
+import Workshops from './pages/workshop/workshops.js'
 // Parent Component
 class App extends Component {
   render() {
@@ -35,7 +36,8 @@ class App extends Component {
                            <Route path="/team" component={Team}/>
                            <Route path="/events/:id" component={OpenEvent}/>
                            <Route path="/contactus" component={Contact}/>
-
+                           <Route path="/workshops" component={Workshops}/>
+                           <Route path="/lectures" component={Lectures}/>
                        </Route>
                        <Route path="*" component={NotFound}/>
                     </Router>

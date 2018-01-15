@@ -9,15 +9,16 @@ class OpenMenu extends Component {
   render() {
     var menuOptions = [ {tit:'Home',linki:'/'},
                         {tit:'Events',linki:'/events'},
-                        {tit:'ContactUs',linki:'/contacts'},
+                        {tit:'ContactUs',linki:'/contactus'},
                         {tit:'Team',linki:'/team'},
                         {tit:'Workshops',linki:'/workshops'},
-                        {tit:'GuestLectures',linki:'/gl'},
+                        {tit:'GuestLectures',linki:'/lectures'},
+                        {tit:'Notifications',linki:'/notifications'},
                       ]
         menuOptions=menuOptions.map((item,index)=>{
             return(
                           <Link to={item.linki}>
-                            <button className="draww meett  navbutt">{item.tit}</button>
+                            <button onClick={closemenu} className="draww meett  navbutt">{item.tit}</button>
                           </Link>
               )
       })

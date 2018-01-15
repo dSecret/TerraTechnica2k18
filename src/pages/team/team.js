@@ -15,6 +15,7 @@ const styles = {
     marginBottom: 12,
     fontWeight: 400,
     marginLeft:30,
+    color:"white"
   },
   slide: {
     padding:0,
@@ -27,7 +28,8 @@ class Team extends Component {
       super(props);
       this.state = {
         slideIndex: 0,
-        prevIndex:0
+        prevIndex:0,
+        teams:['Kakashi','Lee','Ozuna']
       };
     }
 
@@ -59,22 +61,24 @@ class Team extends Component {
     return (
      <div className="team">
           <div className="trig-wrapper cmnTeam" >
-                    <span>TEAM</span>
+              <div className="trig-wrapper-child">
+                    <span>{this.state.teams[this.state.slideIndex]}</span>
                     <span style={{"flex":1}}></span>
-                    <div className="trigg1" onClick={this.handleClick.bind(this, 0)}>
+                    <span className="trigg1" onClick={this.handleClick.bind(this, 0)}>
                           <div className="trigg1-active"  id="trigg10" >
                           </div>
-                    </div>
-                    <div className="trigg1" onClick={this.handleClick.bind(this, 1)}>
+                    </span>
+                    <span className="trigg1" onClick={this.handleClick.bind(this, 1)}>
                           <div className="trigg1-active" id="trigg11">
                           </div>
-                    </div>
-                    <div className="trigg1" onClick={this.handleClick.bind(this, 2)}>
+                    </span>
+                    <span className="trigg1" onClick={this.handleClick.bind(this, 2)}>
                           <div className="trigg1-active" id="trigg12">
                           </div>
-                    </div>
+                    </span>
               </div>
-              <div className="swipe-view-cont">
+          </div>
+          <div className="swipe-view-cont">
                   <SwipeableViews
                     index={this.state.slideIndex}
                     onChangeIndex={this.handleChange}
@@ -82,25 +86,22 @@ class Team extends Component {
                     animateHeight={true}
                   >
                     <div style={styles.slide}>
-                      <h2 style={styles.headline}>Core Team</h2>
                         <div className="sLide cmnTeam">
                           <Profilecard/><Profilecard/><Profilecard/><Profilecard/>
                         </div>
                     </div>
                     <div style={styles.slide}>
-                      <h2 style={styles.headline}>Core Team</h2>
                         <div className="sLide cmnTeam">
                           <Profilecard/><Profilecard/><Profilecard/><Profilecard/>
                         </div>
                     </div>
                     <div style={styles.slide}>
-                        <h2 style={styles.headline}>Core Team</h2>
                         <div className="sLide cmnTeam">
                           <Profilecard/><Profilecard/><Profilecard/><Profilecard/>
                         </div>
                     </div>
                   </SwipeableViews>
-              </div>
+          </div>
             
       </div>
     );

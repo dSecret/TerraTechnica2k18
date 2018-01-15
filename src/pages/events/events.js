@@ -16,11 +16,10 @@ class Events extends Component {
   render() {
     return(
       <div className="Events">
-          <EventsCard title="ROBOTICS" lin="/robotics"/>
-          <EventsCard title="CODING" lin="/robotics"/>
-          <EventsCard title="CTF" lin="/robotics"/>
-          <EventsCard title="PROGRAMMING LEAGUE" lin="/robotics"/>
-          <EventsCard title="ROBOTICS"  lin="/robotics"/>
+          <EventsCard title="ROBOTICS" lin="/events/robotics"/>
+          <EventsCard title="CODING" lin="/events/robotics"/>
+          <EventsCard title="INFORMAL" lin="/events/informal"/>
+          <EventsCard title="MISCELLANEOUS" lin="/events/misc"/>
       </div>
       );
   }
