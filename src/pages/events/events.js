@@ -16,10 +16,10 @@ class Events extends Component {
   render() {
     return(
       <div className="Events">
-          <EventsCard title="ROBOTICS" lin="/events/robotics"/>
-          <EventsCard title="CODING" lin="/events/robotics"/>
-          <EventsCard title="INFORMAL" lin="/events/informal"/>
-          <EventsCard title="MISCELLANEOUS" lin="/events/misc"/>
+          <EventsCard title="ROBOTICS" lin="/events/robotics" options={['Robo Rumble','Robo Race']}/>
+          <EventsCard title="CODING" lin="/events/robotics" options={['Programming League']}/>
+          <EventsCard title="INFORMAL" lin="/events/informal" options={['Chunin Exam']}/>
+          <EventsCard title="MISCELLANEOUS" lin="/events/misc" options={['Noobs Games']}/>
       </div>
       );
   }
