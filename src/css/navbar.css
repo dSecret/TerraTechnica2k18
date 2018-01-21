@@ -7,7 +7,8 @@
 	/*background-color:rgba(0,0,0,0.2);*/
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	z-index:2000;
+	z-index:5000;
+	/*font-size:28px;*/
 }
 .NavBar .rel-wrap{
 	width:100%;
@@ -78,23 +79,27 @@
 	}
 }
 .navbut {
+/*background-color: #0c090c;
+background-image: linear-gradient(45deg, #0c090c 0%, #353637 34%, #b7bab8 60%, #585757 100%);*/
   background-color:rgba(211,211,211,0.3);
   border: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0em 0;
-  padding: 1em 2em;
+  padding:13px 25px;
   -webkit-box-shadow: none;
           box-shadow: none;
   color:white;
-  font-size: inherit;
-  font-weight: 700;
+  font-size:18px;
+  font-weight:600;
   position: relative;
   vertical-align: middle;
   transform:skew(-13deg);
   -moz-transform:skew(-13deg);
   cursor:pointer;
-  font-family:'Roboto',sans-serif !important;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing:2px;
+  /*font-family:'Roboto',sans-serif !important;*/
 }
 .navbut::before,.navbut::after {
   -webkit-box-sizing: inherit;
@@ -160,7 +165,10 @@
   -webkit-transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
   transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
 }
-
+.navbut div{
+	/*background-color: white;*/
+	-moz-transform:skew(13deg);
+}
 
 /*new Css*/
 .toplogo{
@@ -207,7 +215,9 @@
 	user-select: none;
 	cursor: pointer;
 	transform:skew(-10deg);
-	background-color:rgba(0,0,0,0.5);
+	background-color: #0c090c;
+background-image: linear-gradient(45deg, #0c090c 0%, #353637 34%, #b7bab8 60%, #585757 100%);
+
 	/*box-sizing: border-box;*/
 	/*-moz-box-sizing: border-box;*/
 	/*border-left:none;*/

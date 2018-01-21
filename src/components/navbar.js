@@ -30,7 +30,7 @@ class NavBar extends Component {
           menuOptions=menuOptions.map((item,index)=>{
                   return(
                           <Link to={item.linki}>
-                            <button className="draw meet  navbut">{item.tit}</button>
+                            <button className="draw meet  navbut"><div>{item.tit}</div></button>
                           </Link>
                     )
       })

@@ -1,3 +1,4 @@
+
 .Basicwrap{
 	/*width:60vh;*/
 	margin-top:14.5vh;
@@ -31,9 +32,10 @@
 	/*padding:7px 7px;*/
 }
 @media only screen and (max-width:7in){
-/*	.Basicwrap{
-		height:77.5vh;
-	}*/	
+	.Basicwrap{
+		height:87.5vh;
+		/*background-color: green;*/
+	}	
 	.notify-wrap{
 		display: none;
 	}

@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import w_logo from '../static/Terra Technica 18 White.png'
 import b_logo from '../static/Terra Technica 18 Black.png'
 
+import'../css/canvas.css'
+
 const make_stars = (count, tw, th) => {
 
     let star = new Path2D();
@@ -112,8 +114,8 @@ export default class backgroundCanvasComponent extends Component {
 			<canvas
 				className="backgnd_cnvs"
 				ref="background_cnvs" 
-				width={window.innerWidth}
-				height={window.innerHeight}
+				width={window.outerWidth}
+				height={window.outerHeight}
 				style={canvasStyle}
 			/>
 		);

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../css/eventoptions.css';
+import { Link} from 'react-router'
 
 
 
@@ -19,9 +20,11 @@ class EventsOptions extends Component {
                       <img src="https://image.flaticon.com/icons/svg/237/237416.svg" className="Cardicon"/>
                   </div>
                   <div class="layer1-content-back"></div>
-                  <div class="layer1-content-wrap comEC">
-                      <div>{this.props.options}</div>               
-                  </div>
+                  <Link to={'/events/'+this.props.type+'/'+this.props.options}>
+                    <div class="layer1-content-wrap comEC">
+                        <div>{this.props.options}</div>               
+                    </div>
+                  </Link>
               </div>
     );
   }

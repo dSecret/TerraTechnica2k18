@@ -17,8 +17,6 @@ class Basic extends Component {
   render() {
     return (
       <div className="Basic">
-                    {/*<MenuButton/>*/}
-                    {/*<OpenMenu/>*/}
                     <NavBar/>
                     <div className="Basicwrap">
                         {this.props.children}

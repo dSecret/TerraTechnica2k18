@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router'
 
+import Footer from './footermenu.js'
 // components imports
 // css imports
 import '../css/openmenu.css';
@@ -30,14 +31,16 @@ class OpenMenu extends Component {
     return (
       <div id="openmenu-cont">
        <div class="close-but-cont">
-              <span  onClick={closemenu}>&#128473;</span>
+              <span  onClick={closemenu}>X</span>
         </div>        
         <div id="second-child">
             {menuOptions}
         </div>
+        <Footer/>
       </div>
     );
   }
 }
+
 
 export default OpenMenu;

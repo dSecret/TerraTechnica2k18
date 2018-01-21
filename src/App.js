@@ -34,7 +34,10 @@ class App extends Component {
                            <Route path="/" component={Home}/>
                            <Route path="/events" component={Events}/>
                            <Route path="/team" component={Team}/>
-                           <Route path="/events/:id" component={OpenEvent}/>
+                           <Route path="/events/robotics/:id" component={OpenEvent}/>
+                           <Route path="/events/coding/:id" component={OpenEvent}/>
+                           <Route path="/events/informal/:id" component={OpenEvent}/>
+                           <Route path="/events/miscellaneous/:id" component={OpenEvent}/>
                            <Route path="/contactus" component={Contact}/>
                            <Route path="/workshops" component={Workshops}/>
                            <Route path="/lectures" component={Lectures}/>

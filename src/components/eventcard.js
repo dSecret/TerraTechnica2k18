@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import Divider from 'material-ui/Divider';
 // css impoorts
@@ -16,24 +17,13 @@ var sectionStyle={
 class EventsCard extends Component {
   render() {
       var alloptions=this.props.options.map((item,index)=>{
-            return(<EventsOptions options={item}/>)
+            return(<EventsOptions options={item} type={this.props.title}/>)
+            // return(<span> options={item}</span>)
       })
     return (
-        <div className="EventsCard comEC" style={sectionStyle}>
-{/*          <div className="layer1 comEC" id="layer1">
-              <div className="icon-wrap comEC" >
-                <div className="comEC">
-                  <div className="comEC animDiv">
-                    <img src="https://image.flaticon.com/icons/svg/237/237416.svg" className="Cardicon"/>
-                  </div>
-                </div>
-              </div>
-              <div className="title-wrap comEC">
-                  {this.props.title}
-              </div>
-          </div>*/}
+        <div className="EventsCard comEC">
           <div className="layer1 comEC" id="layer2">
-                  <div class="layer1-tit comEC">{this.props.title}</div>
+                  <div class="layer1-tit comEC" id={this.props.title}>{this.props.title}</div>
                   <Divider inset={true} style={{"backgroundColor":"black",}}/>
                   <div className="layer1-options-wrap comEC">
                     {/*<button data-hover="click me!"><div>Hover me!</div></button>*/}
@@ -43,6 +33,9 @@ class EventsCard extends Component {
         </div>
     );
 
+  }
+  ComponentDidMount(){
+      return console.log("Workingkkkk")
   }
 }
 

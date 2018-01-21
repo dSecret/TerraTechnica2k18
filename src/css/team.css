@@ -56,7 +56,7 @@
 	font-family: 'Roboto',sans-serif;
 	display:flex;
 	align-items:center;
-  	justify-content:space-around;
+  	justify-content:center;
   	flex-wrap: wrap;
   	padding-top:50px;
 }
@@ -64,7 +64,7 @@
 .ProfileCard{
 	width:450px;
 	min-height:350px;
-	margin:30px 20px 30px 20px;
+	margin:0px 20px 0px 20px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	overflow:hidden;
