@@ -1,121 +1,214 @@
 import React, { Component } from 'react'
-import w_logo from '../static/Terra Technica 18 White.png'
-import b_logo from '../static/Terra Technica 18 Black.png'
 
-import'../css/canvas.css'
+// icons
+import matrix_icon from '../static/matrix.png'
+import gear_icon from '../static/gear.png'
+import misc_icon from '../static/misc.png'
+import informal_icon from '../static/informal_icon.png'
 
-const make_stars = (count, tw, th) => {
+const canvasStyle = {
+	"position": "absolute",
+	"zIndex": -1,
+	"top": 0,
+	"left": 0
+}
 
-    let star = new Path2D();
-	for (let i = 0; i < count; i++) {
+const deg = {
+	NINETY: Math.PI/2,
+	ONEEIGHTY: Math.PI
+}
 
-		let posX = Math.random() * tw;
-		let posY = Math.random() * th;
-		let radius = Math.random() * 2.5;
+const transformations = {
+	rotate: (coords, deg) => {
+		return {
+			x: (coords.x * Math.cos(deg)) - (coords.y * Math.sin(deg)),
+			y: (coords.y * Math.sin(deg)) + (coords.x * Math.cos(deg))
+		}
+	},
+	translate: (coords, h, k) => {
+		return {
+			x: coords.x + h,
+			y: coords.y + k
+		}
+	}
+}
 
-		star.rect(posX, posY, radius, radius)
+console.log(transformations.rotate({x: 1, y: 0}, deg.ONEEIGHTY))
+
+class Orbit {
+	
+	constructor(a, b, rot, moveRate, image_src, offset) {
+	
+		this.params = {
+			a: a,
+			b: b,
+			moveRate: moveRate,
+			rot: rot
+		}
+		this.deg = offset
+
+		this.image = new Image()
+		this.image.src = image_src
 	}
 
-	return star
+	plotEllipse(deg) {
+		return {
+			x: this.params.a * Math.cos(deg),
+			y: this.params.b * Math.sin(deg)
+		}
+	}
+
+	draw(ctx) {
+	
+		let coords = transformations.translate(
+				this.plotEllipse(this.deg),
+			window.innerWidth/2 - 25,
+			window.innerHeight/2 - 25
+		)
+		
+		/*
+		ctx.fillStyle = this.fillStyle
+		ctx.beginPath()
+		ctx.arc(
+			coords.x, 
+			coords.y, 
+			10, 
+			0, 
+			2 * Math.PI
+		)
+		ctx.fill()
+		*/
+
+		ctx.drawImage(this.image, coords.x, coords.y, 50, 50)
+
+
+		this.deg += this.params.moveRate
+		this.deg %= 2 * Math.PI
+	}
 }
-const canvasStyle={"position":"absolute","zIndex":-1,"top":0,"left":0}
+
+class Particle {
+	
+	constructor(props) {
+		this.stars = []
+		this.decel = 2
+	}
+
+	genStars(vals) {
+		for(let i = 0; i < vals.count; i++) {
+			this.stars.push({
+				x: Math.random() * window.innerWidth,
+				y: Math.random() * window.innerHeight,
+				size: Math.random() * 2 + 0.2,
+				vel: {
+					x: 0,
+					y: 2
+				}
+			});
+		}
+	}
+
+	pushAllStars(pushVector) {
+
+		this.stars.map(s => {
+			s.vel = pushVector;
+		})
+		
+	}
+
+	draw(ctx) {
+		this.stars.forEach(s => {
+			ctx.beginPath()
+			ctx.arc(s.x, s.y, s.size, 0, 2 * Math.PI)
+			ctx.fill()
+		})
+		this.stars.map(s => {
+			s.x += s.vel.x
+			s.y += s.vel.y
+			s.x %= window.innerWidth
+			s.y %= window.innerHeight
+			if (s.x < 0) { s.x = window.innerWidth }
+			if (s.y < 0) { s.y = window.innerHeight }
+			if (s.vel.x > 0 ) { s.vel.x -= this.decel }
+			if (s.vel.y > 0 ) { s.vel.y -= this.decel }
+		})
+	}
+}
 
 export default class backgroundCanvasComponent extends Component {
 
 	constructor(props) {
 		super(props)
 		this.state = {
-			logo_trans: {
+			prevPushVector: {
 				x: 0,
 				y: 0
-			},
-			stars: new Path2D(),
-			// logos: this.loadLogo()
+			}
 		}
+		this.updateCanvas = this.updateCanvas.bind(this)
+		this.Particle = new Particle()
+
+		let centralOffset = 70
+		this.orbit1 = new Orbit(100 + centralOffset, 100 + centralOffset, 0, Math.PI/400, matrix_icon, 0)
+		this.orbit2 = new Orbit(150 + centralOffset, 150 + centralOffset, deg.NINETY/2, Math.PI/500, misc_icon, deg.NINETY)
+		this.orbit3 = new Orbit(200 + centralOffset, 200 + centralOffset, 20, Math.PI/700, informal_icon, 0)
+		this.orbit4 = new Orbit(250 + centralOffset, 250 + centralOffset, 90, Math.PI/900, gear_icon, deg.NINETY/2)
 	}
 
 	componentDidMount() {
-		
-		this.setState({ stars: make_stars(700, this.refs.background_cnvs.width, this.refs.background_cnvs.height) })
-		this.updateCanvas();
-		
-		window.onresize = () => {
-			this.refs.background_cnvs.height = window.innerHeight
-			this.refs.background_cnvs.width = window.innerWidth
-			this.stars = make_stars(700, this.refs.background_cnvs.width, this.refs.background_cnvs.height)
-		}
-
-		window.addEventListener('devicemotion', (evt) => {
-		
+		this.updateCanvas()
+		this.Particle.genStars({count: 200})
+		// TODO Logic for stars interact with mouse
+		/*
+		 * window.addEventListener('mousemove', e => {
+			let distVec = {
+				x: (e.clientX - this.state.prevPushVector.x),
+				y: (e.clientY - this.state.prevPushVector.y)
+			}
+			let pushVelocity = {
+				x: Math.sqrt(2 * 3 * Math.abs(distVec.x)),
+				y: Math.sqrt(2 * 3 * Math.abs(distVec.y))
+			}
+			this.Particle.pushAllStars(pushVelocity)
 			this.setState({
-				logo_trans: {
-					x: this.state.logo_trans.x + evt.rotationRate.beta * 0.002,
-					y: this.state.logo_trans.y + evt.rotationRate.alpha * 0.002,
+				prevPushVector: {
+					x: e.clientX,
+					y: e.clientY
 				}
 			})
+			console.log(pushVelocity)
+		}, false)
+		*/
+		window.addEventListener('resize', () => {
+			this.Particle.stars = []
+			this.Particle.genStars({ count: 200 })
+			const ctx = this.refs.globe_canvas.getContext('2d');	
+			ctx.fillStyle = '#000'
+			ctx.fillRect(0, 0, window.innerWidth, window.innerHeight)
 
 		}, false)
 	}
 
-	// loadLogo() {
-		
-	// 	let white_logo = new Image();
-	// 	let black_logo = new Image();
-
-	// 	let wh_img_w = 320;
-	// 	let wh_img_h = 200;
-
-	// 	let bl_img_w = wh_img_w
-	// 	let bl_img_h = wh_img_h
-
-	// 	white_logo.src = w_logo
-	// 	black_logo.src = b_logo
-
-	// 	return {
-	// 			white: {
-	// 				w: wh_img_w,
-	// 				h: wh_img_h,
-	// 				img: white_logo
-	// 			},
-	// 			black: {
-	// 				w: bl_img_w,
-	// 				h: bl_img_h,
-	// 				img: black_logo
-	// 			}
-	// 		}
-	// }
-
 	updateCanvas() {
-		const ctx = this.refs.background_cnvs.getContext("2d");
-		ctx.fillStyle = 'black'
-		ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
-		ctx.fillStyle = "white"
-		ctx.fill(this.state.stars)
-
-		// const wl = this.state.logos.white
-		// ctx.drawImage(wl.img, 
-		// 		window.innerWidth/2 - wl.w/2, 
-		// 		window.innerHeight/4 - wl.h/2, 
-		// 		wl.w, wl.h
-		// );
-
-		/* const bl = this.state.logos.black
-		ctx.drawImage(bl.img, 
-				this.state.logo_trans.x + window.innerWidth/2 - bl.w/2, 
-				this.state.logo_trans.y + window.innerHeight/2 - bl.h/2, 
-				bl.w, bl.h
-		);*/
-		// ctx.translate(this.state.logo_trans.x, this.state.logo_trans.y)
-		window.requestAnimationFrame(() => { this.updateCanvas() }, 1000/30)
+		const ctx = this.refs.globe_canvas.getContext('2d');	
+		ctx.fillStyle = '#000'
+		ctx.fillRect(0, 0, window.innerWidth, window.innerHeight)
+		ctx.fillStyle = '#f2f2f2'
+		this.Particle.draw(ctx)
+		this.orbit1.draw(ctx)
+		this.orbit2.draw(ctx)
+		this.orbit3.draw(ctx)
+		this.orbit4.draw(ctx)
+		window.requestAnimationFrame(this.updateCanvas, 1000/60)
 	}
 
 	render() {
 		return (
 			<canvas
-				className="backgnd_cnvs"
-				ref="background_cnvs" 
-				width={window.outerWidth}
-				height={window.outerHeight}
+				className="globe_canvas"
+				ref="globe_canvas" 
+				width={window.innerWidth}
+				height={window.innerHeight}
 				style={canvasStyle}
 			/>
 		);
