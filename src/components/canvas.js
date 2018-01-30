@@ -1,214 +1,251 @@
 import React, { Component } from 'react'
+// import threelib from 'three-js'
+import earthbg from './../static/cat2.jpg'
+import * as THREE from 'three'
 
-// icons
 import matrix_icon from '../static/matrix.png'
 import gear_icon from '../static/gear.png'
 import misc_icon from '../static/misc.png'
 import informal_icon from '../static/informal_icon.png'
 
-const canvasStyle = {
-	"position": "absolute",
-	"zIndex": -1,
-	"top": 0,
-	"left": 0
-}
+// let THREE = threelib();
 
-const deg = {
-	NINETY: Math.PI/2,
-	ONEEIGHTY: Math.PI
-}
-
-const transformations = {
-	rotate: (coords, deg) => {
-		return {
-			x: (coords.x * Math.cos(deg)) - (coords.y * Math.sin(deg)),
-			y: (coords.y * Math.sin(deg)) + (coords.x * Math.cos(deg))
-		}
-	},
-	translate: (coords, h, k) => {
-		return {
-			x: coords.x + h,
-			y: coords.y + k
-		}
-	}
-}
-
-console.log(transformations.rotate({x: 1, y: 0}, deg.ONEEIGHTY))
-
-class Orbit {
-	
-	constructor(a, b, rot, moveRate, image_src, offset) {
-	
-		this.params = {
-			a: a,
-			b: b,
-			moveRate: moveRate,
-			rot: rot
-		}
-		this.deg = offset
-
-		this.image = new Image()
-		this.image.src = image_src
-	}
-
-	plotEllipse(deg) {
-		return {
-			x: this.params.a * Math.cos(deg),
-			y: this.params.b * Math.sin(deg)
-		}
-	}
-
-	draw(ctx) {
-	
-		let coords = transformations.translate(
-				this.plotEllipse(this.deg),
-			window.innerWidth/2 - 25,
-			window.innerHeight/2 - 25
-		)
-		
-		/*
-		ctx.fillStyle = this.fillStyle
-		ctx.beginPath()
-		ctx.arc(
-			coords.x, 
-			coords.y, 
-			10, 
-			0, 
-			2 * Math.PI
-		)
-		ctx.fill()
-		*/
-
-		ctx.drawImage(this.image, coords.x, coords.y, 50, 50)
-
-
-		this.deg += this.params.moveRate
-		this.deg %= 2 * Math.PI
-	}
-}
-
-class Particle {
-	
-	constructor(props) {
-		this.stars = []
-		this.decel = 2
-	}
-
-	genStars(vals) {
-		for(let i = 0; i < vals.count; i++) {
-			this.stars.push({
-				x: Math.random() * window.innerWidth,
-				y: Math.random() * window.innerHeight,
-				size: Math.random() * 2 + 0.2,
-				vel: {
-					x: 0,
-					y: 2
-				}
-			});
-		}
-	}
-
-	pushAllStars(pushVector) {
-
-		this.stars.map(s => {
-			s.vel = pushVector;
-		})
-		
-	}
-
-	draw(ctx) {
-		this.stars.forEach(s => {
-			ctx.beginPath()
-			ctx.arc(s.x, s.y, s.size, 0, 2 * Math.PI)
-			ctx.fill()
-		})
-		this.stars.map(s => {
-			s.x += s.vel.x
-			s.y += s.vel.y
-			s.x %= window.innerWidth
-			s.y %= window.innerHeight
-			if (s.x < 0) { s.x = window.innerWidth }
-			if (s.y < 0) { s.y = window.innerHeight }
-			if (s.vel.x > 0 ) { s.vel.x -= this.decel }
-			if (s.vel.y > 0 ) { s.vel.y -= this.decel }
-		})
-	}
-}
+const canvasStyle={"position":"absolute","zIndex":-1,"top":0,"left":0}
 
 export default class backgroundCanvasComponent extends Component {
 
 	constructor(props) {
 		super(props)
 		this.state = {
-			prevPushVector: {
-				x: 0,
-				y: 0
-			}
+			deg1: 0,
+			deg2: 0,
+			mouseDown: false
 		}
-		this.updateCanvas = this.updateCanvas.bind(this)
-		this.Particle = new Particle()
-
-		let centralOffset = 70
-		this.orbit1 = new Orbit(100 + centralOffset, 100 + centralOffset, 0, Math.PI/400, matrix_icon, 0)
-		this.orbit2 = new Orbit(150 + centralOffset, 150 + centralOffset, deg.NINETY/2, Math.PI/500, misc_icon, deg.NINETY)
-		this.orbit3 = new Orbit(200 + centralOffset, 200 + centralOffset, 20, Math.PI/700, informal_icon, 0)
-		this.orbit4 = new Orbit(250 + centralOffset, 250 + centralOffset, 90, Math.PI/900, gear_icon, deg.NINETY/2)
+		this.t = 0
+		this.start = this.start.bind(this)
+		this.stop = this.stop.bind(this)
+		this.animate = this.animate.bind(this)
+	
 	}
 
 	componentDidMount() {
-		this.updateCanvas()
-		this.Particle.genStars({count: 200})
-		// TODO Logic for stars interact with mouse
-		/*
-		 * window.addEventListener('mousemove', e => {
-			let distVec = {
-				x: (e.clientX - this.state.prevPushVector.x),
-				y: (e.clientY - this.state.prevPushVector.y)
-			}
-			let pushVelocity = {
-				x: Math.sqrt(2 * 3 * Math.abs(distVec.x)),
-				y: Math.sqrt(2 * 3 * Math.abs(distVec.y))
-			}
-			this.Particle.pushAllStars(pushVelocity)
-			this.setState({
-				prevPushVector: {
-					x: e.clientX,
-					y: e.clientY
-				}
-			})
-			console.log(pushVelocity)
-		}, false)
-		*/
-		window.addEventListener('resize', () => {
-			this.Particle.stars = []
-			this.Particle.genStars({ count: 200 })
-			const ctx = this.refs.globe_canvas.getContext('2d');	
-			ctx.fillStyle = '#000'
-			ctx.fillRect(0, 0, window.innerWidth, window.innerHeight)
+		
+		const width = this.mount.clientWidth
+		const height = this.mount.clientHeight
+	
+		this.clock = new THREE.Clock()
 
-		}, false)
+		// RENDERER
+		var renderer = new THREE.WebGLRenderer({
+			canvas: this.refs.globe_canvas,
+			antialias: true
+		});
+		renderer.setClearColor(0x000000);
+		renderer.setPixelRatio(window.devicePixelRatio);
+		renderer.setSize(window.innerWidth, window.innerHeight);
+
+		// CAMERA
+		var cameraDistFromCenter = 1000;
+		this.cameraDistFromCenter = cameraDistFromCenter
+		var camera = new THREE.PerspectiveCamera(
+			35, window.innerWidth / window.innerHeight, 0.1, 5000
+		);
+		camera.position.z = cameraDistFromCenter;
+		camera.position.y = 0;
+
+		//SCENE
+		var scene = new THREE.Scene();
+
+		//LIGHTS
+		var light = new THREE.AmbientLight(0xffffff, 0.5);
+		scene.add(light);
+
+		var lightPoint = new THREE.PointLight(0xffffff, 0.5);
+		scene.add(lightPoint);
+
+
+		// MATERIAL
+		var material = new THREE.MeshPhongMaterial({
+			color: 0xff00ff,
+			specular: 0xfff3f3,
+			shininess: 2,
+			map: new THREE.TextureLoader().load(earthbg),
+			//normalMap: new THREE.TextureLoader().load(earthbg)
+		});
+
+
+		// GEOMERTY
+
+		// Center Sphere
+		var geometry = new THREE.SphereGeometry(100, 100, 100);
+		var mesh = new THREE.Mesh(geometry, material);
+		// mesh.position.z = 100;
+		// scene.add(mesh);
+		
+		let boxSize  = 30
+		let boxColor = 0xffffff
+
+
+		var box1Geom = new THREE.BoxGeometry(boxSize, boxSize, boxSize);
+		var box1Material = new THREE.MeshPhongMaterial({
+			color: boxColor,
+			specular: 0xfff3f3,
+			shininess: 2,
+			map: new THREE.TextureLoader().load(gear_icon),
+			//normalMap: new THREE.TextureLoader().load(earthbg)
+		});
+		this.box1Mesh = new THREE.Mesh(box1Geom, box1Material);
+		this.box1Mesh.position.x = 100;
+		this.box1Mesh.position.y = 30;
+		this.box1Mesh.position.z = 30;
+		scene.add(this.box1Mesh);
+		
+		var box2Geom = new THREE.BoxGeometry(boxSize, boxSize, boxSize);
+		var box2Material = new THREE.MeshPhongMaterial({
+			color: boxColor,
+			specular: 0xfff3f3,
+			shininess: 2,
+			map: new THREE.TextureLoader().load(matrix_icon),
+			//normalMap: new THREE.TextureLoader().load(earthbg)
+		});
+		this.box2Mesh = new THREE.Mesh(box2Geom, box2Material);
+		this.box2Mesh.position.x = 100;
+		this.box2Mesh.position.y = 40;
+		this.box2Mesh.position.z = 40;
+		scene.add(this.box2Mesh);
+
+		var box3Geom = new THREE.BoxGeometry(boxSize, boxSize, boxSize);
+		var box3Material = new THREE.MeshPhongMaterial({
+			color: boxColor,
+			specular: 0xfff3f3,
+			shininess: 2,
+			map: new THREE.TextureLoader().load(misc_icon),
+			//normalMap: new THREE.TextureLoader().load(earthbg)
+		});
+		this.box3Mesh = new THREE.Mesh(box3Geom, box3Material);
+		this.box3Mesh.position.x = 10;
+		this.box3Mesh.position.y = 10;
+		this.box3Mesh.position.z = 10;
+		scene.add(this.box3Mesh);
+
+		var box4Geom = new THREE.BoxGeometry(boxSize, boxSize, boxSize);
+		var box4Material = new THREE.MeshPhongMaterial({
+			color: boxColor,
+			specular: 0xfff3f3,
+			shininess: 2,
+			map: new THREE.TextureLoader().load(informal_icon),
+			//normalMap: new THREE.TextureLoader().load(earthbg)
+		});
+		this.box4Mesh = new THREE.Mesh(box4Geom, box4Material);
+		this.box4Mesh.position.x = 10;
+		this.box4Mesh.position.y = 10;
+		this.box4Mesh.position.z = 10;
+		scene.add(this.box4Mesh);
+
+
+		var particleCount = 4000;
+		var particleProps = [
+			{
+				dist: 3000,
+				color: 0xffffff
+			},
+			{
+				dist: 3500,
+				color: 0x2f2f2f
+			}
+		];
+		var particleSize = 3;
+		for (var i = 0; i < particleCount; i++) {
+		
+			particleProps.forEach(prop => {
+				var geom = new THREE.SphereGeometry(0.1 + (Math.random() * particleSize));
+				var mate = new THREE.MeshPhongMaterial({
+					color: prop.color,
+					specular: 0xffffff,
+					shininess: 100
+				});
+				var mesh2 = new THREE.Mesh(geom, mate);
+				var rdeg = 2 * Math.PI * Math.random()
+				mesh2.position.x = prop.dist * Math.cos((180/Math.PI) * rdeg);
+				mesh2.position.z = prop.dist * Math.sin((180/Math.PI) * rdeg);
+				var maxHeight = window.innerHeight* 2;
+				mesh2.position.y = Math.random() * (maxHeight * 2) - maxHeight;
+				scene.add(mesh2);
+			})
+		}
+
+		
+		this.renderer = renderer;
+		this.scene = scene;
+		this.camera = camera;
+		
+		this.mount.appendChild(this.renderer.domElement)
+		this.start()
+
 	}
 
-	updateCanvas() {
-		const ctx = this.refs.globe_canvas.getContext('2d');	
-		ctx.fillStyle = '#000'
-		ctx.fillRect(0, 0, window.innerWidth, window.innerHeight)
-		ctx.fillStyle = '#f2f2f2'
-		this.Particle.draw(ctx)
-		this.orbit1.draw(ctx)
-		this.orbit2.draw(ctx)
-		this.orbit3.draw(ctx)
-		this.orbit4.draw(ctx)
-		window.requestAnimationFrame(this.updateCanvas, 1000/60)
+	orbital(t) {
+		let speed = 0.5
+		
+		this.box1Mesh.position.x = Math.cos(speed * t) * 150
+		this.box1Mesh.position.y = Math.cos(speed * t) * 150
+		this.box1Mesh.position.z = Math.sin(speed * t) * 150
+
+		this.box1Mesh.rotation.x = t * 0.6;
+		this.box1Mesh.rotation.y = t * 0.2;
+		
+		this.box2Mesh.position.x = Math.cos(speed * t) * 150
+		this.box2Mesh.position.y = Math.sin(speed * t) * -150
+		this.box2Mesh.position.z = Math.cos(speed * t) * 150
+		
+		this.box2Mesh.rotation.x = t * 0.2;
+		this.box2Mesh.rotation.y = t * 0.6;
+
+		this.box3Mesh.position.x = Math.cos(speed * t) * -150
+		this.box3Mesh.position.y = Math.cos(speed * t) * 150
+		this.box3Mesh.position.z = Math.sin(speed * t) * 150
+
+		this.box3Mesh.rotation.x = t * 0.5;
+		this.box3Mesh.rotation.y = t * 0.4;
+
+		this.box4Mesh.position.x = Math.cos(speed * t) * 150
+		this.box4Mesh.position.y = Math.sin(speed * t) * 150
+		this.box4Mesh.position.z = Math.cos(speed * t) * -120
+
+		this.box4Mesh.rotation.x = t * 0.2;
+		this.box4Mesh.rotation.y = t * 0.2;
+	}
+
+	componentWillUnmount() {
+		this.stop()
+		this.mount.removeChild(this.renderer.domElement)
+	}
+
+	start() {
+		if (!this.frameId) {
+			this.frameId = requestAnimationFrame(this.animate, 1000/60)
+		}
+	}
+
+	stop() {
+		cancelAnimationFrame(this.frameId)
+	}
+
+	animate() {
+		this.renderScene()	
+		this.orbital(this.clock.getElapsedTime())
+		requestAnimationFrame(this.animate, 1000/60)
+	}
+
+	renderScene() {
+		this.renderer.render(this.scene, this.camera)
+
 	}
 
 	render() {
 		return (
-			<canvas
-				className="globe_canvas"
-				ref="globe_canvas" 
-				width={window.innerWidth}
-				height={window.innerHeight}
+			<div
+				ref={(mount) => { this.mount = mount }} 
 				style={canvasStyle}
 			/>
 		);
