@@ -1,15 +1,12 @@
 #Button-wrapper{
 	width:40px;
-	border:2px solid maroon;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	margin:10px;
+	/*margin:10px;*/
 	border-radius:6px;
 	cursor: pointer;
 	display: inline-block;
-	position: fixed;
-	top:10px;
-	right:10px;
+	z-index:5000;
 }
 .mobile-top-title{
 	font-size: 40px;
@@ -29,12 +26,14 @@
 .layer{
 	border:1px solid white;
 	height:0;
-	margin:4px 4px;
+	margin:5px 4px;
 	transform:2s;
 }
 
 
-
+#Button-wrapper:hover{
+	/*background-color:rgba(0,0,0,0.5);*/
+}
 #Button-wrapper:hover .layer-2{
 	width:10px;
 	transform: rotateZ(-75deg) translate(0px,4px);

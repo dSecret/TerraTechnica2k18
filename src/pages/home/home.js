@@ -4,11 +4,10 @@ import '../../css/home.css';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import {Swipeable,defineSwipe} from 'react-touch';
-
 // import custom modules
 import About from '../../components/about'
 import TitleAnim from '../../components/titleAnim'
-
+import CountDownTimer from '../../components/count_down_timer'
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -68,9 +67,10 @@ class Home extends Component {
     };
   render() {
     return (
-      <div className="Home">
-          <TitleAnim/>
-      </div>
+		<div className="Home">
+        	{/*<TitleAnim/>*/}	
+			<CountDownTimer/>
+		</div>
     );
   }
 }

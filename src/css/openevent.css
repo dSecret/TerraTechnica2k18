@@ -1,3 +1,16 @@
 .OpenEvent{
 	width:100vw;
+	/*background-color: white;*/
+	color:white;
+	display: flex;
+	justify-content: center;
+	/*flex-direction: column;*/
+	align-items: center;
+}
+.OpenEvent div{
+	width:560px;
+	height:560px;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing:2px;
+	font-size:25px;
 }

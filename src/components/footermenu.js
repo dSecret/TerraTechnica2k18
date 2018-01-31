@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
 
-import '../css/footer.css';
+import '../css/FooterMenu.css';
 
-class Footer extends Component {
+class FooterMenu extends Component {
   render() {
     return (
-        <div className="footer-wrapper">
+        <div className="FooterMenu-wrapper">
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-twitter"></a>
             <a href="#" class="fa fa-google"></a>
@@ -18,4 +18,5 @@ class Footer extends Component {
   }
 }
 
-export default Footer;
+
+export default FooterMenu;

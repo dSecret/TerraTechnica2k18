@@ -1,21 +1,43 @@
+/*newcss*/
 .EventsCard{
-	width:100%;
-}
-.event-card-cont{
-	margin:10px 2.5% 10px 2.5%;
+	width:520px;
+	/*height:750px;*/
+	margin:40px;
+	padding: 0;
+	background-color: lightgrey;
+	border-radius:7px;
+  }
+.comEC{
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	display: inline-block;
-	width:45%;
-	
+	overflow: hidden;
 }
-.event-card-img{
-	border-radius:5px;
+.EventsCard .layer1{
+	width:100%;
+	/*height:100%;*/
+  	background: none;
+  	transition:0.09s;
+  	padding: 0;
+  	background-color:white;
 }
-@media only screen and  (max-width:8in){
-	.event-card-cont{
-		margin:10px 5%;
-		width:90%;
+.layer1-tit{
+	font-size:20px;
+	font-family: 'Nova flat',cursive;
+	text-align:right;
+	padding:10px 18px;
+}
+.layer1-options-wrap{
+	display: flex;
+	align-items:center;
+  	justify-content:flex-start;
+  	flex-wrap:wrap;
+  	padding:20px 0px;
+  	width:100%;
+  	/*background-color: red;*/
+}
+@media only screen and (max-width:7.5in){
+	.EventsCard{
+		width:320px;
+		margin:30px 0px;
 	}
-	
 }

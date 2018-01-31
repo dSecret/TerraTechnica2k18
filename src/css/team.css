@@ -1,6 +1,30 @@
 .team{
 	width:100vw;
-	padding-top:100px;
+	/*padding-top:100px;*/
+	/*height:100%;*/
+	overflow:hidden;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.trig-wrapper{
+	position: fixed;
+	top:14;
+	right:100px;
+	background-color: rgba(0,211,211,1);
+	z-index:100;
+	padding:10px 30px;
+	/*border-radius:5px;*/
+	color:white;
+	font-family:'Nova Flat', cursive;
+	font-size:22px;
+	font-weight:bold;
+	display: flex;
+	justify-content:flex-end;
+	/*width:100vw;*/
+	transform: skewX(-10deg);
+}
+.trig-wrapper-child{
+		/*transform:rotateZ(-1deg);*/
 }
 .trigg1{
 	width:18px;
@@ -22,37 +46,91 @@
 #trigg10{
 	background-color: black;
 }
-
+.swipe-view-cont{
+	width:100vw;
+}
+.sLide{
+	width:100vw;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-family: 'Roboto',sans-serif;
+	display:flex;
+	align-items:center;
+  	justify-content:center;
+  	flex-wrap: wrap;
+  	padding-top:50px;
+}
 /*css for profile.js*/
 .ProfileCard{
-	width:100%;
-	margin-bottom:20px;
+	width:450px;
+	min-height:350px;
+	margin:0px 20px 0px 20px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
+	overflow:hidden;
+	padding:0px 0px 0px 0%;
+	border-radius:6px;
+	/*background-color: green;*/
 }
 .profile-card-cont{
-	margin:60px 2.5% 10px 2.5%;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	display: inline-block;
-	width:45%;
-	min-height:200px;
+	width:100%;
+	min-height:100%;
 	position:relative;
 	background-color: white;
 	font-family: 'Roboto',sans-serif;
-	border-radius:6px;
 	box-shadow: 0px 0px 4px #888888;
+	top:50px;
+	border-radius:6px;
 }
+.card-title{
+	background-color:lightgrey;
+	padding:10px;
 
-@media only screen and  (max-width:8in){
-	.profile-card-cont{
-		margin:60px 0% 5px 0%;
-		width:100%;
-		display: block;
-		padding-top: 0;
-	}
-	
+	display:flex;
+	justify-content:flex-end;
+	flex-direction:column;
+	/*align-items:right;*/
+	padding-left: 130px;
 }
+.main-tit{
+	font-size:25px;
+	font-family:'Roboto',sans-serif;	
+}
+.sub-tit{
+	font-size:20px;
+	font-family:'Nova Flat', cursive;
+	color:grey;	
+}
+.cmnTeam{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+@media only screen and  (max-width:7in){
+	.trig-wrapper{
+		width:100%;
+		right:0;
+		justify-content:flex-end;
+		transform: initial;
+	}
+	.trig-wrapper{
+		transform: initial;
+	}
+	.trigg1{
+		margin:1px 8px;
+	}
+	.card-title{
+		padding-left:20px;
+		padding-top:60px;
+	}
+	.main-tit{
+		font-size:22px;
+	}
+	.sub-tit{
+		font-size:18px;
+	}
+}	
 .profile-card-img-cont{
 	position: absolute;
 	width:100px;
@@ -73,7 +151,6 @@
 .profile-card-content-cont{
 	margin-top: 0px;
 	background-color: white;
-	min-height:200px;
 	border-radius:6px;
 	overflow: hidden;
 }

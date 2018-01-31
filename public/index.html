@@ -6,15 +6,16 @@
         src="https://code.jquery.com/jquery-3.2.1.js"
         integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
         crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta name="viewport" content="width=browser-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no" />
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Anton|Bree+Serif|Nova+Flat|Berkshire+Swash|Concert+One|Titillium+Web|Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Nova+Flat|Raleway|Supermercado+One|Quicksand" rel="stylesheet">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above
       It will be replaced with the URL of the `public` folder during the build.
@@ -26,41 +27,21 @@
     -->
         <meta name="theme-color" content="#4DBA87">
     <title>TerraTechnica</title>
+    <style>
+      html,body{
+        padding:0;
+        margin:0;
+        overflow:hidden;
+        width:100vw;
+        height:100vh;
+      }
+    </style>
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-
-
- <!-- <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key= AIzaSyC5cS7NHhrNJu_QQKau5dQ9Az5g7hBuhH8 &callback=initMap">
-    </script> -->
-
   </body>
 
 </html>

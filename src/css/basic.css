@@ -1,0 +1,42 @@
+
+.Basicwrap{
+	/*width:60vh;*/
+	margin-top:14.5vh;
+	height:75.5vh;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	position:relative;
+	/*background-image:url('/src/static/stars1.gif')*/
+}
+.notify-wrap{
+	position:fixed;
+	left:0;
+	top:40%;
+}
+.notify-wrap div{
+	color:white;
+	background:orange;
+	padding:5px 7px;
+	font-family: 'Roboto',sans-serif;
+	transform:rotateZ(-90deg);
+	transform-origin: 0 0;
+	cursor:pointer;
+	border-radius:0 0px 7px 7px;
+	font-weight:bold;
+	font-size:15px;
+	transition:1s;
+}
+.notify-wrap div:hover{
+	/*padding:7px 7px;*/
+}
+@media only screen and (max-width:7in){
+	.Basicwrap{
+		height:87.5vh;
+		/*background-color: green;*/
+	}	
+	.notify-wrap{
+		display: none;
+	}
+}

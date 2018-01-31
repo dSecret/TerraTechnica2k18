@@ -1,9 +1,24 @@
 .App {
   height:100vh;
-  width:120vw;
-  overflow-x: hidden;
-  background-color: #009688;
-  
+  width:100vw;
+  overflow: hidden;
+/*  background-image: linear-gradient(rgb(106, 105, 105) 0%, rgb(207, 207, 207) 49%, rgb(106, 105, 105) 100%);
+  background-color: #6a6969;
+*/  
+  /*box-sizing: border-box;*/
+  /*-moz-box-sizing: border-box;*/
+  position:relative;
 }
-
-
+*{
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+a{
+  outline: none;
+  -moz-outline:none;
+  text-decoration:none;
+}

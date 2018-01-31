@@ -1,4 +1,4 @@
-.Home{
+.Workshops{
   display:flex;
   align-items:center;
   justify-content: center;
@@ -13,4 +13,10 @@
   height:320px;
   border-radius: 50%;
   border:2px solid white;
+  font-family:'Nova Flat', cursive;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  color:lightgrey;
+  font-size:29px;
 }

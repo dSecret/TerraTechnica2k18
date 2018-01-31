@@ -7,6 +7,7 @@ import './App.css';
 
 
 // Components Modules
+import Basic from './basic.js'
 import NavBar from './components/navbar'
 import Footer from './components/footer'
 import OpenMenu from './components/openmenu'
@@ -17,8 +18,10 @@ import Events from './pages/events/events'
 import Team from './pages/team/team.js'
 import NotFound from './notfound.js'
 import OpenEvent from './pages/events/event/openevent.js'
-
-
+import Contact from './pages/contact/contact.js'
+import Canvas from './components/canvas.js'
+import Lectures from './pages/Lectures/lectures'
+import Workshops from './pages/workshop/workshops.js'
 // Parent Component
 class App extends Component {
   render() {
@@ -26,18 +29,24 @@ class App extends Component {
       <div className="App">
              <MuiThemeProvider>
                   <div>
-                    <MenuButton/>
-                    <OpenMenu/>
                     <Router history={browserHistory}>
-                       <Route path="/" component={Home}/>
-                       <Route path="/events" component={Events}/>
-                       <Route path="/team" component={Team}/>
-                       <Route path="/events/:id" component={OpenEvent}/>
+                      <Route path="/home"component={Basic}>
+                           <Route path="/" component={Home}/>
+                           <Route path="/events" component={Events}/>
+                           <Route path="/team" component={Team}/>
+                           <Route path="/events/robotics/:id" component={OpenEvent}/>
+                           <Route path="/events/coding/:id" component={OpenEvent}/>
+                           <Route path="/events/informal/:id" component={OpenEvent}/>
+                           <Route path="/events/miscellaneous/:id" component={OpenEvent}/>
+                           <Route path="/contactus" component={Contact}/>
+                           <Route path="/workshops" component={Workshops}/>
+                           <Route path="/lectures" component={Lectures}/>
+                       </Route>
                        <Route path="*" component={NotFound}/>
                     </Router>
-                    {/*<Footer/>*/}
                   </div>
              </MuiThemeProvider>
+             <Canvas/>
       </div>
     );
   }
