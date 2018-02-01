@@ -1,16 +1,16 @@
 .Events{
 	width:100vw;
-	/*height:100%;*/
+	height:100%;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	font-family: 'Roboto',sans-serif;
 	/*background-color: white;*/
 	display:flex;
 	align-items:center;
-  	/*justify-content:space-around;*/
+  	justify-content:space-around;
   	flex-wrap: wrap;
-  	flex-direction:column;
-  	margin-bottom: 50vh;
+  	flex-direction:row;
+  	/*margin-bottom: 50vh;*/
 }
 @media only screen and (max-width:7in){
 	.Events{

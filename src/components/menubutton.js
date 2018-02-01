@@ -11,7 +11,7 @@ class MenuButton extends Component {
    
     function  openmenu(){
           var mydiv=document.getElementById('openmenu-cont')
-        mydiv.style.width='300px'
+        mydiv.style.width='100vw'
     }
 
     return (

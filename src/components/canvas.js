@@ -10,7 +10,7 @@ import informal_icon from '../static/informal_icon.png'
 
 // let THREE = threelib();
 
-const canvasStyle={"position":"absolute","zIndex":-1,"top":0,"left":0}
+const canvasStyle={}
 
 export default class backgroundCanvasComponent extends Component {
 

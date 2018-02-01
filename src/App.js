@@ -46,7 +46,7 @@ class App extends Component {
                     </Router>
                   </div>
              </MuiThemeProvider>
-             <Canvas/>
+             {/*<Canvas/>*/}
       </div>
     );
   }
