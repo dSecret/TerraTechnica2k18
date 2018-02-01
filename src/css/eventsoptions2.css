@@ -1,0 +1,36 @@
+.EventsOptions2{
+  width:100vw;
+}
+.comEO{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;	
+}
+.EventsOptions2 .topTitle{
+  height:40px;
+  font-family:'Nova Flat', cursive;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  margin:15px;
+}
+.topTitle .title{
+	margin-left:10px;
+	font-size:35px;
+	display: inline-block;
+	/*background-color: lightgrey;*/
+	color:white;
+	vertical-align: center;
+	text-decoration: underline;
+}
+.EventsOptions2 .options{
+  width:100vw;
+  display:flex;
+  align-items:center;
+ justify-content:center;
+  flex-wrap:wrap;
+  font-size:29px;
+	/*background-color: red;*/
+}
+.EventsOptions2 .options .cont{
+	margin:15px 20px;
+}

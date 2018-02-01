@@ -8,6 +8,7 @@ import { Link} from 'react-router'
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ArrowDown from 'material-ui/svg-icons/hardware/keyboard-arrow-down';
 // custom modules import
+
 import EventsOptions from './eventoptions'
 const style = {
 };
@@ -26,42 +27,23 @@ class EventsCard extends Component {
       };
   }
   handleClick=(value) => {
-      var f=this.state
-          
-            
-            if(f.toggle){
-                this.refs.expandOption.style.height="0";
-                this.refs.expandOption.style.padding="0";
-                this.setState({
-                  toggle:0
-                }) 
-                this.refs.expandButton.style.transform ="rotateZ(0deg)"
-            }
-            else{
-                this.refs.expandOption.style.height="initial";
-                this.refs.expandOption.style.padding="20px 0px";
-                this.setState({
-                  toggle:1
-                })  
-                this.refs.expandButton.style.transform ="rotateZ(-180deg)"
-            }  
+      document.getElementById('Events').style.transform="translateX(-100vw)"
+      var b=this.props;
+      var foo={};
+          foo.title=b.title
+          foo.lin=b.lin
+          foo.options=b.options
+          this.props.action(foo)
   }
   render() {
-      var alloptions=this.props.options.map((item,index)=>{
-            return(<EventsOptions options={item} type={this.props.title}/>)
-            // return(<span> options={item}</span>)
-      })
     return (
         <div className="EventsCard comEC">
           <div className="layer1 comEC" id="layer2">
                   <div class="layer1-tit comEC" id={this.props.title}>{this.props.title}</div>
                   <Divider inset={true} style={{"backgroundColor":"black",}}/>
-                  <div className="layer1-options-wrap comEC" ref="expandOption">
-                      {alloptions}
-                  </div>
                   <Divider  style={{"backgroundColor":"black"}}/>
                   <div className="comEC" id="expandable">
-                    <div ref="expandButton" id="expandButton">
+                    <div id="expandButton">
                         <FloatingActionButton style={style} 
                                               mini={true} 
                                               iconStyle={iconStyle} 

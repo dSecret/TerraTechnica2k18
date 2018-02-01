@@ -70,7 +70,7 @@ class Home extends Component {
 		<div className="Home">
         	{/*<TitleAnim/>*/}	
 			{/*<CountDownTimer/>*/}
-      <Canvas/>
+      {/*<Canvas/>*/}
 		</div>
     );
   }

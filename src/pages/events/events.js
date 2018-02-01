@@ -2,27 +2,47 @@ import React, { Component } from 'react';
 import '../../css/events.css';
 
 import EventsCard from '../../components/eventcard.js'
+import EventsOptions2 from '../../components/eventsoptions2.js'
 
+import Db from '../../static/content.js'
 
 // From https://github.com/oliviertassinari/react-swipeable-views
 class Events extends Component {
   constructor(props) {
       super(props);
+      this.handler = this.handler.bind(this);
       this.state = {
-        slideIndex: 0,
-        prevIndex:0
+        title:'',
+        lin:'',
+        options:[],
       };
+    }
+  handler=(foo)=>{
+        this.setState({
+          title:foo.title,
+          lin:foo.lin,
+          options:foo.options
+        })
     }
   render() {
     const robotics=['Robo Rumble','Robo Race','Robo Rumble','Robo Race','Robo Rumble','Robo Race',
                     'Robo Rumble','Robo Race','Robo Rumble','Robo Race'
                   ]
+
     return(
-      <div className="Events">
-          <EventsCard title="ROBOTICS" lin="/events/robotics" options={robotics}/>
-          <EventsCard title="CODING" lin="/events/robotics" options={['Programming League']}/>
-          <EventsCard title="INFORMAL" lin="/events/informal" options={['Chunin Exam']}/>
-          <EventsCard title="MISCELLANEOUS" lin="/events/misc" options={['Noobs Games']}/>
+      <div className="Events" id="Events">
+        <div id="eventsCardCont" className="Events">
+          <EventsCard title="ROBOTICS" lin="/events/robotics" options={Db.robotics.options}  action={this.handler}/>
+          <EventsCard title="CODING" lin="/events/coding" options={Db.coding.options}  action={this.handler}/>
+          <EventsCard title="INFORMAL" lin="/events/informal" options={Db.informal.options}  action={this.handler}/>
+          <EventsCard title="MISCELLANEOUS" lin="/events/misc" options={Db.misc.options}  action={this.handler}/>
+        </div>
+        <div id="eventsCardDtls" className="Events">
+            <EventsOptions2 title={this.state.title} 
+                            lin={this.state.lin} 
+                            options={this.state.options}
+            />
+        </div>
       </div>
       );
   }
