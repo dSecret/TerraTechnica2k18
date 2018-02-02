@@ -5,6 +5,7 @@
 	background-color: white;
 	margin-bottom:7vh;
 	overflow: hidden;
+	/*background: url('/src/static/opBack.png')0 0/100% 100%;*/
 	/*color:white;*/
 /*	display: flex;
 	justify-content: center;*/
@@ -24,13 +25,20 @@
 	padding:15px;
 }
 .OpenEvent .intro{
-	color: 	deeppink;
+	color:#607D8B;
 	font-size:21px;
 	font-family:'Raleway', cursive;
 	padding:15px 10px;
 	text-align: center;
 	line-height:150%;
 
+}
+.introoptions{
+	color:#607D8B;
+	font-size:19px;
+	font-family:'Raleway', cursive;
+	line-height:150%;
+	padding:8px 10px;
 }
 .OpenEvent .img-cont{
 	padding:10px;
@@ -40,6 +48,13 @@
 	width:90px;
 	height:90px;
 	border-radius: 50%;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    user-drag: none; 
 }
 .rules div:first-child{
 	color:black;
@@ -47,9 +62,14 @@
 	font-family:'Nova Flat', cursive;
 	padding:10px;	
 }
+.rules .round{
+	color:black !important;
+	font-size:20px;
+	padding:5px 10px;
+}
 .rules div{
 	color:grey;
-	font-size:21px;
+	font-size:19px;
 	font-family:'Raleway', cursive;
 	line-height:150%;
 	padding:8px 10px;

@@ -7,8 +7,10 @@
   -moz-box-sizing: border-box;
   overflow: hidden;
   width:100vw;
+  color:lightgrey;
+  font-family:'Nova Flat', cursive;
 }
-.Lectures .earth-wrap{
+.Lectures div{
   width:320px;
   height:320px;
   /*border-radius: 50%;
