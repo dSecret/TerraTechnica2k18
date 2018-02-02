@@ -20,7 +20,7 @@ class EventsOptions2 extends Component {
       constructor(props) {
       super(props);
       this.state = {
-
+          toggle:1
       };
     }
   handleClick=(value) => {
@@ -38,12 +38,12 @@ class EventsOptions2 extends Component {
               <FloatingActionButton onClick={this.handleClick}
                                     mini={true} 
                                     iconStyle={iconStyle} 
-                                    zDepth="1"
+                                    zDepth={this.state.toogle}
                                     style={style}
                                     >
                      <ArrowBack />
               </FloatingActionButton>
-               <span class="title">{this.props.title}</span>
+               <span className="title">{this.props.title}</span>
           </div>
           <div className="comEO options">
             {alloptions}

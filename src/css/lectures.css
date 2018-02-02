@@ -8,11 +8,11 @@
   overflow: hidden;
   width:100vw;
 }
-.earth-wrap{
+.Lectures .earth-wrap{
   width:320px;
   height:320px;
-  border-radius: 50%;
-  border:2px solid white;
+  /*border-radius: 50%;
+  border:2px solid white;*/
   font-family:'Nova Flat', cursive;
   display:flex;
   align-items:center;

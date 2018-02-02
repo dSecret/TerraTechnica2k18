@@ -14,11 +14,11 @@ class OpenMenu extends Component {
                         {tit:'Team',linki:'/team'},
                         {tit:'Workshops',linki:'/workshops'},
                         {tit:'GuestLectures',linki:'/lectures'},
-                        {tit:'Notifications',linki:'/notifications'},
+                        {tit:'Notifications',linki:'/'},
                       ]
         menuOptions=menuOptions.map((item,index)=>{
             return(
-                          <Link to={item.linki}>
+                          <Link to={item.linki} key={index}>
                             <button onClick={closemenu} className="draww meett  navbutt">{item.tit}</button>
                           </Link>
               )
@@ -30,7 +30,7 @@ class OpenMenu extends Component {
 
     return (
       <div id="openmenu-cont">
-       <div class="close-but-cont">
+       <div className="close-but-cont">
               <span  onClick={closemenu}>X</span>
         </div>        
         <div id="second-child">

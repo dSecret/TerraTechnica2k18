@@ -5,8 +5,8 @@ import React, { Component } from 'react';
 // Components Modules
 import NavBar from './components/navbar'
 import Footer from './components/footer'
-import OpenMenu from './components/openmenu'
-import MenuButton from './components/menubutton'
+// import OpenMenu from './components/openmenu'
+// import MenuButton from './components/menubutton'
 // Pages Modules
 import './css/basic.css'
 

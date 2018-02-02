@@ -32,10 +32,10 @@ class Events extends Component {
     return(
       <div className="Events" id="Events">
         <div id="eventsCardCont" className="Events">
-          <EventsCard title="ROBOTICS" lin="/events/robotics" options={Db.robotics.options}  action={this.handler}/>
-          <EventsCard title="CODING" lin="/events/coding" options={Db.coding.options}  action={this.handler}/>
-          <EventsCard title="INFORMAL" lin="/events/informal" options={Db.informal.options}  action={this.handler}/>
-          <EventsCard title="MISCELLANEOUS" lin="/events/misc" options={Db.misc.options}  action={this.handler}/>
+          <EventsCard title="ROBOTICS" lin="/events/robotics" options={Db.robotics.options} content={Db.robotics.content} action={this.handler}/>
+          <EventsCard title="CODING" lin="/events/coding" options={Db.coding.options} content={Db.coding.content} action={this.handler}/>
+          <EventsCard title="INFORMAL" lin="/events/informal" options={Db.informal.options} content={Db.informal.content} action={this.handler}/>
+          <EventsCard title="MISCELLANEOUS" lin="/events/misc" options={Db.misc.options}content={Db.misc.content}  action={this.handler}/>
         </div>
         <div id="eventsCardDtls" className="Events">
             <EventsOptions2 title={this.state.title} 

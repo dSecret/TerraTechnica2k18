@@ -6,7 +6,7 @@ import '../css/eventscard.css';
 import Background from '../static/images3.jpg';
 import { Link} from 'react-router'
 import FloatingActionButton from 'material-ui/FloatingActionButton';
-import ArrowDown from 'material-ui/svg-icons/hardware/keyboard-arrow-down';
+import ArrowDown from 'material-ui/svg-icons/maps/near-me';
 // custom modules import
 
 import EventsOptions from './eventoptions'
@@ -23,7 +23,7 @@ class EventsCard extends Component {
   constructor(props) {
       super(props);
       this.state = {
-        toggle:0,
+        toggle:1,
       };
   }
   handleClick=(value) => {
@@ -39,7 +39,7 @@ class EventsCard extends Component {
     return (
         <div className="EventsCard comEC">
           <div className="layer1 comEC" id="layer2">
-                  <div class="layer1-tit comEC" id={this.props.title}>{this.props.title}</div>
+                  <div className="layer1-tit comEC" id={this.props.title}>{this.props.title}</div>
                   <Divider inset={true} style={{"backgroundColor":"black",}}/>
                   <Divider  style={{"backgroundColor":"black"}}/>
                   <div className="comEC" id="expandable">
@@ -48,12 +48,12 @@ class EventsCard extends Component {
                                               mini={true} 
                                               iconStyle={iconStyle} 
                                               onClick={this.handleClick.bind(this)}
-                                              zDepth="1"
+                                              zDepth={this.state.toogle}
                                               >
                                <ArrowDown />
                         </FloatingActionButton>
                     </div>
-                    I extend my warmest greetings to all the participants of this year’s World Robot Olympiad which the Philippine government is very much happy to host.  
+                    {this.props.content}
                   </div>
           </div>
         </div>
