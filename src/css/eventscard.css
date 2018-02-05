@@ -1,7 +1,6 @@
 /*newcss*/
 .EventsCard{
 	width:520px;
-	/*height:750px;*/
 	margin:0px;
 	padding: 0;
 	background-color: lightgrey;
@@ -35,6 +34,11 @@
 	padding-top:25px;
 	/*background-color:red;*/
 	overflow: initial;
+	min-height:100px;
+	display: flex;
+	align-items:center;
+	flex-direction:row;
+
 }
 #expandButton{
 	position: absolute;

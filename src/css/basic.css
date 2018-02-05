@@ -8,7 +8,6 @@
 	overflow-y:scroll;
 	position:relative;
 	padding-bottom:8vh;
-	/*background-image:url('/src/static/stars1.gif')*/
 }
 .notify-wrap{
 	position:fixed;

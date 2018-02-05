@@ -8,6 +8,7 @@
   /*box-sizing: border-box;*/
   /*-moz-box-sizing: border-box;*/
   position:relative;
+  background-image:url('/src/static/stars1.gif') 0 0/100vw 100vh;
 }
 img{
 	-webkit-touch-callout: none;

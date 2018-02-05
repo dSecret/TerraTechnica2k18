@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Router, Route,browserHistory } from 'react-router'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-// import logo from './logo.svg';
+import logo from './static/stars1.gif';
 import './App.css';
 
 
@@ -22,11 +22,14 @@ import Contact from './pages/contact/contact.js'
 // import Canvas from './components/canvas.js'
 import Lectures from './pages/Lectures/lectures'
 import Workshops from './pages/workshop/workshops.js'
+const styles={
+  backgroundImage:`url(${logo})`
+}
 // Parent Component
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App" style={styles}>
              <MuiThemeProvider>
                   <div>
                     <Router history={browserHistory}>
