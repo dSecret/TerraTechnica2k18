@@ -71,16 +71,41 @@ class Home extends Component {
         	{/*<TitleAnim/>*/}	
 			{/*<CountDownTimer/>*/}
       {/*<Canvas/>*/}
-          <div class="view">
-            <div class="plane main">
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-            </div>
-          </div>
+          <div class="system">
+  <div class="sun"></div>
+  <div class="ear-path"></div>
+  <div class="ear"><div class="lune"></div></div>
+  <div class="mar-path"></div>
+  <div class="mar">
+    <div class="pho"></div>
+    <div class="dem"></div>
+  </div>
+  <div class="jup-path"></div>
+  <div class="jup">
+    <div class="spot"></div>
+    <div class="jove io"></div>
+    <div class="jove eur"></div>
+    <div class="jove gan"></div>
+    <div class="jove cal"></div>
+  </div>
+  <div class="sat-path"></div>
+  <div class="sat">
+    <div class="f-ring"></div>
+    <div class="a-ring"></div>
+    <div class="b-ring"></div>
+    <div class="c-ring"></div>
+  </div>
+  <div class="ura-path"></div>
+  <div class="ura">
+    <div class="e-ring"></div>
+  </div>
+  <div class="nep-path"></div>
+  <div class="nep">
+    <div class="spot"></div>
+  </div>
+  <div class="plu-path"></div>
+  <div class="plu"></div>
+</div>
 		</div>
     );
   }
