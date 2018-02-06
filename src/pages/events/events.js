@@ -46,6 +46,9 @@ class Events extends Component {
       </div>
       );
   }
+  ComponentDidMount(){
+      return console.log("Workingkkkk")
+  }
 
 }
 

@@ -70,7 +70,7 @@ class Home extends Component {
   render() {
     return (
 		<div className="Home">
-        <Link to="/events">
+        <Link to="/events#robo" params={{ name: "hello" }}>
           <div class="view" id="view1">
             <div class="plane main" id="plane1">
               <div class="content"><div>

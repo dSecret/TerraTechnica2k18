@@ -36,6 +36,7 @@
   -webkit-perspective: 400;
           perspective: 400;
   background-color: white;
+  display: block;
 }
 .plane, .plane .circle{
     transform:scale(0.4,0.4);
@@ -113,9 +114,12 @@
   font-family: 'Nova flat',cursive;
 }
 .plane .content img{
+    display: block;
+  background: black;
   height:50px;
   width:50px;
   border-radius:50%;
+  background: radial-gradient(circle at 100px 100px, #5cabff, #000);
 }
 .plane.main {
   position: absolute;
