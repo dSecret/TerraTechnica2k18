@@ -4,6 +4,8 @@ import '../../css/home.css';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import {Swipeable,defineSwipe} from 'react-touch';
+import { Link} from 'react-router'
+
 // import custom modules
 import About from '../../components/about'
 import TitleAnim from '../../components/titleAnim'
@@ -68,11 +70,12 @@ class Home extends Component {
   render() {
     return (
 		<div className="Home">
-        	{/*<TitleAnim/>*/}	
-			{/*<CountDownTimer/>*/}
-      {/*<Canvas/>*/}
+        <Link to="/events">
           <div class="view" id="view1">
             <div class="plane main" id="plane1">
+              <div class="content"><div>
+                    <img src="https://image.flaticon.com/icons/svg/237/237416.svg" alt="" />
+              </div></div>
               <div class="circle"></div>
               <div class="circle"></div>
               <div class="circle"></div>
@@ -81,8 +84,13 @@ class Home extends Component {
               <div class="circle"></div>
             </div>
           </div>
+        </Link>
+        <Link to="/events">
           <div class="view" id="view2">
             <div class="plane main" id="plane2">
+              <div class="content"><div>
+                    <img src="https://image.flaticon.com/icons/svg/237/237416.svg" alt="" />
+              </div></div>
               <div class="circle"></div>
               <div class="circle"></div>
               <div class="circle"></div>
@@ -91,8 +99,13 @@ class Home extends Component {
               <div class="circle"></div>
             </div>
           </div>
+        </Link>
+        <Link to="/events">
           <div class="view" id="view3">
             <div class="plane main" id="plane3">
+              <div class="content"><div>
+                    <img src="https://image.flaticon.com/icons/svg/237/237416.svg" alt="" />
+              </div></div>
               <div class="circle"></div>
               <div class="circle"></div>
               <div class="circle"></div>
@@ -101,8 +114,13 @@ class Home extends Component {
               <div class="circle"></div>
             </div>
           </div>
+        </Link>
+        <Link to="/events">
           <div class="view" id="view4">
             <div class="plane main" id="plane4">
+              <div class="content"><div>
+                    <img src="https://image.flaticon.com/icons/svg/237/237416.svg" alt="" />
+              </div></div>
               <div class="circle"></div>
               <div class="circle"></div>
               <div class="circle"></div>
@@ -111,6 +129,7 @@ class Home extends Component {
               <div class="circle"></div>
             </div>
           </div>
+        </Link>
 		</div>
     );
   }
