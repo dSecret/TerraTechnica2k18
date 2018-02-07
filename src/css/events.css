@@ -3,7 +3,7 @@
 	-moz-box-sizing: border-box;	
 	height:100%;
 	transition:0.5s;
-  	
+
 }
 #Events{
 	position:relative;
@@ -23,6 +23,8 @@
 	position:absolute;
 	top:0;
 	left:00vw;
+	padding-bottom:10vh !important;
+
 }
 #eventsCardDtls{
 	position:absolute;

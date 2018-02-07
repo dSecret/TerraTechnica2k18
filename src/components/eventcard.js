@@ -60,9 +60,10 @@ class EventsCard extends Component {
     );
 
   }
-  ComponentDidMount(){
-      // return console.log("Workingkkkk")
-  }
+  // componentDidMount(){
+  //       this.handleQuery()
+  //     // return console.log("Workingkkkk")
+  // }
 }
 
 export default EventsCard;

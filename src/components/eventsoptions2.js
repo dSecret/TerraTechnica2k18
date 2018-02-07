@@ -29,7 +29,7 @@ class EventsOptions2 extends Component {
   }
   render() {
     var alloptions=this.props.options.map((item,index)=>{
-          return(<div className="cont"><EventsOptions options={item} type={this.props.title}/></div>)
+          return(<div className="cont" key={index}><EventsOptions options={item} type={this.props.title}/></div>)
           // return(<span> options={item}</span>)
     })
     return (

@@ -1,11 +1,13 @@
 const Db={
 	"robotics":{
+        title:"ROBOTICS",
 		options:['DEATH RACE','ROBO RACE','ROBO SOCCER','MAZE RUNNER',
 			'PUCK COLLECT','METAL HUNT'	
 		],
         content:'Will robots inherit the earth?'
     },
     "coding":{
+        title:"CODING",
     	options:['HACKATHON','CAPTURE THE FLAG','NITD PROGRAMMING LEAGUE',
     		'CLASH OF CODES','BLANK CODING','MACHINE LEARNING CHALLENGE',
     		'CODE GOLF','SUDOKU QUIZ','REVERSE CODING'
@@ -14,10 +16,12 @@ const Db={
         content:'Talk is cheap. Show me the code.'
     },
     "informal":{
+        title:"INFROMAL",
     	options:['WHO IS THE BOSS','BULL RIDE','TWISTER'],
         content:'None of us is as smart as all of us.'
     },
     misc:{
+        title:"MISCELLANEOUS",
     	options:['VIRTUAL STOCK MARKET','PAINTBALL','NITD EXPO'],
         content:'Mystery keeps us awake.'
     },

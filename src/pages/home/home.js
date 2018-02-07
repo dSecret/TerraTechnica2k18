@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import '../../css/home.css';
 
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
-import {Swipeable,defineSwipe} from 'react-touch';
 import { Link} from 'react-router'
 
 // import custom modules
@@ -11,9 +8,7 @@ import About from '../../components/about'
 import TitleAnim from '../../components/titleAnim'
 import CountDownTimer from '../../components/count_down_timer'
 import Canvas from '../../components/canvas.js'
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const swipe = defineSwipe({swipeDistance:20})
 
 const styles = {
   headline: {
@@ -70,7 +65,7 @@ class Home extends Component {
   render() {
     return (
 		<div className="Home">
-        <Link to="/events#robo" params={{ name: "hello" }}>
+        <Link to={{pathname:'/events',query:{type:'robotics'}}}>
           <div class="view" id="view1">
             <div class="plane main" id="plane1">
               <div class="content"><div>
@@ -85,7 +80,7 @@ class Home extends Component {
             </div>
           </div>
         </Link>
-        <Link to="/events">
+        <Link to={{pathname:'/events',query:{type:'coding'}}}>
           <div class="view" id="view2">
             <div class="plane main" id="plane2">
               <div class="content"><div>
@@ -100,7 +95,7 @@ class Home extends Component {
             </div>
           </div>
         </Link>
-        <Link to="/events">
+        <Link to={{pathname:'/events',query:{type:'informal'}}}>
           <div class="view" id="view3">
             <div class="plane main" id="plane3">
               <div class="content"><div>
@@ -115,7 +110,7 @@ class Home extends Component {
             </div>
           </div>
         </Link>
-        <Link to="/events">
+        <Link to={{pathname:'/events',query:{type:'miscellaneous'}}}>
           <div class="view" id="view4">
             <div class="plane main" id="plane4">
               <div class="content"><div>

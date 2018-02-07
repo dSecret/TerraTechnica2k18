@@ -23,19 +23,24 @@ class Events extends Component {
           lin:foo.lin,
           options:foo.options
         })
+        // console.log(this.props.location.query.type)
     }
+  handleQuery=(value)=>{
+      document.getElementById('Events').style.transform="translateX(-100vw)"
+      var foo={};
+          foo.title=Db[value].title
+          foo.lin='/events/'+value
+          foo.options=Db[value].options
+          this.handler(foo)
+  }
   render() {
-    const robotics=['Robo Rumble','Robo Race','Robo Rumble','Robo Race','Robo Rumble','Robo Race',
-                    'Robo Rumble','Robo Race','Robo Rumble','Robo Race'
-                  ]
-
     return(
       <div className="Events" id="Events">
         <div id="eventsCardCont" className="Events">
-          <EventsCard title="ROBOTICS" lin="/events/robotics" options={Db.robotics.options} content={Db.robotics.content} action={this.handler}/>
-          <EventsCard title="CODING" lin="/events/coding" options={Db.coding.options} content={Db.coding.content} action={this.handler}/>
-          <EventsCard title="INFORMAL" lin="/events/informal" options={Db.informal.options} content={Db.informal.content} action={this.handler}/>
-          <EventsCard title="MISCELLANEOUS" lin="/events/misc" options={Db.misc.options}content={Db.misc.content}  action={this.handler}/>
+          <EventsCard title={Db.robotics.title} lin="/events/robotics" options={Db.robotics.options} content={Db.robotics.content} action={this.handler}/>
+          <EventsCard title={Db.coding.title} lin="/events/coding" options={Db.coding.options} content={Db.coding.content} action={this.handler}/>
+          <EventsCard title={Db.informal.title} lin="/events/informal" options={Db.informal.options} content={Db.informal.content} action={this.handler}/>
+          <EventsCard title={Db.misc.title} lin="/events/misc" options={Db.misc.options}content={Db.misc.content}  action={this.handler}/>
         </div>
         <div id="eventsCardDtls" className="Events">
             <EventsOptions2 title={this.state.title} 
@@ -46,8 +51,10 @@ class Events extends Component {
       </div>
       );
   }
-  ComponentDidMount(){
-      return console.log("Workingkkkk")
+  componentDidMount(){
+      let bar=this.props.location.query.type
+      if(bar)
+        this.handleQuery(bar)
   }
 
 }

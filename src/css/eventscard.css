@@ -1,10 +1,13 @@
 /*newcss*/
 .EventsCard{
 	width:520px;
-	margin:0px;
+	margin:0px ;
 	padding: 0;
 	background-color: lightgrey;
 	border-radius:7px;
+		margin:30px 00px;
+		box-sizing: initial !important;
+		-moz-box-sizing: initial !important;
   }
 .comEC{
 	box-sizing: border-box;
@@ -51,6 +54,8 @@
 @media only screen and (max-width:7.5in){
 	.EventsCard{
 		width:320px;
-		margin:30px 0px;
+		margin:30px 00px;
+		box-sizing: initial !important;
+		-moz-box-sizing: initial !important;
 	}
 }
