@@ -69,7 +69,7 @@ class Home extends Component {
           <div class="view" id="view1">
             <div class="plane main" id="plane1">
               <div class="content"><div>
-                    <img src="https://image.flaticon.com/icons/svg/237/237416.svg" alt="" />
+                    <img src={require('../../static/matrix.png')} alt="" />
               </div></div>
               <div class="circle"></div>
               <div class="circle"></div>
@@ -84,7 +84,7 @@ class Home extends Component {
           <div class="view" id="view2">
             <div class="plane main" id="plane2">
               <div class="content"><div>
-                    <img src="https://image.flaticon.com/icons/svg/237/237416.svg" alt="" />
+                    <img src={require('../../static/gear.png')} alt="" />
               </div></div>
               <div class="circle"></div>
               <div class="circle"></div>
@@ -99,7 +99,7 @@ class Home extends Component {
           <div class="view" id="view3">
             <div class="plane main" id="plane3">
               <div class="content"><div>
-                    <img src="https://image.flaticon.com/icons/svg/237/237416.svg" alt="" />
+                    <img src={require('../../static/informal_icon.png')} alt="" />
               </div></div>
               <div class="circle"></div>
               <div class="circle"></div>
@@ -114,7 +114,7 @@ class Home extends Component {
           <div class="view" id="view4">
             <div class="plane main" id="plane4">
               <div class="content"><div>
-                    <img src="https://image.flaticon.com/icons/svg/237/237416.svg" alt="" />
+                    <img src={require('../../static/misc.png')} alt="" />
               </div></div>
               <div class="circle"></div>
               <div class="circle"></div>

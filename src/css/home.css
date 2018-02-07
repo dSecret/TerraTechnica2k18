@@ -44,8 +44,8 @@
   -moz-transform:scale(0.4,0.4);
 }
 #plane1 , #plane1 .circle{
-  width: 110px;
-  height: 110px;
+  width: 90px;
+  height: 90px;
 }
 #plane2 , #plane2 .circle{
   width: 60px;
@@ -63,29 +63,29 @@
     transform:scale(0.4,0.4,0.4) !important;
   -webkit-transform:scale(0.4.0.4,0.4);
   -moz-transform:scale(0.4,0.4,0.4);
-  -webkit-box-shadow: 0 0 60px crimson, inset 0 0 60px crimson;
-          box-shadow: 0 0 60px crimson, inset 0 0 60px crimson;
+  -webkit-box-shadow: 0 0 30px crimson, inset 0 0 30px crimson;
+          box-shadow: 0 0 30px crimson, inset 0 0 30px crimson;
 }
 #plane2 .circle{
     transform:scale(0.4,0.4,0.4);
   -webkit-transform:scale(0.4.0.4,0.4);
   -moz-transform:scale(0.4,0.4,0.4);
-  -webkit-box-shadow: 0 0 30px crimson, inset 0 0 30px crimson;
-          box-shadow: 0 0 30px crimson, inset 0 0 30px crimson;
+  -webkit-box-shadow: 0 0 10px crimson, inset 0 0 10px crimson;
+          box-shadow: 0 0 10px crimson, inset 0 0 10px crimson;
 }
 #plane3 .circle{
     transform:scale(0.4,0.4,0.4);
   -webkit-transform:scale(0.4.0.4,0.4);
   -moz-transform:scale(0.4,0.4,0.4);
-  -webkit-box-shadow: 0 0 40px crimson, inset 0 0 40px crimson;
-          box-shadow: 0 0 40px crimson, inset 0 0 40px crimson;
+  -webkit-box-shadow: 0 0 10px crimson, inset 0 0 10px crimson;
+          box-shadow: 0 0 10px crimson, inset 0 0 10px crimson;
 }
 #plane4 .circle{
     transform:scale(0.4,0.4,0.4);
   -webkit-transform:scale(0.4.0.4,0.4);
   -moz-transform:scale(0.4,0.4,0.4);
-  -webkit-box-shadow: 0 0 50px crimson, inset 0 0 50px crimson;
-          box-shadow: 0 0 50px crimson, inset 0 0 50px crimson;
+  -webkit-box-shadow: 0 0 10px crimson, inset 0 0 10px crimson;
+          box-shadow: 0 0 10px crimson, inset 0 0 10px crimson;
 }
 .plane {
   /*background-color: white;*/
@@ -119,7 +119,7 @@
   height:50px;
   width:50px;
   border-radius:50%;
-  background: radial-gradient(circle at 100px 100px, #5cabff, #000);
+  /*background: radial-gradient(circle at 100px 100px, #5cabff, #000);*/
 }
 .plane.main {
   position: absolute;
@@ -160,8 +160,8 @@
   background: crimson;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-box-shadow: 0 0 60px 2px blue;
-          box-shadow: 0 0 60px 2px blue;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .plane.main .circle::before {
   -webkit-transform: translateZ(-90px);
