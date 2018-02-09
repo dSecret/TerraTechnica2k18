@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.17.1",
+    "global": "^4.3.2",
     "material-ui": "^0.19.4",
     "moment": "^2.20.1",
     "react": "^16.0.0",
@@ -12,6 +13,7 @@
     "react-scripts": "1.0.14",
     "react-swipeable-views": "^0.12.8",
     "react-touch": "^0.4.3",
+    "serve": "^6.4.9",
     "three": "^0.89.0"
   },
   "scripts": {

@@ -66,62 +66,62 @@ class Home extends Component {
     return (
 		<div className="Home">
         <Link to={{pathname:'/events',query:{type:'robotics'}}}>
-          <div class="view" id="view1">
-            <div class="plane main" id="plane1">
-              <div class="content"><div>
+          <div className="view" id="view1">
+            <div className="plane main" id="plane1">
+              <div className="content"><div>
                     <img src={require('../../static/matrix.png')} alt="" />
               </div></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
             </div>
           </div>
         </Link>
         <Link to={{pathname:'/events',query:{type:'coding'}}}>
-          <div class="view" id="view2">
-            <div class="plane main" id="plane2">
-              <div class="content"><div>
+          <div className="view" id="view2">
+            <div className="plane main" id="plane2">
+              <div className="content"><div>
                     <img src={require('../../static/gear.png')} alt="" />
               </div></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
             </div>
           </div>
         </Link>
         <Link to={{pathname:'/events',query:{type:'informal'}}}>
-          <div class="view" id="view3">
-            <div class="plane main" id="plane3">
-              <div class="content"><div>
+          <div className="view" id="view3">
+            <div className="plane main" id="plane3">
+              <div className="content"><div>
                     <img src={require('../../static/informal_icon.png')} alt="" />
               </div></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
             </div>
           </div>
         </Link>
         <Link to={{pathname:'/events',query:{type:'misc'}}}>
-          <div class="view" id="view4">
-            <div class="plane main" id="plane4">
-              <div class="content"><div>
+          <div className="view" id="view4">
+            <div className="plane main" id="plane4">
+              <div className="content"><div>
                     <img src={require('../../static/misc.png')} alt="" />
               </div></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
             </div>
           </div>
         </Link>
@@ -132,6 +132,6 @@ class Home extends Component {
 
 export default Home;
 
-                    {/*    <div class="about-but" id="navDown">
+                    {/*    <div className="about-but" id="navDown">
                           <a href="#about" ><span></span></a>
                         </div>*/}
