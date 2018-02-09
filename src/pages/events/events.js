@@ -25,6 +25,7 @@ class Events extends Component {
         })
         // console.log(this.props.location.query.type)
     }
+    
   handleQuery=(value)=>{
       document.getElementById('Events').style.transform="translateX(-100vw)"
       var foo={};

@@ -20,7 +20,7 @@ const Db={
     	options:['WHO IS THE BOSS','BULL RIDE','TWISTER'],
         content:'None of us is as smart as all of us.'
     },
-    misc:{
+    "misc":{
         title:"MISCELLANEOUS",
     	options:['VIRTUAL STOCK MARKET','PAINTBALL','NITD EXPO'],
         content:'Mystery keeps us awake.'

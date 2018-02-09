@@ -110,7 +110,7 @@ class Home extends Component {
             </div>
           </div>
         </Link>
-        <Link to={{pathname:'/events',query:{type:'miscellaneous'}}}>
+        <Link to={{pathname:'/events',query:{type:'misc'}}}>
           <div class="view" id="view4">
             <div class="plane main" id="plane4">
               <div class="content"><div>
