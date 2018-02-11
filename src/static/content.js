@@ -16,7 +16,7 @@ const Db={
         content:'Talk is cheap. Show me the code.'
     },
     "informal":{
-        title:"INFROMAL",
+        title:"INFORMAL",
     	options:['WHO IS THE BOSS','BULL RIDE','TWISTER'],
         content:'None of us is as smart as all of us.'
     },

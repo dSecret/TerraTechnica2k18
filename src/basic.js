@@ -11,7 +11,6 @@ import Footer from './components/footer'
 import './css/basic.css'
 
 
-
 // Parent Component
 class Basic extends Component {
   render() {
@@ -23,6 +22,7 @@ class Basic extends Component {
                         <div className="notify-wrap">
                             <div>Notifications</div>
                         </div>
+                        <div className="maintain-padding"></div>
                     </div>
                     <Footer/>
       </div>

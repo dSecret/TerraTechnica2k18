@@ -64,7 +64,6 @@ class OpenEvent extends Component {
                         </ul>
                     </div>
     }
-
     return (
       <div className="OpenEvent" style={sectionStyle}>
              <div className="title comOE">{this.props.params.id}</div>

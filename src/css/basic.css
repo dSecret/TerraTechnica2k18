@@ -9,6 +9,10 @@
 	position:relative;
 	padding-bottom:8vh;
 }
+.maintain-padding{
+	width:100vw;
+	height:15vh;
+}
 .notify-wrap{
 	position:fixed;
 	left:0;
