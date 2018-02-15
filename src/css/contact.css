@@ -11,8 +11,9 @@
 	align-items:center;
   	justify-content:space-around;
   	flex-wrap: wrap;
-  	word-spacing:2px;
-  	line-height:230%;
+  	word-spacing:3px;
+  	letter-spacing: 2px;
+  	line-height:170%;
 	-webkit-touch-callout: text !important;
     -webkit-user-select: text !important;
     -khtml-user-select: text !important;
@@ -27,16 +28,18 @@
 	width:360px;
 	height:280px;
 	/*background-color:rgba(211,211,0,0.1);*/
-	background-color: #0c090c;
-background-image: linear-gradient(45deg, #0c090c 0%, #353637 34%, #b7bab8 60%, #585757 100%);
+	background-color:lightgrey;
 
 }
 .cmnContact{
 	margin:15px;
 	width:360px;
-	/*background-color:rgba(211,211,0,0.1);*/
-	background-color: #0c090c;
-background-image: linear-gradient(45deg, #0c090c 0%, #353637 34%, #b7bab8 60%, #585757 100%);
+
+	/*background-color:rgba(255,255,255,0.5);*/
+	/*border: 3px solid white;*/
+	/*box-shadow: */
+	/*background-color: #0c090c;*/
+/*background-image: linear-gradient(45deg, #0c090c 0%, #353637 34%, #b7bab8 60%, #585757 100%);*/
 
 }
 .addContact{
@@ -44,10 +47,11 @@ background-image: linear-gradient(45deg, #0c090c 0%, #353637 34%, #b7bab8 60%, #
 }
 .addContact h3{
 	font-size:28px;
+	color: grey;
 }
 .addContact p{
 	color:white;
-	font-size:22px;
+	font-size:20px;
 }
 .forlast{
 	width:350px;

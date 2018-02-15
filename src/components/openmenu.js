@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router'
 
+import FlatButton from 'material-ui/FlatButton';
+import Clear from 'material-ui/svg-icons/content/clear'
+import {fullGrey} from 'material-ui/styles/colors'
 import Footer from './footermenu.js'
 // components imports
 // css imports
 import '../css/openmenu.css';
+const iconStyles = {
+  height:40,
+  width:40,
+  marginTop:20
+};
 
 class OpenMenu extends Component {
   render() {
@@ -14,11 +22,11 @@ class OpenMenu extends Component {
                         {tit:'Team',linki:'/team'},
                         {tit:'Workshops',linki:'/workshops'},
                         {tit:'GuestLectures',linki:'/lectures'},
-                        {tit:'Notifications',linki:'/notifications'},
+                        {tit:'Notifications',linki:'/'},
                       ]
         menuOptions=menuOptions.map((item,index)=>{
             return(
-                          <Link to={item.linki}>
+                          <Link to={item.linki} key={index}>
                             <button onClick={closemenu} className="draww meett  navbutt">{item.tit}</button>
                           </Link>
               )
@@ -30,8 +38,10 @@ class OpenMenu extends Component {
 
     return (
       <div id="openmenu-cont">
-       <div class="close-but-cont">
-              <span  onClick={closemenu}>X</span>
+       <div className="close-but-cont">
+              <span  onClick={closemenu}>  
+                  <Clear style={iconStyles}/>
+            </span>
         </div>        
         <div id="second-child">
             {menuOptions}

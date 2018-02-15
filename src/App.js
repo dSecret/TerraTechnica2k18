@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import { Router, Route,browserHistory } from 'react-router'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import logo from './logo.svg';
+import logo from './static/stars1.gif';
 import './App.css';
 
 
 // Components Modules
 import Basic from './basic.js'
-import NavBar from './components/navbar'
-import Footer from './components/footer'
-import OpenMenu from './components/openmenu'
-import MenuButton from './components/menubutton'
+// import NavBar from './components/navbar'
+// import Footer from './components/footer'
+// import OpenMenu from './components/openmenu'
+// import MenuButton from './components/menubutton'
 // Pages Modules
 import Home from './pages/home/home'
 import Events from './pages/events/events'
@@ -19,14 +19,17 @@ import Team from './pages/team/team.js'
 import NotFound from './notfound.js'
 import OpenEvent from './pages/events/event/openevent.js'
 import Contact from './pages/contact/contact.js'
-import Canvas from './components/canvas.js'
+// import Canvas from './components/canvas.js'
 import Lectures from './pages/Lectures/lectures'
 import Workshops from './pages/workshop/workshops.js'
+const styles={
+  backgroundImage:`url(${logo})`
+}
 // Parent Component
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App" style={styles}>
              <MuiThemeProvider>
                   <div>
                     <Router history={browserHistory}>

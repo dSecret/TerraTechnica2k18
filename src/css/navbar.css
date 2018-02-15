@@ -23,6 +23,12 @@
 	left:0;
 	height:14vh;
 	/*background-color:red;*/
+/*	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;*/
 }
 .rel-wrap .options-wrap{
 	/*background-color: green;*/
@@ -51,23 +57,6 @@
 	padding:0px;
 	height:0;
 }
-/*.options-wrap .nav-options{
-	margin:20px 0 0 0;
-	padding:20px 5px;
-	color:white;
-	font-family: 'Roboto',sans-serif;
-	width:100px;
-	text-align: center;
-	user-select: none;
-	cursor: pointer;
-	transform:skew(-10deg);
-	background-color:rgba(0,0,0,0.5);
-}
-.options-wrap>span{
-	transform:rotateZ(-0deg);
-	display: inline-block;
-	font-size:130%;
-}*/
 @media only screen and (max-width:14in){
 	#fullform{
 		width:0;
@@ -76,6 +65,17 @@
 	#shortform{
 		height:100%;
 		padding-right:20px;
+	}
+}
+@media only screen and (max-width:7in){
+	.NavBar{
+		height:11vh;	
+	}
+	.rel-wrap .logo-wrap{
+		height: 11vh;
+	}
+	.form-css{
+		height:11vh;
 	}
 }
 .navbut {
@@ -229,40 +229,4 @@ background-image: linear-gradient(45deg, #0c090c 0%, #353637 34%, #b7bab8 60%, #
 	background-color:black;
 	border-top:2px solid white;
 	border-left:2px solid white;
-}
-
-@media only screen and (max-width:13in){
-	.expand-form{
-		width:0vw;
-	}
-	.short-form{
-		width:100vw;
-	}
-}
-/*Old CSS props*/
-.navbar-cont{
-	width:100vw;
-	background-color:lightblue ;
-	position: relative;
-	top:0;
-	left:0;
-	z-index: 100;
-}
-.title{
-	font-size:50px;
-	font-style: 'Roboto',sans-serif;
-}
-.options-cont{
-	height:100vh;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-}
-.menu-logo-cont{
-	background-color:#2196F3;
-}
-.menu-logo{
-	border-radius:50%;
-	width:100px;
-	height:100px;
-	margin:20px 12.5px;
 }

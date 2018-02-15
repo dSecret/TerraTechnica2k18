@@ -4,7 +4,7 @@
 	/*background-color:rgba(0,0,0,0.8);*/
 	height:100vh;
 	overflow:hidden;
-	transition:0.3s;
+	transition:0.3s linear;
 	position: fixed;
 	top:0;
 	right:0;
@@ -47,17 +47,20 @@
   border: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 4px 0;
-  padding: 1em 2em;
+  margin: 1px 0;
+  padding: 0.5em 2em;
   -webkit-box-shadow: none;
           box-shadow: none;
   color:black;
-  font-size: inherit;
+  font-size:25px;
   font-weight: 700;
   position: relative;
   vertical-align: middle;
   cursor:pointer;
   background: none;
+  font-family: 'Quicksand',sans-serif;
+  outline: none;
+  -moz-outline:none;
 }
 .navbutt::before,.navbutt::after {
   -webkit-box-sizing: inherit;
@@ -93,33 +96,29 @@
   height: 100%;
 }
 .draww:hover::before {
-  border-top-color: #60daaa;
-  border-right-color: #60daaa;
   -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
   transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 .draww:hover::after {
-  border-bottom-color: #60daaa;
-  border-left-color: #60daaa;
   -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
 
 .meett:hover {
-  color: white;
-  background-color:rgba(0,0,0,0.5);
+  /*color: black;*/
+  /*background-color:none;*/
 }
 .meett::after {
   top: 0;
   left: 0;
 }
 .meett:hover::before {
-  border-top-color: red;
-  border-right-color: red;
+  border-top-color:#00BCD4;
+  border-right-color:none !important;
 }
 .meett:hover::after {
-  border-bottom-color: red;
-  border-left-color: red;
+  border-bottom-color:#00BCD4;
+  border-left-color:none !important;
   -webkit-transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
   transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
 }

@@ -1,14 +1,17 @@
-
 .Basicwrap{
 	/*width:60vh;*/
 	margin-top:14.5vh;
-	height:75.5vh;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
+	height:85.5vh;
+/*	box-sizing: border-box;
+	-moz-box-sizing: border-box;*/
 	overflow-x:hidden;
 	overflow-y:scroll;
 	position:relative;
-	/*background-image:url('/src/static/stars1.gif')*/
+	padding-bottom:8vh;
+}
+.maintain-padding{
+	width:100vw;
+	height:15vh;
 }
 .notify-wrap{
 	position:fixed;
@@ -33,7 +36,8 @@
 }
 @media only screen and (max-width:7in){
 	.Basicwrap{
-		height:87.5vh;
+		height:89.5vh;
+		margin-top:11.5vh;
 		/*background-color: green;*/
 	}	
 	.notify-wrap{

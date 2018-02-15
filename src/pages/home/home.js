@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 import '../../css/home.css';
 
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
-import {Swipeable,defineSwipe} from 'react-touch';
+import { Link} from 'react-router'
+
 // import custom modules
 import About from '../../components/about'
 import TitleAnim from '../../components/titleAnim'
 import CountDownTimer from '../../components/count_down_timer'
 import Canvas from '../../components/canvas.js'
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const swipe = defineSwipe({swipeDistance:20})
 
 const styles = {
   headline: {
@@ -68,9 +65,66 @@ class Home extends Component {
   render() {
     return (
 		<div className="Home">
-        	{/*<TitleAnim/>*/}	
-			{/*<CountDownTimer/>*/}
-      <Canvas/>
+        <Link to={{pathname:'/events',query:{type:'robotics'}}}>
+          <div className="view" id="view1">
+            <div className="plane main" id="plane1">
+              <div className="content"><div>
+                    <img src={require('../../static/matrix.png')} alt="" />
+              </div></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+            </div>
+          </div>
+        </Link>
+        <Link to={{pathname:'/events',query:{type:'coding'}}}>
+          <div className="view" id="view2">
+            <div className="plane main" id="plane2">
+              <div className="content"><div>
+                    <img src={require('../../static/gear.png')} alt="" />
+              </div></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+            </div>
+          </div>
+        </Link>
+        <Link to={{pathname:'/events',query:{type:'informal'}}}>
+          <div className="view" id="view3">
+            <div className="plane main" id="plane3">
+              <div className="content"><div>
+                    <img src={require('../../static/informal_icon.png')} alt="" />
+              </div></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+            </div>
+          </div>
+        </Link>
+        <Link to={{pathname:'/events',query:{type:'misc'}}}>
+          <div className="view" id="view4">
+            <div className="plane main" id="plane4">
+              <div className="content"><div>
+                    <img src={require('../../static/misc.png')} alt="" />
+              </div></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+            </div>
+          </div>
+        </Link>
 		</div>
     );
   }
@@ -78,6 +132,6 @@ class Home extends Component {
 
 export default Home;
 
-                    {/*    <div class="about-but" id="navDown">
+                    {/*    <div className="about-but" id="navDown">
                           <a href="#about" ><span></span></a>
                         </div>*/}

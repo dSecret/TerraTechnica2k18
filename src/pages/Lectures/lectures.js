@@ -13,9 +13,7 @@ class Lectures extends Component {
   render() {
     return (
       <div className="Lectures">
-          <div className="earth-wrap">
             Coming Soon...
-          </div>
       </div>
     );
   }

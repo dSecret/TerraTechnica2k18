@@ -1,12 +1,11 @@
 .layer1-options-cont{
 	height:80px;
-	width:250px;
+	width:270px;
 	display: flex;
 	align-items:center;
   	padding:0;
   	position:relative;
   	margin:5px 0 0 10px;
-  	
 }
 .layer1-ic-wrap{
 	position: absolute;
@@ -25,16 +24,16 @@
 	position: absolute;
 	left:60px;
 	top:8px;	
-	background-color:rgba(0,0,0,0.8);
-	width:190px;
+	background-color:lightgrey;
+	width:210px;
 	z-index:1;
 	height:64px;
-	width:0;
+	/*width:0;*/
 	transition: all .3s ease-in-out;
 }
 .layer1-content-wrap{
-	width:190px;
-	background-color:lightgrey;
+	width:210px;
+	background-color:none;
 	height:64px;
 	display: flex;
 	align-items:center;
@@ -58,10 +57,10 @@
   	font-weight: bold;
   	letter-spacing:1px;
   	font-size:19px;
-  	color:white;
+  	color:black;
 }
 .layer1-options-cont:hover .layer1-content-back{
-	width:190px;
+	width:0px;
 }
 .layer1-options-cont:hover .layer1-content-wrap div{
 		color:white;

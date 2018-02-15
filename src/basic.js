@@ -5,11 +5,10 @@ import React, { Component } from 'react';
 // Components Modules
 import NavBar from './components/navbar'
 import Footer from './components/footer'
-import OpenMenu from './components/openmenu'
-import MenuButton from './components/menubutton'
+// import OpenMenu from './components/openmenu'
+// import MenuButton from './components/menubutton'
 // Pages Modules
 import './css/basic.css'
-
 
 
 // Parent Component
@@ -23,6 +22,7 @@ class Basic extends Component {
                         <div className="notify-wrap">
                             <div>Notifications</div>
                         </div>
+                        <div className="maintain-padding"></div>
                     </div>
                     <Footer/>
       </div>
