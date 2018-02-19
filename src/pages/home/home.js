@@ -9,6 +9,9 @@ import TitleAnim from '../../components/titleAnim'
 import CountDownTimer from '../../components/count_down_timer'
 import Canvas from '../../components/canvas.js'
 
+import TTLogo from '../../static/logo.png'
+
+import '../../css/home_simple.css'
 
 const styles = {
   headline: {
@@ -65,66 +68,9 @@ class Home extends Component {
   render() {
     return (
 		<div className="Home">
-        <Link to={{pathname:'/events',query:{type:'robotics'}}}>
-          <div className="view" id="view1">
-            <div className="plane main" id="plane1">
-              <div className="content"><div>
-                    <img src={require('../../static/matrix.png')} alt="" />
-              </div></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-            </div>
-          </div>
-        </Link>
-        <Link to={{pathname:'/events',query:{type:'coding'}}}>
-          <div className="view" id="view2">
-            <div className="plane main" id="plane2">
-              <div className="content"><div>
-                    <img src={require('../../static/gear.png')} alt="" />
-              </div></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-            </div>
-          </div>
-        </Link>
-        <Link to={{pathname:'/events',query:{type:'informal'}}}>
-          <div className="view" id="view3">
-            <div className="plane main" id="plane3">
-              <div className="content"><div>
-                    <img src={require('../../static/informal_icon.png')} alt="" />
-              </div></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-            </div>
-          </div>
-        </Link>
-        <Link to={{pathname:'/events',query:{type:'misc'}}}>
-          <div className="view" id="view4">
-            <div className="plane main" id="plane4">
-              <div className="content"><div>
-                    <img src={require('../../static/misc.png')} alt="" />
-              </div></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
-            </div>
-          </div>
-        </Link>
+        	<div className="HomeTTLogo">
+				<img className="HomeTTLogoimg" src={ TTLogo }/>
+			</div>
 		</div>
     );
   }
