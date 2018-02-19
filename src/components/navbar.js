@@ -38,8 +38,7 @@ class NavBar extends Component {
        <div className="NavBar">
             <div className="rel-wrap">
               <div className="logo-wrap">
-                    <img src={require('../static/logo.png')} alt="" className="toplogo"/>
-                    <img src={require('../static/nitdd.png')} alt="" className="seclogo"/>
+                    <img src={require('../static/Terra Technica 18 White Small 18.png')} alt="" className="toplogo"/>
               </div>
               <div className="options-wrap" id="fullform">
                     {menuOptions}
