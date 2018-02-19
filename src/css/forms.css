@@ -1,0 +1,38 @@
+.Forms{
+	width:60vw;
+	padding:3vw;
+	margin:0 auto;
+	background-color: white;
+	margin-bottom:7vh !important;
+	overflow: hidden;
+	font-family: 'Roboto',sans-serif;
+}
+.title{
+	color:black;
+	font-size:35px;
+	font-family:'Nova Flat', cursive;
+	text-align:center;
+	text-decoration: underline;
+	padding:15px;
+}
+.wrapper-player{
+	border:1px solid lightgrey;
+	margin:10px 5px;
+	border-radius:5px;
+	padding:3%;
+}
+.player{
+	margin-top:5px;
+}
+.warnings{
+	color:red !important;
+	font-size:15px;
+	font-family: 'Roboto',sans-serif;
+}
+@media only screen and (max-width:9in){
+	.Forms{
+		width:97vw;
+		margin-top:2vh;
+		padding:7vh 1.5vw;
+	}
+}

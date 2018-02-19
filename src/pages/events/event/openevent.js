@@ -5,6 +5,8 @@ import'../../../css/openevent.css'
 import Db from '../../../static/content.js'
 // import Background from '../../../static/opBack.png';
 import RaisedButton from 'material-ui/RaisedButton';
+import { Link} from 'react-router'
+
 // Parent Component
 var sectionStyle={
   // backgroundImage:`url(${Background}`
@@ -94,7 +96,14 @@ class OpenEvent extends Component {
                 the decision of the coordinating committee shall be binding to all.
              </div>
              <div className="reg-cont">
-                <RaisedButton label="Register" primary={true} style={style} />
+                <Link to={{pathname:'/register',query:{event:this.props.params.id}}}>
+                    <RaisedButton 
+                      label="Register" 
+                      primary={true} 
+                      style={style} 
+                      disabled={this.props.params.id!=='MACHINE LEARNING CHALLENGE'}
+                      />
+                </Link>
              </div>
              {/*<div>{this.state.data.title}</div>*/}
       </div>
@@ -102,6 +111,7 @@ class OpenEvent extends Component {
   }
   componentDidMount(){
   	this.fetchData()
+    // console.log(this.props.params.id==='MACHINE LEARNING CHALLENGE')
   }
   fetchData(){
   // 	const base = 'https://jsonplaceholder.typicode.com';

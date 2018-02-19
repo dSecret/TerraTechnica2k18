@@ -122,7 +122,7 @@
   z-index:100;
   /*background: radial-gradient(circle at 100px 100px, #5cabff, #000);*/
 }
-.plane.main {
+.main {
   position: absolute;
   top: 0;
   left: 0;
@@ -134,9 +134,8 @@
   -webkit-animation: rotate 4s infinite linear;
           animation: rotate 4s infinite linear;
 }
-.plane.main .circle {
-/*  width: 110px;
-  height: 110px;*/
+.main .circle {
+
   position: absolute;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
@@ -145,7 +144,7 @@
           box-sizing: border-box;
 
 }
-.plane.main .circle::before, .plane.main .circle::after {
+.main .circle::before, .main .circle::after {
   content: "";
   display: block;
   position: absolute;
@@ -163,31 +162,31 @@
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.plane.main .circle::before {
+.main .circle::before {
   -webkit-transform: translateZ(-90px);
           transform: translateZ(-90px);
 }
-.plane.main .circle::after {
+.main .circle::after {
   -webkit-transform: translateZ(90px);
           transform: translateZ(90px);
 }
-.plane.main .circle:nth-child(1) {
+.main .circle:nth-child(1) {
   -webkit-transform: rotateZ(72deg) rotateX(63.435deg);
           transform: rotateZ(72deg) rotateX(63.435deg);
 }
-.plane.main .circle:nth-child(2) {
+.main .circle:nth-child(2) {
   -webkit-transform: rotateZ(144deg) rotateX(63.435deg);
           transform: rotateZ(144deg) rotateX(63.435deg);
 }
-.plane.main .circle:nth-child(3) {
+.main .circle:nth-child(3) {
   -webkit-transform: rotateZ(216deg) rotateX(63.435deg);
           transform: rotateZ(216deg) rotateX(63.435deg);
 }
-.plane.main .circle:nth-child(4) {
+.main .circle:nth-child(4) {
   -webkit-transform: rotateZ(288deg) rotateX(63.435deg);
           transform: rotateZ(288deg) rotateX(63.435deg);
 }
-.plane.main .circle:nth-child(5) {
+.main .circle:nth-child(5) {
   -webkit-transform: rotateZ(360deg) rotateX(63.435deg);
           transform: rotateZ(360deg) rotateX(63.435deg);
 }
