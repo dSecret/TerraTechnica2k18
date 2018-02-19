@@ -204,7 +204,7 @@ const Db={
     	intro:'With the promising spurge in job demand in data science and machine learning currently and years to come, this is probably the best time to take up data science as a career. Hard to believe ?You would have recently come across innumerable online or offline courses ads launched by colleges and universities on data science. Why would it be ? Because, this demand is real. Companies are convinced that data analysis and predictive analysis can help them make better decision. This challenge will help and encourage beginners to acquire the practical skill sets required by a data scientist. Focus will remain more on learning, writing more code and acquiring understanding of how it works.',
     	intropoints:[],
     	ps:'',
-    	team:0,
+    	team:2,
     	win:'',
     	rules1:["Your output will be evaluated only for 50% of the test data while the contest is running. Once the contest is over, output for the remaining 50% of the data will be evaluated and the final rank will be awarded",
     	"You will have to upload your output on the problem page in the format given in the problem statement. In addition to your output, you will also have to submit your source and other files in .zip or .tar compressed archive.",

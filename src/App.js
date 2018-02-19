@@ -18,6 +18,8 @@ import Events from './pages/events/events'
 import Team from './pages/team/team.js'
 import NotFound from './notfound.js'
 import OpenEvent from './pages/events/event/openevent.js'
+import Forms from './pages/events/event/forms.js'
+
 import Contact from './pages/contact/contact.js'
 // import Canvas from './components/canvas.js'
 import Lectures from './pages/Lectures/lectures'
@@ -41,6 +43,7 @@ class App extends Component {
                            <Route path="/events/coding/:id" component={OpenEvent}/>
                            <Route path="/events/informal/:id" component={OpenEvent}/>
                            <Route path="/events/miscellaneous/:id" component={OpenEvent}/>
+                           <Route path="/register" component={Forms}/>
                            <Route path="/contactus" component={Contact}/>
                            <Route path="/workshops" component={Workshops}/>
                            <Route path="/lectures" component={Lectures}/>
