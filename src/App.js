@@ -21,11 +21,11 @@ import OpenEvent from './pages/events/event/openevent.js'
 import Forms from './pages/events/event/forms.js'
 
 import Contact from './pages/contact/contact.js'
-// import Canvas from './components/canvas.js'
+import Canvas from './components/canvas_2d.js'
 import Lectures from './pages/Lectures/lectures'
 import Workshops from './pages/workshop/workshops.js'
 const styles={
-  backgroundImage:`url(${logo})`
+  // backgroundImage:`url(${logo})`
 }
 // Parent Component
 class App extends Component {
@@ -52,7 +52,7 @@ class App extends Component {
                     </Router>
                   </div>
              </MuiThemeProvider>
-             {/*<Canvas/>*/}
+             <Canvas/>
       </div>
     );
   }
