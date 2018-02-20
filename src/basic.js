@@ -27,7 +27,11 @@ class Basic extends Component {
                         :''
                         }
                     </div>
-                    <Footer/>
+                    {this.props.location.pathname==='/'?
+                          <Footer/>
+                        :''
+                        }
+                    
       </div>
     );
   }

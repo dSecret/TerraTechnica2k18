@@ -74,7 +74,7 @@ class Home extends Component {
 				    <img className="HomeTTLogoimg" src={ TTLogo }/>
             <div className="wrap-nitdlogo">
               <img className="NitdLogoimg" src={NITDLogo}/>
-              <span>NIT Delhi</span>
+              <span>NIT DELHI</span>
             </div>
 			    </div>
 		</div>

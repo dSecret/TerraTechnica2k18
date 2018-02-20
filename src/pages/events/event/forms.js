@@ -50,6 +50,7 @@ class Forms extends Component {
       }).then(res=>{
           console.log(res)
       })
+      // console.log(this.state.playerinfo)
     }
   }
   
@@ -86,7 +87,7 @@ class Forms extends Component {
                   />
   						    <TextField 
                       name="phno"
-                      hintText="Phone no."
+                      hintText="Phone no.(+91)"
                       onChange={(eve)=>this.handlePlayerInput(eve,i)}
                   />
   						    <TextField 
@@ -122,7 +123,7 @@ class Forms extends Component {
               {this.state.value?<p>All field are required.</p>:''}
           	  {player}
               {this.state.required?
-                <div className="warnings">*Required fields can't be empty</div>
+                <div className="warnings">*Required fields can't be empty or entered data is not valid</div>
                 :''
               }
               {this.state.value
@@ -144,14 +145,18 @@ class Forms extends Component {
         return false
       }
       let bar=true
+      let  valid=true
+      let re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      let ph=/^\d{10}$/
       let foo=this.state.playerinfo
           foo.some(e=>{
-              if(e.name===''||e.phno===''||e.email===''||e.rollno===''||e.collg===''){
+              if(e.name===''||e.phno===''||e.email===''||e.rollno===''||e.collg===''||!ph.test(e.phno)||!re.test(e.email)){
                   this.setState({required:true})
-                  return bar=false
+                  bar=false
               }
           })
           return bar
+
   }
   componentDidMount(){
       let bar=this.props.location.query.event

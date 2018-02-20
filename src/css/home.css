@@ -12,16 +12,24 @@
   text-align: center;
   padding-bottom:20%;
 }
+.wrap-nitdlogo{
+  display: flex;
+  height:90px;
+  align-items:center;
+  justify-content: center;
+}
 .HomeTTLogo span{
   color:white;
-  margin:0;
+  margin-left:15px;
+  font-size:26px;
   vertical-align: center;
   font-family: 'Roboto',sans-serif;
 }
 .HomeTTLogoimg{
   /*width:250px;*/
   height:170px;
-}.NitdLogoimg{
+}
+.NitdLogoimg{
   width:90px;
   height:90px;  
   vertical-align: center;
