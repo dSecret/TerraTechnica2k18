@@ -42,7 +42,7 @@ class Forms extends Component {
     if(this.handleErrors()){
       axios({
         method:'post',
-        url:'https://texter-d1f26.firebaseio.com/terraTechnica.json',
+        url:'http://terratechnica.in/test.php',
         data:{
             event:this.props.location.query.event,
             players:this.state.playerinfo
@@ -147,7 +147,6 @@ class Forms extends Component {
       let foo=this.state.playerinfo
           foo.some(e=>{
               if(e.name===''||e.phno===''||e.email===''||e.rollno===''||e.collg===''){
-                console.log("hello")
                   this.setState({required:true})
                   return bar=false
               }
