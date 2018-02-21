@@ -42,8 +42,10 @@ class Forms extends Component {
     if(this.handleErrors()){
       axios({
         method:'post',
+
         url:'http://terratechnica.in/test.php',
         data:{
+
             event:this.props.location.query.event,
             players:this.state.playerinfo
         }

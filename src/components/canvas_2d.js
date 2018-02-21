@@ -22,14 +22,17 @@ class Particle {
 
 	genStars(vals) {
 		for(let i = 0; i < vals.count; i++) {
+			let size = Math.random() * 1.2 + 0.2
 			this.stars.push({
 				x: Math.random() * window.innerWidth,
 				y: Math.random() * window.innerHeight,
-				size: Math.random() * 1.2 + 0.2,
+				size: size, 
 				vel: {
-					x: Math.random() * 2 + 1,
-					y: Math.random() * 2 + 1,
-				}
+					x: Math.random() * 0.5 + 0.1,
+					y: Math.random() * 0.5 + 0.1,
+				},
+				bubble: false,
+				minSize: size
 			});
 		}
 	}
@@ -42,12 +45,57 @@ class Particle {
 		
 	}
 
+	newStars(startPos, count) {
+		for (let i = 0; i < count; i++) {
+			let size = Math.random() * 1.2 + 0.2
+			let deg = Math.random() * (2 * Math.PI)
+			this.stars.push({
+				x: startPos.x,
+				y: startPos.y,
+				size: size * 3,
+				vel: {
+					x: (Math.random() * 4 + 1) * Math.cos(deg),
+					y: (Math.random() * 4 + 1) * Math.sin(deg),
+				},
+				bubble: false,
+				minSize: size
+			})
+		}	
+	}
+
+	bubbleStar(mousePos, range) {
+		this.stars = this.stars.map(s => {
+	
+			if (Math.sqrt(Math.pow(mousePos.x - s.x, 2) + Math.pow(mousePos.y - s.y, 2)) < range) {
+				s.bubble = true
+			} else {
+				s.bubble = false
+			}
+
+			return s
+		
+		})
+	}
+
+	breathStar(maxVal) {
+		this.stars = this.stars.map(s => {
+			if (s.bubble) {
+				s.size = s.size < maxVal ? s.size + s.minSize : maxVal
+			} else {
+				s.size = s.size > s.minSize ? s.size - s.minSize : s.minSize
+			}
+
+			return s
+		})
+	}
+
 	draw(ctx) {
 		this.stars.forEach(s => {
 			ctx.beginPath()
 			ctx.arc(s.x, s.y, s.size, 0, 2 * Math.PI)
 			ctx.fill()
 		})
+		this.breathStar(5)
 		this.stars.map(s => {
 			s.x += s.vel.x
 			s.y += s.vel.y
@@ -57,7 +105,16 @@ class Particle {
 			if (s.y < 0) { s.y = window.innerHeight }
 			if (s.vel.x > 0 ) { s.vel.x -= this.decel }
 			if (s.vel.y > 0 ) { s.vel.y -= this.decel }
+			s.bubble = false
 		})
+	}
+
+	removeExcess(threshold) {
+		if (this.stars.count > threshold) {
+			for(let i = 0; i < (this.stars.count - threshold); i++) {
+				this.stars.shift()
+			}
+		}
 	}
 }
 
@@ -79,35 +136,29 @@ export default class backgroundCanvasComponent extends Component {
 
 	componentDidMount() {
 		this.updateCanvas()
-		this.Particle.genStars({count: 900})
+		this.Particle.genStars({count: (window.innerWidth * window.innerHeight) / 1e4})
 		// TODO Logic for stars interact with mouse
 		
-		/* window.addEventListener('mousemove', e => {
-			let distVec = {
-				x: (e.clientX - this.state.prevPushVector.x),
-				y: (e.clientY - this.state.prevPushVector.y)
-			}
-			let pushVelocity = {
-				x: Math.sqrt(2 * 3 * Math.abs(distVec.x)),
-				y: Math.sqrt(2 * 3 * Math.abs(distVec.y))
-			}
-			this.Particle.pushAllStars(pushVelocity)
-			this.setState({
-				prevPushVector: {
-					x: e.clientX,
-					y: e.clientY
-				}
-			})
-			console.log(pushVelocity)
+		window.addEventListener('touchstart', e => {
+			this.Particle.newStars({ x: e.touches[0].clientX, y: e.touches[0].clientY }, 10)
 		}, false)
-		*/
+
+		window.addEventListener('mousedown', e => {
+			this.Particle.newStars({ x: e.clientX, y: e.clientY }, 100)
+		})
+
+
+		window.addEventListener('mousemove', e => {
+			this.Particle.bubbleStar({x: e.clientX, y: e.clientY}, 150)
+		}, false)
+
 		window.addEventListener('resize', () => {
 			this.Particle.stars = []
-			this.Particle.genStars({ count: 200 })
+			this.Particle.genStars({ count: 900 })
 			const ctx = this.refs.globe_canvas.getContext('2d');	
 			ctx.fillStyle = '#000'
 			ctx.fillRect(0, 0, window.innerWidth, window.innerHeight)
-
+			this.Particle.removeExcess(5000)
 		}, false)
 	}
 
