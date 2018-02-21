@@ -1,214 +1,36 @@
 .Home{
-  /*display:block;*/
- /* align-items:center;
-  justify-frecontent: center;*/
+  display:flex;
+  align-items:center;
+  justify-content: center;
   height:100%;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   overflow: hidden;
   width:100vw;
-  position: relative;
 }
-.earth-wrap{
-  width:320px;
-  height:320px;
-  border-radius: 50%;
-  border:2px solid white;
+.HomeTTLogo{
+  text-align: center;
+  padding-bottom:20%;
 }
-#view1{
-  top:25%;
-  left:16%;  
-}
-#view2{
-  top: 70%;
-  left:35%;
-}
-#view3{
-  top: 30%;
-  left:55%;  
-}
-#view4{
-  top: 55%;
-  left:80%;
-}
-.view {
-  position: absolute;
-  -webkit-perspective: 400;
-          perspective: 400;
-  background-color: white;
-  display: block;
-}
-.plane, .plane .circle{
-    transform:scale(0.4,0.4);
-  -webkit-transform:scale(0.4.0.4);
-  -moz-transform:scale(0.4,0.4);
-}
-#plane1 , #plane1 .circle{
-  width: 90px;
-  height: 90px;
-}
-#plane2 , #plane2 .circle{
-  width: 60px;
-  height:60px;
-}
-#plane3 , #plane3 .circle{
-  width: 70px;
-  height: 70px;
-}
-#plane4 , #plane4 .circle{
-  width: 100px;
-  height: 100px;
-}
-#plane1 .circle{
-    transform:scale(0.4,0.4,0.4) !important;
-  -webkit-transform:scale(0.4.0.4,0.4);
-  -moz-transform:scale(0.4,0.4,0.4);
-  -webkit-box-shadow: 0 0 30px crimson, inset 0 0 30px crimson;
-          box-shadow: 0 0 30px crimson, inset 0 0 30px crimson;
-}
-#plane2 .circle{
-    transform:scale(0.4,0.4,0.4);
-  -webkit-transform:scale(0.4.0.4,0.4);
-  -moz-transform:scale(0.4,0.4,0.4);
-  -webkit-box-shadow: 0 0 10px crimson, inset 0 0 10px crimson;
-          box-shadow: 0 0 10px crimson, inset 0 0 10px crimson;
-}
-#plane3 .circle{
-    transform:scale(0.4,0.4,0.4);
-  -webkit-transform:scale(0.4.0.4,0.4);
-  -moz-transform:scale(0.4,0.4,0.4);
-  -webkit-box-shadow: 0 0 10px crimson, inset 0 0 10px crimson;
-          box-shadow: 0 0 10px crimson, inset 0 0 10px crimson;
-}
-#plane4 .circle{
-    transform:scale(0.4,0.4,0.4);
-  -webkit-transform:scale(0.4.0.4,0.4);
-  -moz-transform:scale(0.4,0.4,0.4);
-  -webkit-box-shadow: 0 0 10px crimson, inset 0 0 10px crimson;
-          box-shadow: 0 0 10px crimson, inset 0 0 10px crimson;
-}
-.plane {
-  /*background-color: white;*/
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-
-}
-.plane .content{
-  height:100%;
-  width:100%;
-  /*display:flex;*/
-  position:absolute;
-  top:0;
-  left:0;
-
-
-}
-.plane .content div{
-  width:100%;
-  height:100%;
+.wrap-nitdlogo{
+  display: flex;
+  height:90px;
   align-items:center;
   justify-content: center;
-  /*background-color: red;*/
+}
+.HomeTTLogo span{
   color:white;
-  display:flex;
-  font-family: 'Nova flat',cursive;
+  margin-left:15px;
+  font-size:26px;
+  vertical-align: center;
+  font-family: 'Roboto',sans-serif;
 }
-.plane .content img{
-    display: block;
-  background: black;
-  height:50px;
-  width:50px;
-  border-radius:50%;
-  z-index:100;
-  /*background: radial-gradient(circle at 100px 100px, #5cabff, #000);*/
+.HomeTTLogoimg{
+  /*width:250px;*/
+  height:170px;
 }
-.main {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  -webkit-transform: rotateX(60deg) rotateZ(-30deg);
-          transform: rotateX(60deg) rotateZ(-30deg);
-  -webkit-animation: rotate 4s infinite linear;
-          animation: rotate 4s infinite linear;
-}
-.main .circle {
-
-  position: absolute;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  border-radius: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-
-}
-.main .circle::before, .main .circle::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: 10%;
-  height: 10%;
-  border-radius: 100%;
-  background:crimson;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-.main .circle::before {
-  -webkit-transform: translateZ(-90px);
-          transform: translateZ(-90px);
-}
-.main .circle::after {
-  -webkit-transform: translateZ(90px);
-          transform: translateZ(90px);
-}
-.main .circle:nth-child(1) {
-  -webkit-transform: rotateZ(72deg) rotateX(63.435deg);
-          transform: rotateZ(72deg) rotateX(63.435deg);
-}
-.main .circle:nth-child(2) {
-  -webkit-transform: rotateZ(144deg) rotateX(63.435deg);
-          transform: rotateZ(144deg) rotateX(63.435deg);
-}
-.main .circle:nth-child(3) {
-  -webkit-transform: rotateZ(216deg) rotateX(63.435deg);
-          transform: rotateZ(216deg) rotateX(63.435deg);
-}
-.main .circle:nth-child(4) {
-  -webkit-transform: rotateZ(288deg) rotateX(63.435deg);
-          transform: rotateZ(288deg) rotateX(63.435deg);
-}
-.main .circle:nth-child(5) {
-  -webkit-transform: rotateZ(360deg) rotateX(63.435deg);
-          transform: rotateZ(360deg) rotateX(63.435deg);
-}
-
-@-webkit-keyframes rotate {
-  0% {
-    -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
-            transform: rotateX(0) rotateY(0) rotateZ(0);
-  }
-  100% {
-    -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-            transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-  }
-}
-
-@keyframes rotate {
-  0% {
-    -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
-            transform: rotateX(0) rotateY(0) rotateZ(0);
-  }
-  100% {
-    -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-            transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-  }
+.NitdLogoimg{
+  width:90px;
+  height:90px;  
+  vertical-align: center;
 }

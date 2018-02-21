@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Router, Route,browserHistory } from 'react-router'
+import { Router, Route,hashHistory } from 'react-router'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import logo from './static/stars1.gif';
@@ -34,7 +34,7 @@ class App extends Component {
       <div className="App" style={styles}>
              <MuiThemeProvider>
                   <div>
-                    <Router history={browserHistory}>
+                    <Router history={hashHistory}>
                       <Route path="/home"component={Basic}>
                            <Route path="/" component={Home}/>
                            <Route path="/events" component={Events}/>
