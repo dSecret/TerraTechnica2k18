@@ -42,8 +42,9 @@ class Forms extends Component {
     if(this.handleErrors()){
       axios({
         method:'post',
-        url:'https://texter-d1f26.firebaseio.com/terraTechnica.json',
-        data:{
+        // url:'https://texter-d1f26.firebaseio.com/terraTechnica.json',
+        url: 'http://www.terratechnica.in/register.php',
+		data:{
             event:this.props.location.query.event,
             players:this.state.playerinfo
         }
