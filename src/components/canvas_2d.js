@@ -153,25 +153,21 @@ export default class backgroundCanvasComponent extends Component {
 			this.Particle.newStars({ x: e.clientX, y: e.clientY }, 50)
 		})
 
-		window.addEventListener(
-			'mousemove',
-			e => {
-				this.Particle.bubbleStar({ x: e.clientX, y: e.clientY }, 150)
-			},
-			false
-		)
 
-		window.addEventListener(
-			'resize',
-			() => {
-				this.Particle.stars = []
-				this.Particle.genStars({ count: 850 })
-				const ctx = this.refs.globe_canvas.getContext('2d')
-				ctx.fillStyle = '#000'
-				ctx.fillRect(0, 0, window.innerWidth, window.innerHeight)
-			},
-			false
-		)
+
+		window.addEventListener('mousemove', e => {
+			this.Particle.bubbleStar({x: e.clientX, y: e.clientY}, 150)
+		}, false)
+
+		window.addEventListener('resize', () => {
+			this.refs.globe_canvas.width  = window.innerWidth;
+			this.refs.globe_canvas.height = window.innerHeight;
+			this.Particle.stars = []
+			this.Particle.genStars({ count: 900 })
+			const ctx = this.refs.globe_canvas.getContext('2d');	
+			ctx.fillStyle = '#000'
+			ctx.fillRect(0, 0, window.innerWidth, window.innerHeight)
+		}, false)
 	}
 
 	updateCanvas() {
