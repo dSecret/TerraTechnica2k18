@@ -1,36 +1,49 @@
-.Home{
-  display:flex;
-  align-items:center;
+.Home {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  height:100%;
+  height: 100%;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   overflow: hidden;
-  width:100vw;
+  width: 100vw;
 }
-.HomeTTLogo{
+
+.HomeTTLogo {
   text-align: center;
-  padding-bottom:20%;
+  padding-bottom: 20%;
+  overflow: hidden;
 }
-.wrap-nitdlogo{
+.wrap-nitdlogo {
   display: flex;
-  height:90px;
-  align-items:center;
+  height: 90px;
+  align-items: center;
   justify-content: center;
 }
-.HomeTTLogo span{
-  color:white;
-  margin-left:15px;
-  font-size:26px;
+.HomeTTLogo span {
+  color: white;
+  margin-left: 15px;
+  font-size: 26px;
   vertical-align: center;
-  font-family: 'Roboto',sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
-.HomeTTLogoimg{
-  /*width:250px;*/
-  height:170px;
+.HomeTTLogoimg {
+  width:250px;
+  height: 170px;
+  -webkit-animation: mymove 1s; 
+  animation: mymove 1s;
 }
-.NitdLogoimg{
-  width:90px;
-  height:90px;  
+@-webkit-keyframes mymove {
+    from {transform:translateY(-90%);}
+    to {transform:translateY(0%);}
+}
+
+@keyframes mymove {
+    from {transform:translateY(-90%);}
+    to {transform:translateY(0%);}
+}
+.NitdLogoimg {
+  width: 90px;
+  height: 90px;
   vertical-align: center;
 }
