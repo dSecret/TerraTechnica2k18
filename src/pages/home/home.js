@@ -63,10 +63,6 @@ class Home extends Component {
                       // }
                 }
     };
-    scrollNext = ()=>{
-      console.log('next')
-       console.log(document.getElementById('Home').scrollHeight);
-    };
   render() {
     return (
 		<div className="Home">
