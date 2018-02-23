@@ -153,6 +153,8 @@ export default class backgroundCanvasComponent extends Component {
 		}, false)
 
 		window.addEventListener('resize', () => {
+			this.refs.globe_canvas.width  = window.innerWidth;
+			this.refs.globe_canvas.height = window.innerHeight;
 			this.Particle.stars = []
 			this.Particle.genStars({ count: 900 })
 			const ctx = this.refs.globe_canvas.getContext('2d');	
