@@ -1,6 +1,7 @@
 .EventsOptions2{
   width:100vw;
 }
+
 .comEO{
   box-sizing: border-box;
   -moz-box-sizing: border-box;	
@@ -29,6 +30,7 @@
  justify-content:center;
   flex-wrap:wrap;
   font-size:29px;
+  overflow: hidden;
 	/*background-color: red;*/
 }
 .EventsOptions2 .options .cont{

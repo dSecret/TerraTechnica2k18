@@ -69,8 +69,8 @@ class Home extends Component {
         	<div className="HomeTTLogo">
 				    <img className="HomeTTLogoimg" src={ TTLogo }/>
             <div className="wrap-nitdlogo">
-              <img className="NitdLogoimg" src={NITDLogo}/>
-              <span>NIT DELHI</span>
+              <a href="http://nitdelhi.ac.in"><img className="NitdLogoimg" src={NITDLogo}/></a>
+              {/*<span>NIT DELHI</span>*/}
             </div>
 			    </div>
 		</div>
