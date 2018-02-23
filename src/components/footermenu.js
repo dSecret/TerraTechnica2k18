@@ -7,12 +7,10 @@ class FooterMenu extends Component {
   render() {
     return (
         <div className="FooterMenu-wrapper">
-            <a href="#" className="fa fa-facebook"></a>
-            <a href="#" className="fa fa-twitter"></a>
-            <a href="#" className="fa fa-google"></a>
-            <a href="#" className="fa fa-linkedin"></a>
-            <a href="#" className="fa fa-youtube"></a>
-            <a href="#" className="fa fa-instagram"></a>
+            <a target="_blank" href="https://www.facebook.com/terratechnica/" className="fa fa-facebook"></a>
+            <a target="_blank" href="https://www.twitter.com/terra_technica" className="fa fa-twitter"></a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=mDUVf8YUVnQ" className="fa fa-youtube"></a>
+            <a target="_blank" href="https://www.instagram.com/terratechnica/" className="fa fa-instagram"></a>
         </div>
     );
   }

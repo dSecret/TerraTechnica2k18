@@ -22,9 +22,16 @@ class Basic extends Component {
                         <div className="notify-wrap">
                             <div>Notifications</div>
                         </div>
-                        <div className="maintain-padding"></div>
+                        {this.props.location.pathname!=='/'?
+                          <div className="maintain-padding"></div>
+                        :''
+                        }
                     </div>
-                    <Footer/>
+                    {this.props.location.pathname==='/'?
+                          <Footer/>
+                        :''
+                        }
+                    
       </div>
     );
   }

@@ -10,6 +10,8 @@ import CountDownTimer from '../../components/count_down_timer'
 import Canvas from '../../components/canvas.js'
 
 import TTLogo from '../../static/logo.png'
+import NITDLogo from '../../static/nitdd.png'
+
 
 import '../../css/home_simple.css'
 
@@ -69,8 +71,12 @@ class Home extends Component {
     return (
 		<div className="Home">
         	<div className="HomeTTLogo">
-				<img className="HomeTTLogoimg" src={ TTLogo }/>
-			</div>
+				    <img className="HomeTTLogoimg" src={ TTLogo }/>
+            <div className="wrap-nitdlogo">
+              <img className="NitdLogoimg" src={NITDLogo}/>
+              <span>NIT DELHI</span>
+            </div>
+			    </div>
 		</div>
     );
   }
