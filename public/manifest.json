@@ -1,15 +1,20 @@
 {
   "short_name": "TT'18",
-  "name": "'TerraTechnica@NITD'",
+  "name": "TT'18",
   "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "192x192",
-      "type": "image/png"
-    }
+        {
+            "src": "/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
   ],
-  "start_url": "/",
+  "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "grey",
-  "theme_color": "grey"
+  "background_color": "black",
+  "theme_color": "black"
 }
