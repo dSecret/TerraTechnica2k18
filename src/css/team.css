@@ -1,6 +1,6 @@
 .team{
 	width:100vw;
-	padding-top:80px;
+	padding-top:10px;
 	padding-bottom:80px;
 	overflow:hidden;
 	box-sizing: border-box;
@@ -10,6 +10,28 @@
   	justify-content: center;
   	flex-wrap:wrap;
 }
+.team-type{
+	width:200px;
+	height: 200px;
+	background-color:lightgrey;
+	display:flex;
+	color:black !important;
+	font-family:'Nova Flat', cursive;
+	font-size:17px;
+	flex-direction: column;
+	margin:10px;
+	border-radius:50%;
+	padding-top:80px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.team-type a{
+	outline: none !important;
+	text-decoration: none !important;
+	-moz-text-decoration:none !important;
+	margin-top:25px;
+	text-align:center;
+}
 .team .main-title{
 	color:white;
 	font-size:35px;
@@ -18,6 +40,12 @@
 	text-decoration: underline;
 	padding:15px;
 	margin: 20px;
+}
+.team .profiles-wrap{
+	display:flex;
+	align-items: center;
+  	justify-content: center;
+  	flex-wrap:wrap;	
 }
 /*css for profile.js*/
 .ProfileCard{
@@ -56,6 +84,7 @@
 	font-size:26px;
 	font-family:'Roboto',sans-serif;
 	padding:35px 0 35px 0;	
+	color:grey;	
 }
 .team-info-wrap .as{
 	font-size:23px;

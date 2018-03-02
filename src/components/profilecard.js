@@ -19,7 +19,7 @@ class ProfileCard extends Component {
       <div className="ProfileCard" align="center">
               <div className="team-img-wrap">
                     <img 
-                        src={require('../static/manavatar.png')} 
+                        src={require('../static/profiles/'+this.props.mem.dp)} 
                         alt="" 
                         className="team-img"
                     />

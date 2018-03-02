@@ -1,4 +1,4 @@
-export default details = [
+const Contacts = [
 	{
 		"name": "Yoga Reddy",
 		"team": "General Administration"
@@ -87,3 +87,4 @@ export default details = [
 		"name"
 	}
 ]	
+export default Contacts

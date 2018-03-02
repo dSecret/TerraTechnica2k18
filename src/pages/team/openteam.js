@@ -16,16 +16,16 @@ class OpenTeam extends Component {
       };
     }
   componentWillMount(){
-      let bar=this.props.params.id
-      if((bar in Cont)){
-      	let mems=Cont[this.props.params.id].map(e=>{
-        	return <Profilecard mem={e}/>
+      	let bar=this.props.params.id
+      	let mems=Cont.map(e=>{
+      		if(e.team==bar)
+        		return <Profilecard mem={e} key={e.name}/>
     	})
-    	this.setState({mems:mems})
-      }
-      else{
-      	browserHistory.push('team')
-      }
+    	if(mems.length)
+    		this.setState({mems:mems})
+	    else
+      		browserHistory.push('team')
+      	
 
   }
   render() {
@@ -33,7 +33,7 @@ class OpenTeam extends Component {
     return (
      <div className="team">
           <div className="main-title">{this.props.params.id}</div>
-          {this.state.mems}
+          <div className="profiles-wrap">{this.state.mems}</div>
       </div>
     );
   }
