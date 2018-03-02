@@ -54,8 +54,8 @@ class Particle {
 				y: startPos.y,
 				size: size * 3,
 				vel: {
-					x: (Math.random() * 4 + 1) * Math.cos(deg),
-					y: (Math.random() * 4 + 1) * Math.sin(deg),
+					x: (Math.random() * 4) * Math.cos(deg),
+					y: (Math.random() * 4) * Math.sin(deg),
 				},
 				bubble: false,
 				minSize: size
