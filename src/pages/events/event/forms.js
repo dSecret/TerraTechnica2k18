@@ -124,7 +124,7 @@ class Forms extends Component {
               {this.state.value?<p>All field are required.</p>:''}
           	  {player}
               {this.state.required?
-                <div className="warnings">*Required fields can't be empty or entered data is not valid</div>
+                <div className="warnings">*Required fields cannot be empty or entered data is not valid</div>
                 :''
               }
               {this.state.value
