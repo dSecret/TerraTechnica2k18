@@ -3,13 +3,14 @@
 	margin-top:14.5vh;
 	height:85.5vh;
 	overflow-x:hidden;
-	overflow-y:scroll;
+	overflow-y:auto;
 	position:relative;
 	padding-bottom:8vh;
 }
 .maintain-padding{
 	width:100vw;
 	height:15vh;
+	display: none;
 }
 .notify-wrap{
 	position:fixed;
@@ -40,5 +41,8 @@
 	}	
 	.notify-wrap{
 		display: none;
+	}
+	.maintain-padding{
+		display: block;
 	}
 }

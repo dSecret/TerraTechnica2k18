@@ -63,18 +63,14 @@ class Home extends Component {
                       // }
                 }
     };
-    scrollNext = ()=>{
-      console.log('next')
-       console.log(document.getElementById('Home').scrollHeight);
-    };
   render() {
     return (
 		<div className="Home">
         	<div className="HomeTTLogo">
 				    <img className="HomeTTLogoimg" src={ TTLogo }/>
             <div className="wrap-nitdlogo">
-              <img className="NitdLogoimg" src={NITDLogo}/>
-              <span>NIT DELHI</span>
+              <a href="http://nitdelhi.ac.in"><img className="NitdLogoimg" src={NITDLogo}/></a>
+              {/*<span>NIT DELHI</span>*/}
             </div>
 			    </div>
 		</div>

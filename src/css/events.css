@@ -18,7 +18,7 @@
   	justify-content:space-around;
   	flex-wrap: wrap;
   	flex-direction:row;
-  	overflow-y:scroll;
+  	overflow-y:auto;
   	width:100vw;
 	position:absolute;
 	top:0;
@@ -30,7 +30,8 @@
 	position:absolute;
 	top:0;
 	left:100vw;
-	overflow-y:scroll;
+	padding-bottom: 10vh;
+	overflow-y:auto;
 	font-family: 'Roboto',sans-serif;
 }
 @media only screen and (max-width:10in){

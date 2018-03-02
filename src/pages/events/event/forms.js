@@ -42,7 +42,6 @@ class Forms extends Component {
     if(this.handleErrors()){
       axios({
         method:'post',
-
         url:'http://terratechnica.in/test.php',
         data:{
 
@@ -50,7 +49,7 @@ class Forms extends Component {
             players:this.state.playerinfo
         }
       }).then(res=>{
-          console.log(res)
+          window.location='http://terratechnica.in/insta.php?req='+res.data
       })
       // console.log(this.state.playerinfo)
     }

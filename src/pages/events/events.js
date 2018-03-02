@@ -23,7 +23,6 @@ class Events extends Component {
           lin:foo.lin,
           options:foo.options
         })
-        // console.log(this.props.location.query.type)
     }
     
   handleQuery=(value)=>{

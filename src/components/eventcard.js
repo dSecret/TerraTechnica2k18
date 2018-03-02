@@ -53,7 +53,7 @@ class EventsCard extends Component {
                                <ArrowDown />
                         </FloatingActionButton>
                     </div>
-                    {this.props.content}
+                    <div className="expandable-div">{this.props.content}</div>
                   </div>
           </div>
         </div>
