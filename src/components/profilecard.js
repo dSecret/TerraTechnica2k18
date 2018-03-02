@@ -11,74 +11,31 @@ import '../css/team.css';
 
 // custom modules impor
 
-const CardTitleStyle={paddingLeft:"129px",
-                      paddingTop:"5px",
-                      backgroundColor: 'lightgrey',
-                      width:'100%'
-                    }
+
 
 class ProfileCard extends Component {
   render() {
     return (
       <div className="ProfileCard" align="center">
-          <div className="profile-card-cont" align="left">
-              <div className="profile-card-img-cont">
-                    <img src={require('../static/manavatar.png')} alt="" className="profile-card-img"/>
+              <div className="team-img-wrap">
+                    <img 
+                        src={require('../static/manavatar.png')} 
+                        alt="" 
+                        className="team-img"
+                    />
               </div>
-              <div className="profile-card-content-cont">
-{/*                      <Card>
-                        <CardTitle  title="Shantanu Patil" 
-                                    subtitle="Convener" 
-                                    style={CardTitleStyle}
-                                    subtitleStyle={{fontSize:"20px",fontFamily:"'Nova Flat', cursive"}}
-                        />
-                       <CardText style={{padding:"0px"}}>
-                              <List>
-                                <ListItem
-                                  leftIcon={<CommunicationCall color={indigo500} />}
-                                  rightIcon={<CommunicationChatBubble />}
-                                  primaryText="(650) 555 - 1234"
-                                  secondaryText="Mobile"
-                                  disabled="true"
-                                />
-                              </List>
-                              <Divider inset={true} />
-                              <List>
-                                <ListItem
-                                  leftIcon={<CommunicationEmail color={indigo500} />}
-                                  primaryText="aliconnors@example.com"
-                                  secondaryText="Personal"
-                                  disabled="true"
-                                />
-                              </List>
-                       </CardText>
-                      </Card>*/}
-                      <div className="card-title">
-                          <span className="main-tit">Naruto Uzumaki</span>
-                          <span className="sub-tit">Hokage</span>
-                      </div>
-                      <div>
-                          <List>
-                            <ListItem
-                              leftIcon={<CommunicationCall color={indigo500} />}
-                              rightIcon={<CommunicationChatBubble />}
-                              primaryText="(650) 555 - 1234"
-                              secondaryText="Mobile"
-                              disabled="true"
-                            />
-                          </List>
-                          <Divider inset={true} />
-                          <List>
-                            <ListItem
-                              leftIcon={<CommunicationEmail color={indigo500} />}
-                              primaryText="aliconnors@example.com"
-                              secondaryText="Personal"
-                              disabled="true"
-                            />
-                          </List>                      
-                      </div>
+              <div className="team-info-wrap">
+                    <div className="name">{this.props.mem.name}</div>
+                    {/*<div className="as">{this.props.mem.as}</div>*/}
+                    <div className="contact">
+                          <span><CommunicationCall color={indigo500}/></span>
+                          +91-{this.props.mem.phno}
+                    </div>
+                    <div className="contact">
+                          <span><CommunicationEmail color={indigo500}/></span>
+                          {this.props.mem.email}
+                    </div>
               </div>
-          </div>
       </div>
     );
   }

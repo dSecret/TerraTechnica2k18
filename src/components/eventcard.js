@@ -4,17 +4,13 @@ import Divider from 'material-ui/Divider';
 // css impoorts
 import '../css/eventscard.css';
 import Background from '../static/images3.jpg';
-import { Link} from 'react-router'
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ArrowDown from 'material-ui/svg-icons/maps/near-me';
 // custom modules import
 
-import EventsOptions from './eventoptions'
 const style = {
 };
-var sectionStyle={
-  backgroundImage:`url(${Background}`
-}
+
 const iconStyle={
   paddingTop:"1px"
 }

@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 
 // icons
-import matrix_icon from '../static/matrix.png'
-import gear_icon from '../static/gear.png'
-import misc_icon from '../static/misc.png'
-import informal_icon from '../static/informal_icon.png'
 
 const canvasStyle = {
 	position: 'absolute',

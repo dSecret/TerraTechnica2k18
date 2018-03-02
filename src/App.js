@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Router, Route,hashHistory } from 'react-router'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import logo from './static/stars1.gif';
 import './App.css';
 
 
@@ -16,6 +15,8 @@ import Basic from './basic.js'
 import Home from './pages/home/home'
 import Events from './pages/events/events'
 import Team from './pages/team/team.js'
+import OpenTeam from './pages/team/openteam.js'
+
 import NotFound from './notfound.js'
 import OpenEvent from './pages/events/event/openevent.js'
 import Forms from './pages/events/event/forms.js'
@@ -39,6 +40,7 @@ class App extends Component {
                            <Route path="/" component={Home}/>
                            <Route path="/events" component={Events}/>
                            <Route path="/team" component={Team}/>
+                           <Route path="/team/:id" component={OpenTeam}/>
                            <Route path="/events/robotics/:id" component={OpenEvent}/>
                            <Route path="/events/coding/:id" component={OpenEvent}/>
                            <Route path="/events/informal/:id" component={OpenEvent}/>

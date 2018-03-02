@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router'
 
-import FlatButton from 'material-ui/FlatButton';
 import Clear from 'material-ui/svg-icons/content/clear'
-import {fullGrey} from 'material-ui/styles/colors'
 import Footer from './footermenu.js'
 // components imports
 // css imports

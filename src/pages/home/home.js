@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import '../../css/home.css';
 
-import { Link} from 'react-router'
 
 // import custom modules
-import About from '../../components/about'
-import TitleAnim from '../../components/titleAnim'
-import CountDownTimer from '../../components/count_down_timer'
-import Canvas from '../../components/canvas.js'
 
 import TTLogo from '../../static/logo.png'
 import NITDLogo from '../../static/nitdd.png'
@@ -36,33 +31,6 @@ class Home extends Component {
         curTrans: 0
       };
     }
-
-    handleLeft = () => {
-
-              if(this.state.curTrans>-1920){   
-                this.setState({
-                  curTrans: this.state.curTrans -384
-                })
-                document.getElementById('mysvg').style.transform
-                      =`translate(${this.state.curTrans}px,0px)`,
-                document.getElementById('svg-over').style.transform
-                      =`translate(${this.state.curTrans}px,0px)`
-               }
-                
-    };
-    handleRight = () => {
-              if(this.state.curTrans<0){ 
-                this.setState({
-                    curTrans: this.state.curTrans +384
-                  })
-                  // if(this.state.curTrans!==-1920){ 
-                        document.getElementById('mysvg').style.transform
-                          =`translate(${this.state.curTrans}px,0px)`,
-                        document.getElementById('svg-over').style.transform
-                          =`translate(${this.state.curTrans}px,0px)`
-                      // }
-                }
-    };
   render() {
     return (
 		<div className="Home">
@@ -70,7 +38,6 @@ class Home extends Component {
 				    <img className="HomeTTLogoimg" src={ TTLogo }/>
             <div className="wrap-nitdlogo">
               <a href="http://nitdelhi.ac.in"><img className="NitdLogoimg" src={NITDLogo}/></a>
-              {/*<span>NIT DELHI</span>*/}
             </div>
 			    </div>
 		</div>
@@ -79,7 +46,3 @@ class Home extends Component {
 }
 
 export default Home;
-
-                    {/*    <div className="about-but" id="navDown">
-                          <a href="#about" ><span></span></a>
-                        </div>*/}

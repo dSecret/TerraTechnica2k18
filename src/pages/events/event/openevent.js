@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios'
 
 import'../../../css/openevent.css'
 import Db from '../../../static/content.js'
@@ -32,7 +31,7 @@ class OpenEvent extends Component {
               )
     })
     var ps=null;
-    if(bar.ps!=''){
+    if(bar.ps!==''){
       ps =<div className="rules" >
                   <div>Problem Statement :</div>
                   <div>{bar.ps}</div>
@@ -101,7 +100,6 @@ class OpenEvent extends Component {
                       label="Register" 
                       primary={true} 
                       style={style} 
-                      disabled={this.props.params.id!=='MACHINE LEARNING CHALLENGE'}
                       />
                 </Link>
              </div>

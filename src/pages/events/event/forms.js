@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import {browserHistory } from 'react-router'
 
-import SelectField from 'material-ui/SelectField';
 import TextField from 'material-ui/TextField';
-import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
 
 import '../../../css/forms.css';
@@ -76,6 +74,7 @@ class Forms extends Component {
         <div className="wrapper-player" key={i}>
             {i!==0?'\tPlayer'+''+(i+1):'Team Leader'}
   					<div className="player" id={'forms'+i}>
+                <form>
   						    <TextField 
                       name="name"
                       hintText="Name" 
@@ -101,6 +100,7 @@ class Forms extends Component {
                       hintText="College Name"
                       onChange={(eve)=>this.handlePlayerInput(eve,i)}
                   />
+                </form>
   					</div>
   				</div>
   				)
@@ -161,9 +161,9 @@ class Forms extends Component {
   }
   componentDidMount(){
       let bar=this.props.location.query.event
-      if(bar!=="MACHINE LEARNING CHALLENGE"){
-          return browserHistory.push('/events/')
-      }
+      // if(bar!=="MACHINE LEARNING CHALLENGE"){
+      //     return browserHistory.push('/events/')
+      // }
       if((bar in Db)){
       	this.handleQuery(Db[bar])
       	this.handleInput()
