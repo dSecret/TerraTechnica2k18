@@ -20,11 +20,15 @@ import OpenTeam from './pages/team/openteam.js'
 import NotFound from './notfound.js'
 import OpenEvent from './pages/events/event/openevent.js'
 import Forms from './pages/events/event/forms.js'
+import Registered from './pages/events/event/registered.js'
+import ErrorPage from './pages/events/event/errorpage.js'
+
 
 import Contact from './pages/contact/contact.js'
 import Canvas from './components/canvas_2d.js'
 import Lectures from './pages/Lectures/lectures'
 import Workshops from './pages/workshop/workshops.js'
+import Merch from './pages/merch/merch.js'
 const styles={
   // backgroundImage:`url(${logo})`
 }
@@ -46,9 +50,12 @@ class App extends Component {
                            <Route path="/events/informal/:id" component={OpenEvent}/>
                            <Route path="/events/miscellaneous/:id" component={OpenEvent}/>
                            <Route path="/register" component={Forms}/>
+                           <Route path="/registered" component={Registered}/>
+                           <Route path="/error" component={ErrorPage}/>
                            <Route path="/contactus" component={Contact}/>
                            <Route path="/workshops" component={Workshops}/>
                            <Route path="/lectures" component={Lectures}/>
+                           <Route path="/merchandise" component={Merch}/>
                        </Route>
                        <Route path="*" component={NotFound}/>
                     </Router>

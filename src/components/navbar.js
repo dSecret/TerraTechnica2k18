@@ -26,6 +26,7 @@ class NavBar extends Component {
                         {tit:'Team',linki:'/team'},
                         {tit:'Workshops',linki:'/workshops'},
                         {tit:'Lectures',linki:'/lectures'},
+                        {tit:'Merchandise',linki:'/merchandise'},
                       ]
           menuOptions=menuOptions.map((item,index)=>{
                   return(

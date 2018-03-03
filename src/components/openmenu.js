@@ -12,6 +12,7 @@ const iconStyles = {
   marginTop:20
 };
 
+
 class OpenMenu extends Component {
   render() {
     var menuOptions = [ {tit:'Home',linki:'/'},
@@ -20,6 +21,7 @@ class OpenMenu extends Component {
                         {tit:'Team',linki:'/team'},
                         {tit:'Workshops',linki:'/workshops'},
                         {tit:'GuestLectures',linki:'/lectures'},
+                        {tit:'Merchandise',linki:'/merchandise'},
                         {tit:'Notifications',linki:'/'},
                       ]
         menuOptions=menuOptions.map((item,index)=>{

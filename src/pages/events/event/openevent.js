@@ -17,7 +17,8 @@ class OpenEvent extends Component {
   constructor(props) {
   	super(props);
   	this.state = {
-		  d:{}
+		  d:{},
+      category:''
   	};
   }
   // var foo=Db.this.props.params.id
@@ -75,7 +76,10 @@ class OpenEvent extends Component {
               {introoptions}
               {ps}
              <div className="rules">
-                  <div>Rules :</div>
+                  {bar.rules1.length ?
+                    <div>Rules :</div>
+                    :''
+                  }
                   {round1}
                   <div>
                     <ul>
@@ -87,21 +91,38 @@ class OpenEvent extends Component {
 
              </div>
              <div className="rules">
-                  <div>Criteria for victory :</div>
-                  <div>{bar.win}</div>
+                <div>Registration Fee :</div>
+                <div className="fee"><span>{bar.fee}</span> Rs.</div>
              </div>
+             { bar.win ?
+               <div className="rules">
+                    <div>Criteria for victory :</div>
+                    <div>{bar.win}</div>
+               </div>
+               :''
+             }
              <div className="alert">
                 **In case of any ambiguity or controversy, 
                 the decision of the coordinating committee shall be binding to all.
              </div>
              <div className="reg-cont">
-                <Link to={{pathname:'/register',query:{event:this.props.params.id}}}>
+                { this.props.location.pathname!=='/events/CODING/HACKATHON'?
+                  <Link to={{pathname:'/register',query:{event:this.props.params.id,category:this.state.category}}}>
                     <RaisedButton 
                       label="Register" 
                       primary={true} 
                       style={style} 
                       />
                 </Link>
+                :
+                <a href="http://www.tatainnoverse.com/tatacruciblehackathon/index.php">
+                  <RaisedButton 
+                        label="Register" 
+                        primary={true} 
+                        style={style} 
+                  />
+                </a>
+                }
              </div>
              {/*<div>{this.state.data.title}</div>*/}
       </div>
@@ -109,7 +130,9 @@ class OpenEvent extends Component {
   }
   componentDidMount(){
   	this.fetchData()
-    // console.log(this.props.params.id==='MACHINE LEARNING CHALLENGE')
+    let str=this.props.location.pathname
+    str=str.substring(str.lastIndexOf("/events/")+8,str.lastIndexOf("/"))
+    this.setState({category:str})
   }
   fetchData(){
   // 	const base = 'https://jsonplaceholder.typicode.com';

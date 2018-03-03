@@ -1,0 +1,35 @@
+.Registered{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  height:100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  overflow: hidden;
+  width:100vw;
+  font-family:'Nova Flat', cursive;
+}
+.Registered .wrap-register{
+	width:320px;
+	background-color: white;
+	padding:20px;
+	border-radius:6px;
+}
+.Registered .main-tit{
+	color:green;
+	text-align: center;
+	font-size:25px;
+	margin:20px 0;
+}
+.Registered .sub-tit{
+	font-size:22px;
+	margin:5px;
+}
+.Registered .goback{
+	font-size:18px;
+	font-size:'Roboto',sans-serif !important;
+	text-align: center;
+}
+.goback .firstdiv{
+	padding:10px 0;
+}

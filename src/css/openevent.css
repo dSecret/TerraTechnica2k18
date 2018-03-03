@@ -80,6 +80,10 @@
 .reg-cont{
 	text-align: right;
 }
+.fee span{
+	font-family: 'Roboto',sans-serif !important;
+	color:teal;
+}
 /*.OpenEvent div{
 	width:560px;
 	height:560px;

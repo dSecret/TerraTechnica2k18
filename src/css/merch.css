@@ -1,0 +1,88 @@
+.Merch{
+/*  display:flex;
+  align-items:center;
+  justify-content: center;*/
+  /*height:100%;*/
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  overflow: hidden;
+  width:70vw;
+  color:lightgrey;
+  font-family:'Nova Flat', cursive;
+  margin:0 auto;
+}
+.main-wrap-merch{
+	width:100%;
+	min-height: 200px;
+	margin:0 auto;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	background-color:rgba(255,255,255,0.8);
+	flex-wrap: wrap;
+	border-bottom:3px solid red;
+  }
+
+.main-wrap-merch img{
+	width:250px;
+	/*height:200px;*/
+}
+.main-form-merch{
+	background-color: white;
+	width:100%;
+}
+@media only screen and (max-width:8in){
+	.Merch{
+		width:97.5vw;
+	}
+}
+.flip {
+    backface-visibility:             hidden;
+        -moz-backface-visibility:    hidden;
+        -ms-backface-visibility:     hidden;
+        -o-backface-visibility:      hidden;
+        -webkit-backface-visibility: hidden;
+    border: 1px solid black;
+    transform-origin:             50% 50% 0px;
+        -moz-transform-origin:    50% 50% 0px;
+        -ms-transform-origin:     50% 50% 0px;
+        -o-transform-origin:      50% 50% 0px;
+        -webkit-transform-origin: 50% 50% 0px;
+    transition: all 1s;
+        -moz-transition:    all 1s;
+        -ms-transition:     all 1s;
+        -o-transition:      all 1s;
+        -webkit-transition: all 1s;
+}
+
+#side-1 {
+    transform:             rotateY( 0deg );
+        -moz-transform:    rotateY( 0deg );
+        -ms-transform:     rotateY( 0deg );
+        -o-transform:      rotateY( 0deg );
+        -webkit-transform: rotateY( 0deg );
+}
+
+#side-2 {
+    transform:             rotateY( 180deg );
+        -moz-transform:    rotateY( 180deg );
+        -ms-transform:     rotateY( 180deg );
+        -o-transform:      rotateY( 180deg );
+        -webkit-transform: rotateY( 180deg );
+}
+
+.flip-side-1 {    
+    transform:             rotateY( 0deg ) !important;
+        -moz-transform:    rotateY( 0deg ) !important;
+        -ms-transform:     rotateY( 0deg ) !important;
+        -o-transform:      rotateY( 0deg ) !important;
+        -webkit-transform: rotateY( 0deg ) !important;
+}
+
+.flip-side-2 {
+    transform:             rotateY( 180deg ) !important;
+        -moz-transform:    rotateY( 180deg ) !important;
+        -ms-transform:     rotateY( 180deg ) !important;
+        -o-transform:      rotateY( 180deg ) !important;
+        -webkit-transform: rotateY( 180deg ) !important;
+}

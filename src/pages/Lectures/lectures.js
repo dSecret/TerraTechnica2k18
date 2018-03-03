@@ -5,8 +5,8 @@ import '../../css/lectures.css';
 class Lectures extends Component {
   render () {
     return (
-      <div >
-
+      <div class="Lectures">
+      		coming soon !!
       </div>
     )
   }

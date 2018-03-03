@@ -42,12 +42,15 @@ class Forms extends Component {
         method:'post',
         url:'http://terratechnica.in/test.php',
         data:{
-
+            category:this.props.location.query.category,
             event:this.props.location.query.event,
             players:this.state.playerinfo
         }
       }).then(res=>{
-          window.location='http://terratechnica.in/insta.php?req='+res.data
+          if(this.state.event.fee)
+              window.location='http://terratechnica.in/insta.php?req='+res.data
+          else
+              window.location=`http://terratechnica.in/#/registered?category=${this.props.location.query.category}&event=${this.props.location.query.event}`
       })
       // console.log(this.state.playerinfo)
     }
@@ -67,12 +70,12 @@ class Forms extends Component {
   render() {
   	var foo=this.state.event.team
   	var items=Array.apply(null, {length: foo}).map((e,i)=>{
-  		return(<option value={i+1}  key={i}>{i+1+'\tPlayer'}</option>)
+  		return(<option value={i+1}  key={i}>{i+1+'\tMember'}</option>)
   	})
   	var player=this.state.playerinfo.map((e,i)=>{
   		return(
         <div className="wrapper-player" key={i}>
-            {i!==0?'\tPlayer'+''+(i+1):'Team Leader'}
+            {i!==0?'\tMember'+''+(i+1):'Team Leader'}
   					<div className="player" id={'forms'+i}>
                 <form>
   						    <TextField 
@@ -110,13 +113,6 @@ class Forms extends Component {
       	<div className="title">
       		{this.props.location.query.event}
       	</div>
-     	{/*<SelectField
-          floatingLabelText="Team"
-          value={this.state.value}
-          onChange={this.handleChange}
-        >
-        	{items}
-        </SelectField>*/}
           <select value={this.state.value} onChange={this.handleChange}>
             <option>Team</option>
             {items}
@@ -124,7 +120,7 @@ class Forms extends Component {
               {this.state.value?<p>All field are required.</p>:''}
           	  {player}
               {this.state.required?
-                <div className="warnings">*Required fields can't be empty or entered data is not valid</div>
+                <div className="warnings">*Required fields can not be empty or entered data is invalid</div>
                 :''
               }
               {this.state.value
@@ -167,7 +163,6 @@ class Forms extends Component {
       if((bar in Db)){
       	this.handleQuery(Db[bar])
       	this.handleInput()
-          console.log(Db[bar].team)
       }
       else{
       	browserHistory.push('/events')

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../../css/workshops.css';
 
 
-
 class Workshops extends Component {
       constructor(props) {
       super(props);
