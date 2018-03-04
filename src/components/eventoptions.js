@@ -19,7 +19,7 @@ class EventsOptions extends Component {
     return (
               <div className="layer1-options-cont">
                   <div className="layer1-ic-wrap">
-                      <img src={require('../static/robotics/car(1).png')} className="Cardicon"/>
+                      <img src='https://image.flaticon.com/icons/svg/237/237416.svg' className="Cardicon"/>
                   </div>
                   <div className="layer1-content-back"></div>
                   <Link to={'/events/'+this.props.type+'/'+this.props.options}>
