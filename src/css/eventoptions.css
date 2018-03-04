@@ -9,7 +9,7 @@
 }
 .layer1-ic-wrap{
 	position: absolute;
-	background:grey;
+	background:rgba(33, 150, 243, 0.7);
 	width:80px;
 	height:100%;
 	/*padding:2px;*/
@@ -18,13 +18,16 @@
 	top:0;
 	z-index:10;
 	overflow: hidden;
+	display: flex;
+	align-items:center;
+	justify-content: center;
 }
 
 .layer1-content-back{
 	position: absolute;
 	left:60px;
 	top:8px;	
-	background-color:lightgrey;
+	background-color:rgba(200, 200, 200, 0.7);
 	width:220px;
 	z-index:1;
 	height:64px;

@@ -47,10 +47,18 @@ class Forms extends Component {
             players:this.state.playerinfo
         }
       }).then(res=>{
-          if(this.state.event.fee)
-              window.location='http://terratechnica.in/insta.php?req='+res.data
-          else
-              window.location=`http://terratechnica.in/#/registered?category=${this.props.location.query.category}&event=${this.props.location.query.event}`
+          if(res.status===200){
+              if(this.state.event.fee)
+                  window.location='http://terratechnica.in/insta.php?req='+res.data
+              else
+                  window.location=`http://terratechnica.in/#/registered?category=${this.props.location.query.category}&event=${this.props.location.query.event}`            
+          }
+          else{
+              window.location='http://terratechnica.in/#/error?req=/events/'+this.props.location.query.category+'/'+this.props.location.query.event
+          }
+          
+      }).catch(res=>{
+              window.location='http://terratechnica.in/#/error?req=/events/'+this.props.location.query.category+'/'+this.props.location.query.event
       })
       // console.log(this.state.playerinfo)
     }

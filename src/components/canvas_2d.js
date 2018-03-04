@@ -86,7 +86,7 @@ class Particle {
 			ctx.arc(s.x, s.y, s.size, 0, 2 * Math.PI)
 			ctx.fill()
 		})
-		this.breathStar(5)
+		this.breathStar(Math.random() * 7 + 2)
 		this.stars.map(s => {
 			s.x += s.vel.x
 			s.y += s.vel.y
@@ -152,7 +152,8 @@ export default class backgroundCanvasComponent extends Component {
 
 
 		window.addEventListener('mousemove', e => {
-			this.Particle.bubbleStar({x: e.clientX, y: e.clientY}, 150)
+			this.Particle.bubbleStar(
+				{ x: e.clientX, y: e.clientY }, 150);
 		}, false)
 
 		window.addEventListener('resize', () => {

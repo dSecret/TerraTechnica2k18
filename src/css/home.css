@@ -1,5 +1,6 @@
 .Home {
   display: flex;
+  /*display: inline-flex;*/
   align-items: center;
   justify-content: center;
   height: 100%;
@@ -7,13 +8,6 @@
   -moz-box-sizing: border-box;
   overflow: hidden;
   width: 100vw;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  user-drag: none; 
 }
 
 .HomeTTLogo {

@@ -3,6 +3,7 @@
   align-items:center;
   justify-content: center;*/
   /*height:100%;*/
+  position: relative;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   overflow: hidden;
@@ -10,26 +11,65 @@
   color:lightgrey;
   font-family:'Nova Flat', cursive;
   margin:0 auto;
+  padding-bottom:100px;
 }
 .main-wrap-merch{
 	width:100%;
-	min-height: 200px;
+	min-height: 300px;
 	margin:0 auto;
-	display:flex;
+	/*display:flex;
 	align-items:center;
-	justify-content: center;
+	justify-content: center;*/
 	background-color:rgba(255,255,255,0.8);
 	flex-wrap: wrap;
 	border-bottom:3px solid red;
   }
 
 .main-wrap-merch img{
-	width:250px;
-	/*height:200px;*/
+	width:260px;
+	height:260px;
+}
+.button-wrap{
+	padding-top:275px;
+}
+.custom-butt{
+	border-radius: 50%;
+	width:19px;
+	height:19px;
+	border:2px solid black;
+	display: inline-block;
+	margin:4px 5px;
+	/*padding:4px 4px 2px 4px; */
+}
+.custom-butt div{
+	
+	width:15px;
+	height:15px;
+	border-radius: 50%;
+	margin:2px;
+}
+.click-back{
+	background-color: black;
+}
+.intro-wrap{
+	font-family:'Raleway', cursive;
+	font-size:25px;
+	background-color: white;
+	padding:20px 25px;
+	color:teal;
 }
 .main-form-merch{
 	background-color: white;
 	width:100%;
+	border:1px solid grey;
+	margin:1.5% 0;
+}
+.main-form-merch .heading{
+	font-family:'Raleway', cursive;
+	font-size: 20px;
+	color:grey;
+	padding:20px; 
+	display: block;
 }
 @media only screen and (max-width:8in){
 	.Merch{
@@ -42,7 +82,11 @@
         -ms-backface-visibility:     hidden;
         -o-backface-visibility:      hidden;
         -webkit-backface-visibility: hidden;
-    border: 1px solid black;
+    /*height: 105px;*/
+    position: absolute;
+    left:0%;
+    right:0;
+    margin:autos;
     transform-origin:             50% 50% 0px;
         -moz-transform-origin:    50% 50% 0px;
         -ms-transform-origin:     50% 50% 0px;
@@ -53,6 +97,7 @@
         -ms-transition:     all 1s;
         -o-transition:      all 1s;
         -webkit-transition: all 1s;
+    /*width: 300px;    */
 }
 
 #side-1 {
@@ -86,3 +131,5 @@
         -o-transform:      rotateY( 180deg ) !important;
         -webkit-transform: rotateY( 180deg ) !important;
 }
+
+

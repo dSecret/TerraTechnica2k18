@@ -11,7 +11,9 @@ const iconStyles = {
   width:40,
   marginTop:20
 };
-
+const style={
+  backgound:`url(${require('../static/Terra Technica 18 Black.png')}) 0 0 /100% 100%`
+}
 
 class OpenMenu extends Component {
   render() {
@@ -35,7 +37,6 @@ class OpenMenu extends Component {
           var mydivi=document.getElementById('openmenu-cont')
         mydivi.style.width='00vw'
     }
-
     return (
       <div id="openmenu-cont">
        <div className="close-but-cont">
@@ -44,6 +45,9 @@ class OpenMenu extends Component {
             </span>
         </div>        
         <div id="second-child">
+            <div className="background-div">
+              <img src={require('../static/Terra Technica 18 Black.png')} alt="tt18"/>
+            </div>
             {menuOptions}
         </div>
         <Footer/>

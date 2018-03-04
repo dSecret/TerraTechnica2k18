@@ -3,55 +3,85 @@ import '../../css/merch.css';
 // import '../../static/build/tracking-min.js'
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import SelectField from 'material-ui/SelectField';
+import MenuItem from 'material-ui/MenuItem';
 import axios from 'axios'
 const style = {
+  margin: "12px 20px",
+};
+const style2 = {
   margin: 12,
 };
+const items = [
+  <option key={0} disabled>Size</option>,
+  <option key={1} value={"S"} >S</option>,
+  <option key={2} value={"M"} >M</option>,
+  <option key={3} value={"L"}>L</option>,
+  <option key={4} value={"XL"}>XL</option>
+];
 
 class Merch extends Component {
       constructor(props) {
       super(props);
       this.state = {
-      		user:{},
-      		required:false
+      		user:{size:"S"},
+      		required:false,
+      		value:"S"
       };
     }
+
+  handleChange2 = (event, index, value) => {
+  	let bar=this.state.user
+  		bar.size=value
+  	this.setState({user:bar}) 
+ }
   render () {
     return (
       <div className="Merch">
-      		<div className="main-wrap-merch">
-				<div id="side-1" class="flip">
+      		<div className="main-wrap-merch" align="center">
+				<div id="side-1" className="flip">
 				    <img src={require('../../static/tfront.png')} alt="front"/>
 				</div>
-				<div id="side-2" class="flip">
+				<div id="side-2" className="flip">
 				    <img src={require('../../static/tback.png')} alt="back"/>
 				</div>
-				<div>
-					<button onClick={this.handleUp}>up</button>
-					<button onClick={this.handleDown}>down</button>
+				<div className="button-wrap">
+					<div className="custom-butt" id="up"><div id="upin" className="click-back"></div></div>
+					<div className="custom-butt"id="down"><div id="downin"></div></div>
 				</div>
       		</div>
+      		<div className="intro-wrap">
+      			Grab one for ₹ 200 only, hurry!
+      		</div>
       		<div className="main-form-merch">
+      			<div className="heading">Place your order here! </div>
+                <select
+		          defaultValue={this.state.value}
+		          onChange={this.handleChange}
+		          style={style}
+		          name="size"
+		        >
+		          {items}
+		        </select><br/>
   				<TextField 
                     name="name"
                     hintText="Name" 
                     onChange={(eve)=>this.handleChange(eve)}
+                    style={style}
                 />
   				<TextField 
                     name="email"
                     hintText="Email" 
                     onChange={(eve)=>this.handleChange(eve)}
+                    style={style}
                 />
   				<TextField 
                     name="phno"
                     hintText="PhoneNumber" 
                     onChange={(eve)=>this.handleChange(eve)}
+                    style={style}
                 />
-                <TextField 
-                    name="size"
-                    hintText="Size" 
-                    onChange={(eve)=>this.handleChange(eve)}
-                /><br/>
+                <br/>
                 {
                 	this.state.required?
                 	<div className="warnings">**Required fields can not be empty or invalid entry</div>
@@ -59,9 +89,9 @@ class Merch extends Component {
                 }
 
 	            <RaisedButton 
-	                label="SubmitForm" 
+	                label="Order" 
 	                primary={true} 
-	                style={style} 
+	                style={style2} 
 	                onClick={this.handleSubmit}
 	            />
       		</div>
@@ -73,15 +103,25 @@ class Merch extends Component {
   			foo[e.target.name]=e.target.value
   		this.setState({user:foo});
   }
-  handleUp=(e)=>{
-    e.preventDefault();
-    document.getElementById( 'side-2' ).className = 'flip flip-side-1';
-    document.getElementById( 'side-1' ).className = 'flip flip-side-2';
-  }
-  handleDown=(e)=>{
-    e.preventDefault();
-    document.getElementById( 'side-2' ).className = 'flip';
-    document.getElementById( 'side-1' ).className = 'flip';  	
+  handleUp=()=>{
+		document.getElementById( 'up' ).addEventListener( 'click', function( event ) {
+		    
+		    event.preventDefault();
+		    document.getElementById( 'side-2' ).className = 'flip ';
+		    document.getElementById( 'side-1' ).className = 'flip';
+		    document.getElementById( 'upin' ).className = 'click-back';
+		    document.getElementById( 'downin' ).className = '';
+		} );
+
+		document.getElementById( 'down' ).addEventListener( 'click', function( event ) {
+		    
+		    event.preventDefault();
+		    document.getElementById( 'side-2' ).className = 'flip flip-side-1';
+		    document.getElementById( 'side-1' ).className = 'flip flip-side-2';
+		    document.getElementById( 'upin' ).className = '';
+		    document.getElementById( 'downin' ).className = 'click-back';		    
+		});
+
   }
   handleSubmit=()=>{
     if(this.handleErrors()){
@@ -90,12 +130,13 @@ class Merch extends Component {
         url:'http://terratechnica.in/ts.php',
         data:this.state.user
       }).then(res=>{
-      		if(res.status===200)
+              if(res.status===200)
               	window.location='http://terratechnica.in/instat.php?req='+res.data
-      		else
-      			window.location='http://terratechnica.in/#/error'
+              else
+                window.location='http://terratechnica.in/#/error?req=/merchandise'
+      }).catch(res=>{
+                window.location='http://terratechnica.in/#/error?req=/merchandise'
       })
-      // console.log(this.state.playerinfo)
     } 
   }
   handleErrors=()=>{
@@ -109,6 +150,9 @@ class Merch extends Component {
 	    }
 	    return bar
 
+  }
+  componentDidMount(){
+  	this.handleUp()
   }
 }
 

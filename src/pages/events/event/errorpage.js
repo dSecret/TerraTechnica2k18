@@ -17,10 +17,15 @@ class Registered extends Component {
       <div className="Registered">
       		<div className="wrap-register">
       			<div className="main-tit" style={{color:'red'}}>Oops! Something went wrong.</div>
-      			<div className="sub-tit">Try Again.</div>
+      			<div className="sub-tit">
+      					<ul>
+      						<li>Try again.</li>
+      						<li>Try using Firefox browser or Edge browser</li>
+      					</ul>
+      			</div>
 		  		<div className="goback">
-		  			<div className="firstdiv">Go back to events</div>
-		          <Link to="/events">
+		  			<div className="firstdiv">Go back</div>
+		          <Link to={this.props.location.query.req}>
 		            <FloatingActionButton style={style} 
 		                                  mini={true} 
 		                                  iconStyle={iconStyle} 
