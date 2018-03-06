@@ -10,4 +10,18 @@
   color:lightgrey;
   font-family:'Nova Flat', cursive;
 }
-  
+
+.images{
+    height:90%;
+  }
+@media only screen and (max-width:8in){
+  .images{
+      width:97%;
+      height:initial;
+      margin-top:20px;
+  }
+  .Lectures{
+      height:initial;
+      overflow:initial;
+  }
+}

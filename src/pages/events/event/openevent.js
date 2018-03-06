@@ -28,14 +28,14 @@ class OpenEvent extends Component {
     var bar=Db[foo]
     var options=bar.rules1.map((item,index)=>{
             return(
-                          <li key={index}>{item}</li>
+                            <li key={index} dangerouslySetInnerHTML={{__html:item}}/>
               )
     })
     var ps=null;
     if(bar.ps!==''){
       ps =<div className="rules" >
                   <div>Problem Statement :</div>
-                  <div>{bar.ps}</div>
+                  <div dangerouslySetInnerHTML={{__html:bar.ps}}/>
           </div>
     }
     var round1=null;
@@ -46,7 +46,7 @@ class OpenEvent extends Component {
       round2=<div className="round">Round 2</div>
       var foo=bar.rules2.map((item,index)=>{
               return(
-                            <li key={index}>{item}</li>
+                            <li key={index}dangerouslySetInnerHTML={{__html:item}}/>
                 )
       })
       var options2=<div>
@@ -58,7 +58,7 @@ class OpenEvent extends Component {
     var introoptions=null;
     if(bar.intropoints.length){
       var foo=bar.intropoints.map((item,index)=>{
-          return(<li key={index}>{item}</li>)
+          return(<li key={index} dangerouslySetInnerHTML={{__html:item}}/>)
       })
       introoptions=<div className="introoptions">
                         <ul>

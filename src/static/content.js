@@ -2,7 +2,7 @@ const Db={
 	"robotics":{
         title:"ROBOTICS",
 		options:['DEATH RACE','ROBO RACE','ROBO SOCCER','MAZE RUNNER',
-			'PUCK COLLECT','METAL HUNT'	
+			'PUCK COLLECT','ROBO RUMBLE'	
 		],
         content:'Will robots inherit the earth?'
     },
@@ -127,6 +127,27 @@ const Db={
     	"The team collecting the maximum pucks will win the round.",
     	"The participants must not deliberately hit their opponent’s bot, doing so will lead to disqualification."],
     	rules2:[]
+    },
+    'ROBO RUMBLE':{
+        intro:"",
+        intropoints:[
+            "<b>Arena</b> will be square(2m x 2m) in shape open from top and arena will be open from all sides so as to eliminate the opponent's robot by pushing, lifting, etc outside the ring. Participants keep in mind that wire should be sufficient. Exact arena will opened at the time of event. ",
+        ],
+        ps:"To design and construct a warfare robot which should be capable of eliminating other robots from the arena justlike Royal Rumble and the last robot standing will be declared as the winner.",
+        team:4,
+        fee:100,
+        win:'The last standing bot in the arena will be the winner.',
+        rules1:[
+            "<b>Basic rules :</b><br/><ul><li>Maximum participants per team = 4</li><li>Each new entry will be in 30 seconds on the basis of chit system.</li><li>Maximum of two members of a team are allowed to operate the remote controller.</li><li>If the participants are not present at the arena on the given time slot then that team will be disqualified</li><li>The machines are not allowed to leave any loose parts on any part of the arena.</li><li>Bots immobilized for 15 seconds or more will result in warning. If any machine remains immobilized for 30 seconds it will be treated passive and will be disqualified.</li><li>Damage to arena is not allowed and will lead to disqualification of team.</li><li>Teams should take care of their bot; they will be responsible for the damage to their bots.</li><li>Hopping outside the ring will result in disqualification.</li><li>Flying (using airfoil, helium balloons, ornithopters etc.) is not allowed.</li><li>No rematch will be there.</li><li>Any team that is not ready at the time specified will be eliminated from the competition.</li><li>Co-ordination Committee reserves the right to add or update rules.</li></ul>",
+            "Max Size of robot 20CM x 20CM x 20CM.<br/>Max weight 7kg(tolerance +/- 0.3kg).<br/>Excluding any external controlling device or batteries.",
+            "The machine should be controlled by a wireless remote control Mechanism or wired one throughout the war. In case of wireless system, it should have a minimum four Frequency remote control circuit or two dual control circuits or a transmitter-receiver paired module so that the frequency interferences opponent team can be avoided (in case of any interference in the wireless systems, they will not be considered for rematch or in the results).",
+            "The machine must not be made from Lego parts, or any readymade Kit, if we find such machine it will be disqualified.",
+            "If the machine is wired then the wire should remain slack under all circumstances during the competition. All the wires coming out of the Machine should be stacked as single unit.",
+            "It is necessary for all that teams that the bot must be electrically or electronically powered. If any team uses any type of mechanical powered system like IC ENGINE or other then it will be disqualified.",
+            "Robots can have any kind of cutters, flippers, saws, hammers, lifting devices etc. as weapons,with the following exceptions:<br/><ul><li>'Liquid projectiles.'</li><li>'Acid based Weapons.'</li><li>'EMP generators'</li><li>'Any kind of flammable liquid.'</li><li>'Flame-producing weapons.'</li><li>'Any kind of explosive material.'</li><li>'Nets, glue or any other entanglement devices.'</li><li>'High power magnets or electromagnets, Radio jammers.'</li><li>'Pneumatic weapons.'</li></ul>",
+            "Batteries must be sealed, immobilized electrolyte types (gel cells, lithium, NiCad, or dry cells). The electric voltage anywhere in the machine should not be more than 24V DC at any point of time. On board power supply of 24V DC will be provided. The teams can also use their own power supply."
+        ],
+        rules2:[]
     },
     'METAL HUNT':{
     	intro:'The event objective is to find the maximum number of metal pieces in a given location by using metal detector in provided time duration. The metal pieces will be placed inside the soil with maximum depth of 10 cms. All teams will find the metal pieces at the same time and the team which gets maximum number of metal pieces in the provided time duration will be awarded as winner.',

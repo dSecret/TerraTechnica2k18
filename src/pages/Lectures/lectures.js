@@ -5,8 +5,12 @@ import '../../css/lectures.css';
 class Lectures extends Component {
   render () {
     return (
-      <div class="Lectures">
-      		coming soon !!
+      <div className="Lectures">
+      		<img 
+      			src={require('../../static/lecture.jpg')}
+      			className="images"
+      			alt="lecture 1"
+      		/>
       </div>
     )
   }
