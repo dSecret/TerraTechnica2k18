@@ -12,11 +12,10 @@
   	margin:0 auto;
 }
 .team-type{
-	width:200px;
-	height: 200px;
-	background-color:lightgrey;
+	width:230px;
+	height: 230px;
 	display:flex;
-	color:black !important;
+	color:white !important;
 	font-family:'Nova Flat', cursive;
 	font-size:17px;
 	flex-direction: column;
@@ -25,6 +24,11 @@
 	padding-top:80px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
+	font-weight: bolder;
+	border:2px solid  #db615c;
+	background-color: rgba(0,0,0,0.5)
+/*background-image: linear-gradient(19deg, #db615c 0%, #DDD6F3 100%);*/
+
 }
 .team-type a{
 	outline: none !important;

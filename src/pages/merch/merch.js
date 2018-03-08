@@ -17,7 +17,8 @@ const items = [
   <option key={1} value={"S"} >S</option>,
   <option key={2} value={"M"} >M</option>,
   <option key={3} value={"L"}>L</option>,
-  <option key={4} value={"XL"}>XL</option>
+  <option key={4} value={"XL"}>XL</option>,
+  <option key={5} value={"XXL"}>XXL</option>
 ];
 
 class Merch extends Component {

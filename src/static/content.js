@@ -10,19 +10,19 @@ const Db={
         title:"CODING",
     	options:['HACKATHON','CAPTURE THE FLAG','NITD PROGRAMMING LEAGUE',
     		'CLASH OF CODES','BLANK CODING','MACHINE LEARNING CHALLENGE',
-    		'CODE GOLF','SUDOKU QUIZ','REVERSE CODING'
+    		'CODE GOLF','REVERSE CODING'
 
     	],
         content:'Talk is cheap. Show me the code.'
     },
     "informal":{
         title:"INFORMAL",
-    	options:['WHO IS THE BOSS','BULL RIDE','TWISTER'],
+    	options:['BULL RIDE','TWISTER'],
         content:'None of us is as smart as all of us.'
     },
     "misc":{
         title:"MISCELLANEOUS",
-    	options:['VIRTUAL STOCK MARKET','PAINTBALL','NITD EXPO'],
+    	options:['VIRTUAL STOCK MARKET','PAINTBALL'],
         content:'Mystery keeps us awake.'
     },
     'DEATH RACE':{
@@ -178,7 +178,7 @@ const Db={
     'CAPTURE THE FLAG':{
     	intro:'CTF is an event which provides a platform for participants to work out on real world scenarios like malware analysis ¸pretesting , system administration.  The game is played in team of four players where each team is provided with a real world scenario along with an system where they need to seek out a solution which promotes next level. Each level is associated with different kind of scenario of increasing difficulty. This allows the participants to apply various concepts and techniques to reach a solution. The game is entirely based on Command line interface. The team is given secured access to a system to analyse, execute instructions to find the flag. The games assumes players to have knowledge in computer engineering such as files, networking, various tools of system administration. The game duration is estimated to be around 3hrs.',    	intropoints:[],
     	ps:'',
-    	team:0,
+    	team:3,
         fee:0,
     	win:'',
     	rules1:[],
@@ -283,13 +283,26 @@ const Db={
     },
     'VIRTUAL STOCK MARKET':{
     	intro:'Always cherished striking gold, trading at Dalal Street/Nasdaq? Think you can grab opportunities and make most of out of the dynamic stock market? Are you that smart investor who can buy right and sell right? Do you believe that the Stock Market is where you belong? BRACE YOURSELF. Here comes the simulation of it i.e. VIRTUAL STOCK MARKET game presented by TerraTechnica in association with MoneyPot. It is an exciting opportunity to show your investment skills and win prizes by playing this game.',
-    	intropoints:["VSM is a multiplayer game which is conducted online. The start time, time of declaration of winners, and other similar details can be found on the online portal.", "2.	Participants interested need to login to TerraTechnica website and can play this game when it will be put live. Participants need to bring their own laptops.", "3.	Every participant is given some amount of money(dummy) before he/she starts playing the game i.e. the balance of each participant is credited with a particular amount initially.", "4.	Here, you can buy and sell dummy shares of various companies.", "5.	The company listings would be according to BSE(Bombay Stock Exchange).", "6.	Participants can view the number of shares and price of each share for every company. (Note: The information would not be real and it is only for the sake of playing game)", "7.	Participants can now choose for which company they would like to invest. This can be done by buying the shares of that company.", "8.	Every time a participant buys shares of a particular company, corresponding amount would be deducted from his/her balance.", "9.	Participants could also sell their shares, which they own, at current price of the shares.", "10.	The rate of shares of a particular company is decided according to the growth/decline of the company in Stock Market, news pertaining to that company etc.", "11.	The rates will be fluctuating in between the game and would be visible to all the participants.", "12.	Participants could also view the growth of company from the period when the game started in form of graphs which would help them decide which company's share to buy.", "13.	Participants will be provided with the new statistics and can plan accordingly", "14.	The participant with highest balance at the end of the game will be the winner of VSM.", "15.	The final balance of each participant would be calculated by summing the price value of all the shares the participant owns and the money(amount) that he has."],
+    	intropoints:[
+        "People who are registered can start participating in the event from <b>10 March,2018.</b>",
+        "Registrations will be <b>closed from  13th March</b>.So register as soon as possible.",
+        "VSM is a multiplayer game which is conducted online. The start time, time of declaration of winners, and other similar details can be found on the online portal.", 
+        "Participants interested need to login to TerraTechnica website and can play this game when it will be put live. Participants need to bring their own laptops.", "Every participant is given some amount of money(dummy) before he/she starts playing the game i.e. the balance of each participant is credited with a particular amount initially.", "Here, you can buy and sell dummy shares of various companies.", "The company listings would be according to BSE(Bombay Stock Exchange).", "Participants can view the number of shares and price of each share for every company. (Note: The information would not be real and it is only for the sake of playing game)", "Participants can now choose for which company they would like to invest. This can be done by buying the shares of that company.", "Every time a participant buys shares of a particular company, corresponding amount would be deducted from his/her balance.", "Participants could also sell their shares, which they own, at current price of the shares.", "The rate of shares of a particular company is decided according to the growth/decline of the company in Stock Market, news pertaining to that company etc.", "The rates will be fluctuating in between the game and would be visible to all the participants.", "Participants could also view the growth of company from the period when the game started in form of graphs which would help them decide which company's share to buy.", "Participants will be provided with the new statistics and can plan accordingly", "The participant with highest balance at the end of the game will be the winner of VSM.", "The final balance of each participant would be calculated by summing the price value of all the shares the participant owns and the money(amount) that he has.",
+        "In case find difficulties in registering Mail to 141100025@nitdelhi.ac.in",
+        "<a href='https://play.google.com/store/apps/details?id=com.moneypot&hl=en'><b>Android App</b></a>",
+        "<a href='https://itunes.apple.com/in/app/moneypot-app/id1159626753?mt=8'><b>iOS App</b></a>",
+        "Prize money worth 15000/- Rs.(all may not be in cash)",
+        "<ul><li>1st Prize 3000</li><li>2nd Prize 2000</li><li>3rd Prize 1500</li></ul>",
+        "Other prizes are given in form of goodies.",
+        ],
     	ps:'',
     	team:1,
         fee:0,
     	win:'',
     	rules1:["Every participant is allowed to play the game with single login identity. Participants found playing the game with multiple logins would be disqualified.",
-    	"Participants can not buy more than a particular amount of shares of a particular company which would be fixed by the game developer team and would be conveyed to all the participants at start of the game."],
+    	"Participants can not buy more than a particular amount of shares of a particular company which would be fixed by the game developer team and would be conveyed to all the participants at start of the game.",
+        "Registrations will be approved first then participant can start VSM, ALL  approvals will be done from 9:00 PM, So kindly wait for the approval.",
+        ],
     	rules2:[]
     },
     'WHO IS THE BOSS':{
