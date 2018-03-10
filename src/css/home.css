@@ -1,5 +1,5 @@
 .Home {
-  display: flex;
+  display:flex;
   /*display: inline-flex;*/
   align-items: center;
   justify-content: center;
@@ -8,16 +8,19 @@
   -moz-box-sizing: border-box;
   overflow: hidden;
   width: 100vw;
+  clear:both;
 }
 
 .HomeTTLogo {
+  /*background-color: red;*/
   text-align: center;
-  padding-bottom: 20%;
+  padding-top:15%;
+  padding-bottom: 25%;
   overflow: hidden;
 }
 .wrap-nitdlogo {
   display: flex;
-  height: 90px !important;
+  /*height: 90px !important;*/
   align-items: center;
   justify-content: center;
 }
@@ -29,23 +32,43 @@
   font-family: 'Roboto', sans-serif;
 }
 .HomeTTLogoimg {
-  /*width:250px !important;*/
-  height: 170px !important;
+  width:250px !important;
+  /*height: 180px !important;*/
 
 }
-
+.TTDate{
+  text-align:center;
+  font-family:'Raleway', cursive;
+  width:100%;
+  color:lightgrey;
+  margin-bottom:5px;
+  font-weight: bolder;
+  font-size:20px;
+}
+.NITDText{
+  text-align:center;
+  font-family:'Nova Flat', cursive;
+  width:100%;
+  color:grey;
+  /*margin-bottom: 20px;*/
+  font-weight: bolder;
+  font-size:17px;
+}
 .NitdLogoimg {
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   vertical-align: center;
 }
 @media only screen and (max-width:7in){
+  .HomeTTLogo{
+    padding-top: 0;
+  }
   .HomeTTLogoimg{
     width:250px !important;
     height: 140px !important;    
   }
   .wrap-nitdlogo img{
-    height: 70px !important;
-    width: 70px !important;
+    height: 50px !important;
+    width: 50px !important;
   }
 }

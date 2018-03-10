@@ -26,9 +26,7 @@ class Home extends Component {
       constructor(props) {
       super(props);
       this.state = {
-        slideIndex: 0,
-        prevIndex:0,
-        curTrans: 0
+ 
       };
     }
   render() {
@@ -36,9 +34,13 @@ class Home extends Component {
 		<div className="Home">
         	<div className="HomeTTLogo">
 				    <img className="HomeTTLogoimg" src={ TTLogo }/>
+            <div className="TTDate">23rd Mar - 24th Mar</div>
             <div className="wrap-nitdlogo">
-              <a href="http://nitdelhi.ac.in"><img className="NitdLogoimg" src={NITDLogo}/></a>
+              <a href="http://nitdelhi.ac.in">
+                  <img className="NitdLogoimg" src={NITDLogo}/>
+              </a>
             </div>
+            <div className="NITDText">NIT Delhi</div>
 			    </div>
 		</div>
     );

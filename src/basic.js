@@ -19,9 +19,9 @@ class Basic extends Component {
                     <NavBar/>
                     <div className="Basicwrap">
                         {this.props.children}
-                        <div className="notify-wrap">
+                      {/*  <div className="notify-wrap">
                             <div>Notifications</div>
-                        </div>
+                        </div>*/}
                         {this.props.location.pathname!=='/'?
                           <div className="maintain-padding"></div>
                         :''

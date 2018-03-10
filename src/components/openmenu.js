@@ -24,7 +24,6 @@ class OpenMenu extends Component {
                         {tit:'Workshops',linki:'/workshops'},
                         {tit:'GuestLectures',linki:'/lectures'},
                         {tit:'Merchandise',linki:'/merchandise'},
-                        {tit:'Notifications',linki:'/'},
                       ]
         menuOptions=menuOptions.map((item,index)=>{
             return(
