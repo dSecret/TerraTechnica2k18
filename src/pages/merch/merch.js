@@ -128,15 +128,17 @@ class Merch extends Component {
     if(this.handleErrors()){
       axios({
         method:'post',
-        url:'http://terratechnica.in/ts.php',
+        url:'https://terratechnica.in/ts.php',
         data:this.state.user
       }).then(res=>{
+              console.log(this.state.user)
               if(res.status===200)
-              	window.location='http://terratechnica.in/instat.php?req='+res.data
+                {console.log(res.data)
+                  window.location='https://terratechnica.in/instat.php?req='+res.data}
               else
-                window.location='http://terratechnica.in/#/error?req=/merchandise'
+                window.location='https://terratechnica.in/#/error?req=/merchandise'
       }).catch(res=>{
-                window.location='http://terratechnica.in/#/error?req=/merchandise'
+                window.location='https://terratechnica.in/#/error?req=/merchandise'
       })
     } 
   }

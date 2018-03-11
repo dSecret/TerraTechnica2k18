@@ -40,7 +40,7 @@ class Forms extends Component {
     if(this.handleErrors()){
       axios({
         method:'post',
-        url:'http://terratechnica.in/test.php',
+        url:'https://terratechnica.in/test.php',
         data:{
             category:this.props.location.query.category,
             event:this.props.location.query.event,
@@ -49,16 +49,16 @@ class Forms extends Component {
       }).then(res=>{
           if(res.status===200){
               if(this.state.event.fee)
-                  window.location='http://terratechnica.in/insta.php?req='+res.data
+                  window.location='https://terratechnica.in/insta.php?req='+res.data
               else
-                  window.location=`http://terratechnica.in/#/registered?category=${this.props.location.query.category}&event=${this.props.location.query.event}`            
+                  window.location=`https://terratechnica.in/#/registered?category=${this.props.location.query.category}&event=${this.props.location.query.event}`            
           }
           else{
-              window.location='http://terratechnica.in/#/error?req=/events/'+this.props.location.query.category+'/'+this.props.location.query.event
+              window.location='https://terratechnica.in/#/error?req=/events/'+this.props.location.query.category+'/'+this.props.location.query.event
           }
           
       }).catch(res=>{
-              window.location='http://terratechnica.in/#/error?req=/events/'+this.props.location.query.category+'/'+this.props.location.query.event
+              window.location='https://terratechnica.in/#/error?req=/events/'+this.props.location.query.category+'/'+this.props.location.query.event
       })
       // console.log(this.state.playerinfo)
     }
