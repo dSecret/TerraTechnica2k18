@@ -35,6 +35,7 @@
 	width:360px;
 	height:700px;
 	overflow: hidden;
+
 	/*background-color:rgba(255,255,255,0.5);*/
 	/*border: 3px solid white;*/
 	/*box-shadow: */
@@ -70,6 +71,7 @@
 .addContact p{
 	color:white;
 	font-size:20px;
+
 }
 .forlast{
 	width:350px;
@@ -78,6 +80,9 @@
 	margin:10px;
 	padding:20px;
 	background-color: red;
+}
+.cmnContact ul{
+	word-break: break-all;
 }
 @media only screen and (max-width:7in){
 	.Contact{

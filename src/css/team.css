@@ -1,5 +1,5 @@
 .team{
-	width:70vw;
+	width:80vw;
 	padding-top:10px;
 	padding-bottom:80px;
 	overflow:hidden;
@@ -54,7 +54,7 @@
 }
 /*css for profile.js*/
 .ProfileCard{
-	width:250px;
+	width:280px;
 	margin:20px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;

@@ -28,11 +28,20 @@ class ProfileCard extends Component {
                     <div className="name">{this.props.mem.name}</div>
                     {/*<div className="as">{this.props.mem.as}</div>*/}
                     <div className="contact">
-                          <span><CommunicationCall color={indigo500}/></span>
-                          +91-{this.props.mem.phno}
+                          <span>
+                          <a href={'tel:+91'+this.props.mem.phno}>
+                            <CommunicationCall color={indigo500}/>
+                            </a>
+                            </span>
+                              +91-{this.props.mem.phno}
+                          
                     </div>
                     <div className="contact">
-                          <span><CommunicationEmail color={indigo500}/></span>
+                          <span>
+                              <a href={'mailto:'+this.props.mem.email}>
+                                <CommunicationEmail color={indigo500}/>
+                              </a>
+                          </span>
                           {this.props.mem.email}
                     </div>
               </div>

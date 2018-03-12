@@ -27,7 +27,7 @@ import ErrorPage from './pages/events/event/errorpage.js'
 import Contact from './pages/contact/contact.js'
 import Canvas from './components/canvas_2d.js'
 import Lectures from './pages/Lectures/lectures'
-import Workshops from './pages/workshop/workshops.js'
+import Timeline from './pages/timeline/timeline.js'
 import Merch from './pages/merch/merch.js'
 const styles={
   // backgroundImage:`url(${logo})`
@@ -53,7 +53,7 @@ class App extends Component {
                            <Route path="/registered" component={Registered}/>
                            <Route path="/error" component={ErrorPage}/>
                            <Route path="/contactus" component={Contact}/>
-                           <Route path="/workshops" component={Workshops}/>
+                           <Route path="/timeline" component={Timeline}/>
                            <Route path="/lectures" component={Lectures}/>
                            <Route path="/merchandise" component={Merch}/>
                        </Route>
