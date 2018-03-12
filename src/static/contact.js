@@ -23,9 +23,9 @@ const Contacts = [
 	{
 		"name": "Harshit Tyagi",
 		"team": "General Administration",
-		"dp": "harshit_tyagi.jpg",
+		"dp": "harshit_cropped.jpg",
 		"phno": "98883 57929",
-		"email":"161210005@nitdelhi.ac.in"
+		"email":"tyagi.harshit1997@gmail.com"
 	},
 	{
 		"name": "Shantanu Patil",
@@ -51,7 +51,7 @@ const Contacts = [
 	{
 		"name": "Aryan Singh",
 		"team": "Marketing",
-		"dp": "aryan_singh.jpg",
+		"dp": "aryan_cropped.jpg",
 		"phno": "98910 83293",
 		"email":"161210005@nitdelhi.ac.in"
 	},
@@ -79,16 +79,16 @@ const Contacts = [
 	{
 		"name": "Havish N Reddy",
 		"team": "General Welfare",
-		"dp": "manavatar.png",
-		"phno": "",
-		"email":"161210005@nitdelhi.ac.in"
+		"dp": "profic_pic_havi.jpeg",
+		"phno": "95604 68502",
+		"email":"haviahavi008@gmail.com"
 	},
 	{
 		"name": "Gurpreet Singh",
 		"team": "General Welfare",
-		"dp": "manavatar.png",
+		"dp": "guri.jpg",
 		"phno": "85718 32001",
-		"email":"161210005@nitdelhi.ac.in"
+		"email":"gshantpuri@gmail.com"
 	},
 	{
 		"name": "Arpan Kumar Singh",

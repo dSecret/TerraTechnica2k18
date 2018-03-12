@@ -21,12 +21,12 @@ class NavBar extends Component {
 
   render() {
     var menuOptions = [ {tit:'Home',linki:'/'},
+                        {tit:'Timeline',linki:'/timeline'},
                         {tit:'Events',linki:'/events'},
-                        {tit:'ContactUs',linki:'/contactus'},
-                        {tit:'Team',linki:'/team'},
-                        {tit:'Workshops',linki:'/workshops'},
                         {tit:'Lectures',linki:'/lectures'},
                         {tit:'Merchandise',linki:'/merchandise'},
+                        {tit:'Team',linki:'/team'},
+                        {tit:'ContactUs',linki:'/contactus'},
                       ]
           menuOptions=menuOptions.map((item,index)=>{
                   return(
