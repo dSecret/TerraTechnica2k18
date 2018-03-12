@@ -30,7 +30,7 @@ const Contacts = [
 	{
 		"name": "Shantanu Patil",
 		"team": "Public Relations",
-		"dp": "manavatar.png",
+		"dp": "shantanu_patil.jpg",
 		"phno": "91581 21986",
 		"email":"161210005@nitdelhi.ac.in"
 	},
@@ -79,14 +79,14 @@ const Contacts = [
 	{
 		"name": "Havish N Reddy",
 		"team": "General Welfare",
-		"dp": "manavatar.png",
+		"dp": "havish_n_reddy.jpg",
 		"phno": "",
 		"email":"161210005@nitdelhi.ac.in"
 	},
 	{
 		"name": "Gurpreet Singh",
 		"team": "General Welfare",
-		"dp": "manavatar.png",
+		"dp": "gurpreet_singh.jpg",
 		"phno": "85718 32001",
 		"email":"161210005@nitdelhi.ac.in"
 	},
@@ -112,7 +112,7 @@ const Contacts = [
 		"email":"161210045@nitdelhi.ac.in"
 	},
 	{
-		"name":"Ajay  Rathore",
+		"name":"Ajay Rathore",
 		"team":"IT Support",
 		"dp":"ajay_rathore.jpg",
 		"phno":"8076109532",
