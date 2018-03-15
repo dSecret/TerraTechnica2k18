@@ -21,10 +21,12 @@ class NavBar extends Component {
 
   render() {
     var menuOptions = [ {tit:'Home',linki:'/'},
-                        {tit:'Timeline',linki:'/timeline'},
+                        // {tit:'Timeline',linki:'/timeline'},
                         {tit:'Events',linki:'/events'},
+                        // {tit:'Pro nite',linki:'/pronite'},
                         {tit:'Lectures',linki:'/lectures'},
                         {tit:'Merchandise',linki:'/merchandise'},
+                        {tit:'Accommodations',linki:'/accommodations'},
                         {tit:'Team',linki:'/team'},
                         {tit:'ContactUs',linki:'/contactus'},
                       ]
@@ -39,7 +41,13 @@ class NavBar extends Component {
        <div className="NavBar">
             <div className="rel-wrap">
               <div className="logo-wrap">
-                    <img src={require('../static/Terra Technica 18 White Small 18.png')} alt="" className="toplogo"/>
+                    <Link to="/">
+                      <img 
+                          src={require('../static/Terra Technica 18 White Small 18.png')} 
+                          alt="logo" 
+                          className="toplogo"
+                      />
+                    </Link>
               </div>
               <div className="options-wrap" id="fullform">
                     {menuOptions}

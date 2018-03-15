@@ -174,6 +174,13 @@ background-image: linear-gradient(45deg, #0c090c 0%, #353637 34%, #b7bab8 60%, #
 .toplogo{
 	height:100%;
 	/*width:150px;*/
+	-webkit-touch-callout: initial !important;
+    -webkit-user-select: initial !important;
+    -khtml-user-select: initial !important;
+    -moz-user-select: initial !important;
+    -ms-user-select: initial !important;
+    user-select: initial !important;
+    user-drag: initial !important; 
 }
 .seclogo{
 	height:80%;

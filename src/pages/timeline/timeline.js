@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import '../../css/timeline.css';
-import {Card,CardMedia, CardTitle, CardText} from 'material-ui/Card';
+
+
 
 class Timeline extends Component {
       constructor(props) {
       super(props);
       this.state = {
-
+        open: false,
       };
     }
   render() {
     return (
       <div className="Timeline">
-
-
+        <div>Coming Soon...</div>
 {/*  <Card style={{margin:'20px 0'}}>
     <CardTitle title="Card title" subtitle="Card subtitle" />
     <CardText>

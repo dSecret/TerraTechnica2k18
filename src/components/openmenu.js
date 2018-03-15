@@ -17,11 +17,13 @@ const style={
 
 class OpenMenu extends Component {
   render() {
-    var menuOptions = [ {tit:'Home',linki:'/'},
-                        {tit:'Timeline',linki:'/timeline'},
+    var menuOptions =[ {tit:'Home',linki:'/'},
+                        // {tit:'Timeline',linki:'/timeline'},
                         {tit:'Events',linki:'/events'},
+                        // {tit:'Pro nite',linki:'/pronite'},
                         {tit:'Lectures',linki:'/lectures'},
                         {tit:'Merchandise',linki:'/merchandise'},
+                        {tit:'Accommodations',linki:'/accommodations'},
                         {tit:'Team',linki:'/team'},
                         {tit:'ContactUs',linki:'/contactus'},
                       ]

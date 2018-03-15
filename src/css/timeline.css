@@ -1,33 +1,15 @@
 .Timeline{
-  display:block;
-  /*align-items:center;*/
-  /*justify-content: center;*/
-  /*height:100%;*/
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  /*overflow: hidden;*/
-  width:40vw;
-  font-family:'Nova Flat', cursive;
-  color:lightgrey;
-  margin:0 auto;
-  
-}
-.Timeline .earth-wrap{
-  width:320px;
-  height:320px;
-/*  border-radius: 50%;
-  border:2px solid white;*/
   display:flex;
   align-items:center;
   justify-content: center;
-  font-size:29px;
-}
-.Timeline .main-margin{
-  width:100%;
-  height:20vh;
-}
-@media only screen and (max-width:8in){
-  .Timeline{
-    width:97.5vw;
-  }
+  flex-direction: column;
+  height:100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  overflow: hidden;
+  width:100vw;
+  font-family:'Nova Flat', cursive;
+  color:lightgrey;
+  margin:0 auto;
+  /*padding:0;*/
 }

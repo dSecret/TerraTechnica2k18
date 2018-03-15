@@ -128,13 +128,11 @@ class Merch extends Component {
     if(this.handleErrors()){
       axios({
         method:'post',
-        url:`${window.origin}/ts.php`,
+        url:`${window.location.origin}/ts.php`,
         data:this.state.user
       }).then(res=>{
-              console.log(this.state.user)
               if(res.status===200)
-                {console.log(res.data)
-                  window.location='http://terratechnica.in/instat.php?req='+res.data}
+                  window.location='http://terratechnica.in/instat.php?req='+res.data
               else
                 window.location='https://terratechnica.in/#/error?req=/merchandise'
       }).catch(res=>{

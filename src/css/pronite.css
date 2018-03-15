@@ -1,0 +1,124 @@
+.Pronite{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  height:100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  overflow: hidden;
+  width:100vw;
+  /*background-color: rgba(255,0,0,0.8);*/
+  font-family:'Nova Flat', cursive;
+  color:lightgrey;
+  margin:0 auto;
+  /*padding:0;*/
+}
+.image{
+    /*height:160px;
+    width:160px;
+    border-radius: 50%;*/
+    /*margin-bottom:20px;*/
+}
+.sonar-wrapper {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  width:100%;
+  height:100%;
+  padding-top: 24%;
+  /*background-color: green;*/
+}
+
+/* The circle */
+.sonar-emitter {
+  position: relative;
+  margin: 0px auto;
+  width: 290px;
+  height: 290px;
+  border-radius: 9999px;
+  background-color: HSL(45,100%,50%);
+  color:black;
+}
+.sonar-emitter .sonar-button-wrap{
+  width:100%;
+  height:100%;
+  border-radius: 50%;
+  display:flex;
+  align-items:center;
+  justify-content: flex-end;
+  flex-direction: column;
+  overflow: hidden;
+  /*background-image:url('/src/static/sunburn.jpg') 0 0/100vw 100vh;*/
+}
+/* the 'wave', same shape and size as its parent */
+.sonar-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  /*background-color: HSL(45,100%,50%);*/
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/*
+  Animate!
+  NOTE: add browser prefixes where needed.
+*/
+.sonar-wave {
+  /*animation: sonarWave 1s linear infinite;*/
+}
+#sonarwave1{
+   animation: sonarWave 0s linear infinite;
+   background-color: teal;
+
+}
+#sonarwave2{
+   animation: sonarWave 1s linear infinite;
+   background-color: maroon;
+
+}
+#sonarwave3{
+   animation: sonarWave 2.5s linear infinite;
+   background-color: HSL(55,100%,50%);
+
+}
+#sonarwave4{
+   animation: sonarWave 4s linear infinite;
+   background-color: white;
+
+}
+#sonarwave5{
+   animation: sonarWave 5s linear infinite;
+   background-color:HSL(52,100%,50%);
+
+}
+@keyframes sonarWave {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.Pronite .main-margin{
+  width:100%;
+  height:20vh;
+  display: none;
+}
+@media only screen and (max-width:8in){
+  .Pronite{
+    /*width:97.5vw;*/
+  }
+  .images{
+    width:97.5vw;
+    margin: 0 auto;
+    height:initial;
+  }
+}

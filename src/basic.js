@@ -14,6 +14,7 @@ import './css/basic.css'
 // Parent Component
 class Basic extends Component {
   render() {
+    let path=this.props.location.pathname
     return (
       <div className="Basic">
                     <NavBar/>
@@ -22,7 +23,7 @@ class Basic extends Component {
                       {/*  <div className="notify-wrap">
                             <div>Notifications</div>
                         </div>*/}
-                        {this.props.location.pathname!=='/'?
+                        {path!=='/pronite'&&path!=='/'?
                           <div className="maintain-padding"></div>
                         :''
                         }

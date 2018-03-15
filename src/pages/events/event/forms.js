@@ -40,7 +40,7 @@ class Forms extends Component {
     if(this.handleErrors()){
       axios({
         method:'post',
-        url:`${window.origin}/test.php`,
+        url:`${window.location.origin}/test.php`,
         data:{
             category:this.props.location.query.category,
             event:this.props.location.query.event,
@@ -49,16 +49,17 @@ class Forms extends Component {
       }).then(res=>{
           if(res.status===200){
               if(this.state.event.fee)
-                  window.location='http://terratechnica.in/insta.php?req='+res.data
-              else
-                  window.location=`https://terratechnica.in/#/registered?category=${this.props.location.query.category}&event=${this.props.location.query.event}`            
+                  return window.location='http://terratechnica.in/insta.php?req='+res.data
+              else{
+                  return window.location=`https://terratechnica.in/#/registered?category=${this.props.location.query.category}&event=${this.props.location.query.event}`            
+                }
           }
           else{
-              window.location='https://terratechnica.in/#/error?req=/events/'+this.props.location.query.category+'/'+this.props.location.query.event
+              return window.location='https://terratechnica.in/#/error?req=/events/'+this.props.location.query.category+'/'+this.props.location.query.event
           }
           
       }).catch(res=>{
-              window.location='https://terratechnica.in/#/error?req=/events/'+this.props.location.query.category+'/'+this.props.location.query.event
+              return window.location='https://terratechnica.in/#/error?req=/events/'+this.props.location.query.category+'/'+this.props.location.query.event
       })
       // console.log(this.state.playerinfo)
     }
@@ -85,6 +86,7 @@ class Forms extends Component {
         <div className="wrapper-player" key={i}>
             {i!==0?'\tMember'+''+(i+1):'Team Leader'}
   					<div className="player" id={'forms'+i}>
+                <div className="inform">*Use 'NA', if you don't have a roll no.</div>
                 <form>
   						    <TextField 
                       name="name"
@@ -125,7 +127,7 @@ class Forms extends Component {
             <option>Team</option>
             {items}
           </select>
-              {this.state.value?<p>All field are required.</p>:''}
+              {this.state.value?<p>All fields are required.</p>:''}
           	  {player}
               {this.state.required?
                 <div className="warnings">*Required fields can not be empty or entered data is invalid</div>

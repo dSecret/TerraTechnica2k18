@@ -15,6 +15,10 @@
 	text-decoration: underline;
 	padding:15px;
 }
+.inform{
+	font-size: 13px !important;
+	color:grey;
+}
 .wrapper-player{
 	border:1px solid lightgrey;
 	margin:10px 5px;

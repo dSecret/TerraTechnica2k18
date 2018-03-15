@@ -20,7 +20,7 @@ class Registered extends Component {
       			<div className="sub-tit">
       					<ul>
       						<li>Try again.</li>
-      						<li>Try using Firefox browser or Edge browser</li>
+      						<li>Try using Firefox browser or Chrome browser</li>
       					</ul>
       			</div>
 		  		<div className="goback">

@@ -11,6 +11,11 @@ class Lectures extends Component {
       			className="images"
       			alt="lecture 1"
       		/>
+          <img 
+            src={require('../../static/lec2.jpg')}
+            className="images"
+            alt="lecture 1"
+          />
       </div>
     )
   }

@@ -1,3 +1,4 @@
+
 #openmenu-cont{
 	z-index: 5000;
 	width:0;
@@ -13,11 +14,11 @@
 #second-child{
 	width:100%;
 	height:90%;
-	overflow-y:auto;
+	/*overflow-y:scroll;*/
 	/*background-color:green;*/
-  padding-bottom:20%;
+  padding-bottom:30%;
 	display:flex;
-	align-items:center;
+	align-items:flex-start;
 	justify-content:center;
 	 flex-direction: column;
    position:relative;

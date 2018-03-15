@@ -27,7 +27,8 @@ class Team extends Component {
             'Event Management',
             'General Welfare',
             'Design',
-            'IT Support'
+            'IT Support',
+            'Logistics'
         ]
       };
     }

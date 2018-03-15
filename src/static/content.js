@@ -1,7 +1,8 @@
 const Db={
 	"robotics":{
         title:"ROBOTICS",
-		options:['DEATH RACE','ROBO RACE','ROBO SOCCER','MAZE RUNNER',
+		options:[
+            'DEATH RACE','ROBO RACE','ROBO SOCCER','MAZE RUNNER',
 			'PUCK COLLECT','ROBO RUMBLE'	
 		],
         content:'Will robots inherit the earth?'
@@ -27,7 +28,7 @@ const Db={
     },
     'DEATH RACE':{
         intro:"For all RC car lovers, we provide a big platform to prove yourself as the champion among all the RC Car drivers. If you love RC cars and have excellence in driving cars then drive through the toughest path filled up by high bumps, sharpest turns and high ramps to fly you in air and grab huge prizes.",
-        intropoints:[],
+        intropoints:['<b>Contact : </b> +91 72890 17595 (Ayush Pranav)'],
         ps:"You have to design a RC car with given technical specifications and drive it on a track full of obstacles and traps.",
         team:3,
         fee:100,
@@ -44,7 +45,7 @@ const Db={
     },
     'ROBO RACE':{
         intro:'Enough trash talk. Let the robo do the running." Robots compete in a race to prove their speed. The bot to cross the finish line first emerges as victor.',
-        intropoints:[],
+        intropoints:['<b>Contact : </b> +91 72890 17595 (Ayush Pranav)'],
         ps:'You have to design a RC car with given technical specifications and drive it on a track with obstacles and traps.',
         team:3,
         fee:100,
@@ -60,7 +61,7 @@ const Db={
     },
     'ROBO SOCCER':{
         intro:'Robo soccer confronts the sheer and intensified tryst of the football lovers with robomaniacs. The love for the game just got technically amplified with the circuits and steel fighting for the precious prize. Infiltrate your robot with the soccer skill, it just might be the striker you need.',
-        intropoints:[],
+        intropoints:['<b>Contact : </b> +91 72890 17595 (Ayush Pranav)'],
         ps:'',
         team:3,
         fee:100,
@@ -83,7 +84,8 @@ const Db={
     },
     'MAZE RUNNER':{
         intro:"If you're going to decipher a hidden code from a complex set of different mazes, I'm pretty sure you need a Sherlock’s brain running the show.",
-        intropoints:["The robot should be autonomous, not manual.",
+        intropoints:['<b>Contact : </b> +91 72890 17595 (Ayush Pranav)',
+        "The robot should be autonomous, not manual.",
         "No damage should be made by a bot to the arena or to other's team bot in any manner.",
         "Bots should not be disassembled until the results are declared.",
         "When a team is called, they must report within five minutes.",
@@ -114,7 +116,7 @@ const Db={
     },
     'PUCK COLLECT':{
     	intro:"TerraTechnica'18 is back with its dais ready for young and ardent minds to exhibit their innovation in designing and to prove their mettle in the RIDE under technology. Let's not waste any more time in awaiting the opportunity, just get busy in availing it. Enter the field of robo-mech war, with your bots ready to collect their assigned pucks and leave the place with excitement of triumph over opponents. Come, conquer and savour victory!!",
-    	intropoints:[],
+    	intropoints:['<b>Contact : </b> +91 72890 17595 (Ayush Pranav)'],
     	ps:'Two Remote Controlled robots compete. 10 pucks of each assigned colour are distributed randomly on the Arena. The aim is to collect all pucks of the assigned colour and carry them to the own home base.',
     	team:2,
         fee:100,
@@ -131,6 +133,7 @@ const Db={
     'ROBO RUMBLE':{
         intro:"",
         intropoints:[
+            '<b>Contact : </b> +91 72890 17595 (Ayush Pranav)',
             "<b>Arena</b> will be square(2m x 2m) in shape open from top and arena will be open from all sides so as to eliminate the opponent's robot by pushing, lifting, etc outside the ring. Participants keep in mind that wire should be sufficient. Exact arena will opened at the time of event. ",
         ],
         ps:"To design and construct a warfare robot which should be capable of eliminating other robots from the arena justlike Royal Rumble and the last robot standing will be declared as the winner.",
@@ -151,7 +154,7 @@ const Db={
     },
     'METAL HUNT':{
     	intro:'The event objective is to find the maximum number of metal pieces in a given location by using metal detector in provided time duration. The metal pieces will be placed inside the soil with maximum depth of 10 cms. All teams will find the metal pieces at the same time and the team which gets maximum number of metal pieces in the provided time duration will be awarded as winner.',
-    	intropoints:[],
+    	intropoints:['<b>Contact : </b> +91 72890 17595 (Ayush Pranav)'],
     	ps:'',
     	team:3,
         fee:100,
@@ -164,7 +167,7 @@ const Db={
     },
     'HACKATHON':{
     	intro:'"Walking on water and developing software from a specification are easy if both are frozen." Hackathon is an onsite mobile app building competition where we give you an opportunity to design and develop your own mobile or even web app, show off your skills to win the battle and be the master of web world.',
-    	intropoints:[],
+    	intropoints:['<b>Contact : </b> +91 88022 20624 (Anurag Giri)'],
     	ps:'Your team will be required to build an app from scratch, based on the given theme. With two days to make it, you and your team can code all day and seek learning resources as well, so participate whether or not you know how to make an app or not. The submissions will then be judged on a number of criteria and the best will be declared the winner.',
     	team:5,
         fee:0,
@@ -176,8 +179,9 @@ const Db={
     	rules2:[]
     },
     'CAPTURE THE FLAG':{
-    	intro:'CTF is an event which provides a platform for participants to work out on real world scenarios like malware analysis ¸pretesting , system administration.  The game is played in team of four players where each team is provided with a real world scenario along with an system where they need to seek out a solution which promotes next level. Each level is associated with different kind of scenario of increasing difficulty. This allows the participants to apply various concepts and techniques to reach a solution. The game is entirely based on Command line interface. The team is given secured access to a system to analyse, execute instructions to find the flag. The games assumes players to have knowledge in computer engineering such as files, networking, various tools of system administration. The game duration is estimated to be around 3hrs.',    	intropoints:[],
-    	ps:'',
+    	intro:'CAPTURE THE FLAG is an event which provides a platform for participants to work out on real world scenarios like malware analysis ¸pretesting , system administration.  The game is played in team of four players where each team is provided with a real world scenario along with an system where they need to seek out a solution which promotes next level. Each level is associated with different kind of scenario of increasing difficulty. This allows the participants to apply various concepts and techniques to reach a solution. The game is entirely based on Command line interface. The team is given secured access to a system to analyse, execute instructions to find the flag. The games assumes players to have knowledge in computer engineering such as files, networking, various tools of system administration. The game duration is estimated to be around 3hrs.',    	intropoints:[],
+    	intropoints:['<b>Contact : </b> +91 88022 20624 (Anurag Giri)'],
+        ps:'',
     	team:3,
         fee:0,
     	win:'',
@@ -186,7 +190,7 @@ const Db={
     },
     'NITD PROGRAMMING LEAGUE':{
     	intro:'“Truth can only be found in one place: the code.”  Robert C. Martin minced no words while he made that statement. For those who think themselves as the problem solvers and all the code freaks out there, Terra Technica’18 is back with a platform for you to prove your mettle. This could be the event that gives you that confidence to code which could change your life forever.',
-    	intropoints:[],
+    	intropoints:['<b>Contact : </b> +91 88022 20624 (Anurag Giri)'],
     	ps:'This is a competitive programming event. There will be a set of questions, and participants will be required to write programs to solve them (in C, C++ or Java), which will be judged by an online judge. The team which solves the maximum number of questions in least time will be declared as the winner.',
     	team:3,
         fee:0,
@@ -202,7 +206,7 @@ const Db={
     },
     'CLASH OF CODES':{
     	intro:'Outwit, outplay, outlastGet ready for your chance to glory, where you would have to unleash your coding skills but, you would win only if you outlast your competitors.It’s an opportunity to boast your coding skills, but you can’t entirely rely on them…..May the odds always be in your favour.',
-		intropoints:[],
+		intropoints:['<b>Contact : </b> +91 88022 20624 (Anurag Giri)'],
     	ps:'',
     	team:1,
         fee:0,
@@ -215,7 +219,7 @@ const Db={
     },
     'BLANK CODING':{
     intro:'Got good hands in Coding? Ever thought of writing the codes with MONITOR OFF? Sounds challenging?',
-    intropoints:["Individual Event",
+    intropoints:['<b>Contact : </b> +91 88022 20624 (Anurag Giri)',"Individual Event",
     "The allowed language is C and compiler turbo C /dev c++ /code blocks",
     "Consists of two rounds",
     "The Judge’s decision is final"],
@@ -233,23 +237,31 @@ const Db={
     "Winners will be announced based on the results of compilation and execution."]	
     },
     'MACHINE LEARNING CHALLENGE':{
-    	intro:'With the promising spurge in job demand in data science and machine learning currently and years to come, this is probably the best time to take up data science as a career. Hard to believe ?You would have recently come across innumerable online or offline courses ads launched by colleges and universities on data science. Why would it be ? Because, this demand is real. Companies are convinced that data analysis and predictive analysis can help them make better decision. This challenge will help and encourage beginners to acquire the practical skill sets required by a data scientist. Focus will remain more on learning, writing more code and acquiring understanding of how it works.',
-    	intropoints:[],
+    	intro:"Key phrases can provide highly condensed valuable information that allows users to quickly acquire the main ideas of text. The task is to automatically extract Key phrases from documents .",
+    	intropoints:['<b>Contact : </b> +91 88022 20624 (Anurag Giri)',
+            "<b>Solution Required : </b>  We want an AI to -<br><ul><li>Index all documents</li><li>Extract a list of potential topics from each document (building a taxonomy of topics)</li><li>Link supporting entities to the taxonomies</li><li>A working Model for the same</li></ul>"
+
+        ],
     	ps:'',
     	team:2,
         fee:0,
     	win:'',
-    	rules1:["Your output will be evaluated only for 50% of the test data while the contest is running. Once the contest is over, output for the remaining 50% of the data will be evaluated and the final rank will be awarded",
-    	"You will have to upload your output on the problem page in the format given in the problem statement. In addition to your output, you will also have to submit your source and other files in .zip or .tar compressed archive.",
-    	"The total number of submission allowed by a participant is 1000. The maximum number of submission a participant can make in a day is 10.",
-    	"You can use any tools or libraries for building your solution. There is no restriction on the tools that you can use.",
-    	"You can only participate only as an individual.",
-    	"In order to claim prize, your leaderboard score must be reproducible from your code files."],
+    	rules1:[
+           "Do not use any paid APIs or software in your toolset",
+            "A summarisation algorithm can be a good by-product of the challenge (but not necessary)",
+            "A deep learning working solution will be preferred , but we are not discouraging other approaches",
+            "We are looking for an open source working solution , that will be challenged by test cases that FIL will share on the day of evaluation/presentation",
+            "This should work on the stock articles / News on Yahoo finance or Economic times or other similar textual information. ",
+            "Participants will have to give a live demo on the event day.",
+            "<b>Example</b><br>China has the world’s fastest growing major economy with growth rates averaging 10% over the past 30 years, according to the International Monetary Fund (IMF). As of the end of 2017, the country’s economy was the second largest in the world by nominal gross domestic product (GDP) and the world's largest by purchasing power parity (PPP) next to the United States, driven largely by its manufacturing sector that exports goods that are widely consumed around the world.",
+            "<b>Extract Topics</b><br>From 1,00,000 tweets (such as 1 above) about Chinese economy (Tweets could be from BBC , CNN , FOX News , Yahoo Finance)",
+            "<b>After Extracting</b><br>After extracting “china fastest growing economy” as 1 possible topic from 1,00,000 tweets , matches for the topic would be verified against different forms of the same topic, e.g. “economy china”, “fastest growing ”, “china experiencing fast growth”. -> Link “china fastest growing economy“ to “IMF” , “GDP” , “PPP” , “USA”"
+        ],
     	rules2:[]
     },
     'CODE GOLF':{
     	intro:"CodeGolf is a competitive coding challenge for all the geeks out there, but what makes it different is, you have to code short to fetch more marks. Lesser you code, better you score. Though what's priceless is solving interesting problems and the thrill of competition. To deal with it, you require a level patience and skill that escapes ordinary programmers. Are you ready?",
-    	intropoints:[],
+    	intropoints:['<b>Contact : </b> +91 88022 20624 (Anurag Giri)'],
     	ps:'',
     	team:2,
         fee:0,
@@ -266,7 +278,7 @@ const Db={
     },
     'REVERSE CODING':{
     	intro:"Think you know everything about programming? Well there are many ways to go, let’s see which one you pick. This event looks for the real star that stands up to the ability of creativity and logic. So, be ready to storm out not just by switching systems but switching your brains into the all new arena.",
-    	intropoints:[],
+    	intropoints:['<b>Contact : </b> +91 88022 20624 (Anurag Giri)'],
     	ps:'The difference between general competitive programming competition and reverse coding is that you will not be given the exact question statement but you will be provided with some set of sample inputs and outputs which will be sufficient enough to guess the problem and then you have to submit a code for your guessed problem. Interesting... right?',
     	team:3,
         fee:0,
@@ -325,7 +337,7 @@ const Db={
     	intropoints:[],
     	ps:'',
     	team:1,
-        fee:0,
+        fee:50,
     	win:'',
     	rules1:[],
     	rules2:[]
@@ -335,7 +347,7 @@ const Db={
     	intropoints:[],
     	ps:'',
     	team:1,
-        fee:0,
+        fee:100,
     	win:'',
     	rules1:[],
     	rules2:[]

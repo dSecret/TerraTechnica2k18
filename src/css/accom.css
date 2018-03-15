@@ -1,0 +1,44 @@
+.Accom{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  height:100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  overflow: hidden;
+  width:60vw;
+  font-family:'Nova Flat', cursive;
+  color:lightgrey;
+  margin:0 auto;
+  background-color:white;
+  /*padding:0;*/
+}
+.Accom .intro{
+  color:#607D8B;
+  font-size:21px;
+  font-family:'Raleway', cursive;
+  padding:15px 10px;
+  line-height:150%;
+}
+.accom-form{
+  border:1px solid lightgrey;
+  margin:10%;
+  padding:10px;
+  border-radius:5px;
+/*  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-wrap: nowrap;*/
+}
+.accom-butt{
+  padding:20px;
+  text-align: left;
+}
+
+@media only screen and (max-width:10in){
+  .Accom{
+    width:97.5vw;
+    height: initial;
+  }
+}

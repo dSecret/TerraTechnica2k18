@@ -16,13 +16,14 @@ import Home from './pages/home/home'
 import Events from './pages/events/events'
 import Team from './pages/team/team.js'
 import OpenTeam from './pages/team/openteam.js'
-
+import Accom from './pages/accom/accom.js'
+import Pronite from './pages/pronite/pronite.js'
 import NotFound from './notfound.js'
 import OpenEvent from './pages/events/event/openevent.js'
 import Forms from './pages/events/event/forms.js'
 import Registered from './pages/events/event/registered.js'
 import ErrorPage from './pages/events/event/errorpage.js'
-
+import Forms1 from './pages/events/event/forms1.js'
 
 import Contact from './pages/contact/contact.js'
 import Canvas from './components/canvas_2d.js'
@@ -50,12 +51,15 @@ class App extends Component {
                            <Route path="/events/informal/:id" component={OpenEvent}/>
                            <Route path="/events/miscellaneous/:id" component={OpenEvent}/>
                            <Route path="/register" component={Forms}/>
+                           {/*<Route path="/registerpaintball" component={Forms1}/>*/}
                            <Route path="/registered" component={Registered}/>
                            <Route path="/error" component={ErrorPage}/>
                            <Route path="/contactus" component={Contact}/>
-                           <Route path="/timeline" component={Timeline}/>
+                           <Route path="/pronite" component={Pronite}/>
                            <Route path="/lectures" component={Lectures}/>
                            <Route path="/merchandise" component={Merch}/>
+                           <Route path="/accommodations" component={Accom}/>
+                           <Route path="/timeline" component={Timeline}/>
                        </Route>
                        <Route path="*" component={NotFound}/>
                     </Router>
