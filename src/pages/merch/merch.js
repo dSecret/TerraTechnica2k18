@@ -31,13 +31,42 @@ class Merch extends Component {
       };
     }
 
-  handleChange2 = (event, index, value) => {
-  	let bar=this.state.user
+	handleChange2 = (event, index, value) => {
+  		let bar=this.state.user
   		bar.size=value
-  	this.setState({user:bar}) 
- }
-  render () {
-    return (
+  		this.setState({user:bar}) 
+ 	}
+	
+	MerchClosed() {
+		return (
+			<div className="Merch">
+				<div className="main-wrap-merch" align="center">
+					<div id="side-1" className="flip">
+					    <img src={require('../../static/tfront.png')} alt="front"/>
+					</div>
+					<div id="side-2" className="flip">
+				    	<img src={require('../../static/tback.png')} alt="back"/>
+					</div>
+					<div className="button-wrap">
+						<div className="custom-butt" id="up"><div id="upin" className="click-back"></div></div>
+						<div className="custom-butt"id="down"><div id="downin"></div></div>
+					</div>
+    		  	</div>
+				<div className="intro-wrap">
+					<b>Mechandise is closed!</b>
+					<br/>
+					Thanks for purchasing the T-Shirt, distribution of the T-Shirt will be announced soon.
+					For more info, 
+					<br/>	
+					contact Gurpreet Singh Ph.No: +91 85718 32001
+				</div>
+			</div>
+		)
+	}
+
+  	render () {
+		return this.MerchClosed()
+    /* return (
       <div className="Merch">
       		<div className="main-wrap-merch" align="center">
 				<div id="side-1" className="flip">
@@ -98,13 +127,15 @@ class Merch extends Component {
       		</div>
       </div>
     )
+	*/
   }
   handleChange=(e)=>{
   		let foo=this.state.user
   			foo[e.target.name]=e.target.value
   		this.setState({user:foo});
   }
-  handleUp=()=>{
+
+	handleUp=()=>{
 		document.getElementById( 'up' ).addEventListener( 'click', function( event ) {
 		    
 		    event.preventDefault();
@@ -124,6 +155,7 @@ class Merch extends Component {
 		});
 
   }
+/*
   handleSubmit=()=>{
     if(this.handleErrors()){
       axios({
@@ -152,6 +184,7 @@ class Merch extends Component {
 	    return bar
 
   }
+  */
   componentDidMount(){
   	this.handleUp()
   }
