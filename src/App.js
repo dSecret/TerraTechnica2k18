@@ -18,6 +18,8 @@ import Team from './pages/team/team.js'
 import OpenTeam from './pages/team/openteam.js'
 import Accom from './pages/accom/accom.js'
 import Pronite from './pages/pronite/pronite.js'
+import Sponsors from './pages/sponsors/sponsors.js'
+
 import NotFound from './notfound.js'
 import OpenEvent from './pages/events/event/openevent.js'
 import Forms from './pages/events/event/forms.js'
@@ -60,6 +62,7 @@ class App extends Component {
                            <Route path="/merchandise" component={Merch}/>
                            <Route path="/accommodations" component={Accom}/>
                            <Route path="/timeline" component={Timeline}/>
+                           <Route path="/sponsors" component={Sponsors}/>
                        </Route>
                        <Route path="*" component={NotFound}/>
                     </Router>

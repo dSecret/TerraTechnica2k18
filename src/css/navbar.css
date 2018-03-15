@@ -22,6 +22,7 @@
 	top:0;
 	left:0;
 	height:14vh;
+	z-index:1000;
 	/*background-color:red;*/
 /*	-webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -46,7 +47,7 @@
 	top:0;
 }
 #fullform{
-	right:100px;
+	right:50px;
 	padding-right:10px;
 	width:100vw;
 	height: 100%;

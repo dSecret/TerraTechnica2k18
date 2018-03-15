@@ -74,12 +74,12 @@
 }
 #sonarwave1{
    animation: sonarWave 0s linear infinite;
-   background-color: teal;
+   background-color:rgb(128,128,128);
 
 }
 #sonarwave2{
    animation: sonarWave 1s linear infinite;
-   background-color: maroon;
+   background-color: rgb(211,211,211);
 
 }
 #sonarwave3{
@@ -89,12 +89,12 @@
 }
 #sonarwave4{
    animation: sonarWave 4s linear infinite;
-   background-color: white;
+   background-color: rgb(169,169,169);
 
 }
 #sonarwave5{
    animation: sonarWave 5s linear infinite;
-   background-color:HSL(52,100%,50%);
+   background-color:  rgb(192,192,192);
 
 }
 @keyframes sonarWave {

@@ -6,7 +6,7 @@ import '../../css/home.css';
 
 import TTLogo from '../../static/logo.png'
 import NITDLogo from '../../static/nitdd.png'
-
+import Honda from '../../static/Honda-Logo.jpg'
 
 import '../../css/home_simple.css'
 
@@ -36,11 +36,16 @@ class Home extends Component {
 				    <img className="HomeTTLogoimg" src={ TTLogo }/>
             <div className="TTDate">23rd Mar - 24th Mar</div>
             <div className="wrap-nitdlogo">
-              <a href="http://nitdelhi.ac.in">
+              <a href="http://nitdelhi.ac.in" style={{marginRight:"10px"}}>
+                  <div className="NITDText">Presented by</div>
                   <img className="NitdLogoimg" src={NITDLogo}/>
               </a>
+              <a href="" style={{marginLeft:"10px"}}>
+                  <div className="NITDText">Co-sponsored by</div>
+                  <img className="NitdLogoimg" src={Honda}/>
+              </a>
             </div>
-            <div className="NITDText">NIT Delhi</div>
+            
 			    </div>
 		</div>
     );

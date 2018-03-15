@@ -20,11 +20,13 @@ class NavBar extends Component {
 
 
   render() {
-    var menuOptions = [ {tit:'Home',linki:'/'},
+    var menuOptions = [
+                       // {tit:'Home',linki:'/'},
                         // {tit:'Timeline',linki:'/timeline'},
                         {tit:'Events',linki:'/events'},
                         // {tit:'Pro nite',linki:'/pronite'},
                         {tit:'Lectures',linki:'/lectures'},
+                        // {tit:'Sponsors',linki:'/sponsors',},
                         {tit:'Merchandise',linki:'/merchandise'},
                         {tit:'Accommodations',linki:'/accommodations'},
                         {tit:'Team',linki:'/team'},
