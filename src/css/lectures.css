@@ -13,8 +13,8 @@
 }
 
 .images{
-    height:90%;
-    margin:0 30px;
+    margin:0 2px;
+	width: 33%;
   }
 @media only screen and (max-width:8in){
   .images{

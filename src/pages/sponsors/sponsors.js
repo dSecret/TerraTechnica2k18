@@ -11,7 +11,13 @@ class Sponsors extends Component {
       };
     }
   render() {
-  	const spo=['pcm logo.png','Canara-Bank-logo.png','IBC Logo.png',]
+  	const spo=[
+		'pcm logo.png',
+		'ETS-TOEFL-4C.jpg',
+		'EDST Logo.png',
+		'IBC Logo.png',
+		'Canara-Bank-logo.png',
+	]
   	let	  spomap=spo.map(e=>{
   		  		return(
   		  			<img 
@@ -22,10 +28,10 @@ class Sponsors extends Component {
   		  			)
   		  })
   	const part=[
-  		{tit:'tata_hackathon.jpg',span:'Hackathon Partner'},
+		{tit:'tata_hackathon.jpg',span:'Hackathon Partner'},
   		{tit:'fidelity-international-logo.png',span:'ML Challenge Partner'},
   		{tit:'ace academy logo.jpg',span:'Higher Education Partner'},
-  		{tit:'new delhi times logo.jpg',span:'Media Partner'},
+  		{tit:'NDT logo.png',span:'Media Partner'},
   		{tit:'wittyfeed logo.png',span:'Official outreach Partner'},
   		
   	]
