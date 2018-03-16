@@ -46,8 +46,8 @@ class App extends Component {
                       <Route path="/home"component={Basic}>
                            <Route path="/" component={Home}/>
                            <Route path="/events" component={Events}/>
-                           <Route path="/team" component={Team}/>
-                           <Route path="/team/:id" component={OpenTeam}/>
+                           {/*<Route path="/team" component={Team}/>*/}
+                           {/*<Route path="/team/:id" component={OpenTeam}/>*/}
                            <Route path="/events/robotics/:id" component={OpenEvent}/>
                            <Route path="/events/coding/:id" component={OpenEvent}/>
                            <Route path="/events/informal/:id" component={OpenEvent}/>
@@ -60,7 +60,7 @@ class App extends Component {
                            <Route path="/pronite" component={Pronite}/>
                            <Route path="/lectures" component={Lectures}/>
                            <Route path="/merchandise" component={Merch}/>
-                           <Route path="/accommodations" component={Accom}/>
+                           {/*<Route path="/accommodations" component={Accom}/>*/}
                            <Route path="/timeline" component={Timeline}/>
                            <Route path="/sponsors" component={Sponsors}/>
                        </Route>

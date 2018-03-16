@@ -90,10 +90,13 @@ class OpenEvent extends Component {
                   {options2}
 
              </div>
-             <div className="rules">
-                <div>Registration Fee :</div>
-                <div className="fee"><span>{bar.fee}</span> Rs.</div>
-             </div>
+             {this.props.params.id!=='PAINTBALL'&&this.props.params.id!=='BULL RIDE'?
+               <div className="rules">
+                  <div>Registration Fee :</div>
+                  <div className="fee"><span>{bar.fee}</span> Rs.</div>
+               </div>
+               :''
+            }
              { bar.win ?
                <div className="rules">
                     <div>Criteria for victory :</div>

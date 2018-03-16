@@ -16,10 +16,10 @@ class Contact extends Component {
   render() {
     return (
      <div className="Contact">
-          <div className="cmnContact addContact">
-                <div>
+          <div className="cmnContact addContact cmnnContact">
+                <div className="cmnnContact">
                     <h3>Address</h3>
-                    <p> National Institute of Technology Delhi,<br/>
+                    <p className="cmnnContact"> National Institute of Technology Delhi,<br/>
                       A-7, Institutional Area, <br/>Near - Satyawadi
                       Raja Harish Chandra Hospital,<br/>
                       Narela, New Delhi,<br/> 110040.<br/> </p>
@@ -35,21 +35,25 @@ class Contact extends Component {
           </div>
           </div>    
           <div className="cmnContact addContact">
-            <div>
+            <div className="cmnnContact">
                 <h3>Contact</h3>
-               <p> Email : 
+               <p> 
+                Phone no. : <br/>
+                  <ul>
+                    <li>General Info.<br/>(+91)-87430 68185 ,</li>
+                    <li>Sponsorships<br/>(+91)-91581 21986</li>
+                    <li>Robotics<br/>(+91)-72890 17595</li>
+                    <li>Coding<br/>(+91)-88022 20624</li>
+                    <br/>
+                  </ul>
+                Email : 
                <ul>
                     <li>General Info.<br/>terratechnica@nitdelhi.ac.in ,</li>
                     <li>Sponsorships<br/>sponsorships@nitdelhi.ac.in ,</li>
                     <li>Workshops & Student Queries<br/>campusrelations@nitdelhi.ac.in ,</li>
                     <br/>
                   </ul>
-                Phone no. : <br/>
-                  <ul>
-                    <li>General Info.<br/>(+91)-8750267966 ,</li>
-                    <li>Sponsorships<br/>(+91)-9158121986</li>
-                    <br/>
-                  </ul>
+               
                 </p>
             </div>
           </div> 

@@ -33,8 +33,9 @@ class Accom extends Component {
               Accommodation charges will be Rs 200 for two days.
             </li>
             <li>
-              Please contact +91-95602 97049 (Rajnish Prajapati) for further queries.
+              Please contact +91-87430 68185 (Avtansh Gupta) for further queries.
             </li>
+            <li></li>
           </ul>
         </div>
         <div className="accom-form">

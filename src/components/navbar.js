@@ -26,10 +26,10 @@ class NavBar extends Component {
                         {tit:'Events',linki:'/events'},
                         // {tit:'Pro nite',linki:'/pronite'},
                         {tit:'Lectures',linki:'/lectures'},
-                        // {tit:'Sponsors',linki:'/sponsors',},
+                        {tit:'Sponsors',linki:'/sponsors',},
                         {tit:'Merchandise',linki:'/merchandise'},
-                        {tit:'Accommodations',linki:'/accommodations'},
-                        {tit:'Team',linki:'/team'},
+                        // {tit:'Accommodations',linki:'/accommodations'},
+                        // {tit:'Team',linki:'/team'},
                         {tit:'ContactUs',linki:'/contactus'},
                       ]
           menuOptions=menuOptions.map((item,index)=>{
