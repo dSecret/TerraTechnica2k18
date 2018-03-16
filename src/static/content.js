@@ -18,12 +18,12 @@ const Db={
     },
     "informal":{
         title:"INFORMAL",
-    	options:['BULL RIDE','TWISTER'],
+    	options:['BULL RIDE','TWISTER','PAINTBALL'],
         content:'None of us is as smart as all of us.'
     },
     "misc":{
         title:"MISCELLANEOUS",
-    	options:['VIRTUAL STOCK MARKET','PAINTBALL'],
+    	options:['VIRTUAL STOCK MARKET',],
         content:'Mystery keeps us awake.'
     },
     'DEATH RACE':{
@@ -303,9 +303,9 @@ const Db={
         "In case find difficulties in registering Mail to 141100025@nitdelhi.ac.in",
         "<a href='https://play.google.com/store/apps/details?id=com.moneypot&hl=en'><b>Android App</b></a>",
         "<a href='https://itunes.apple.com/in/app/moneypot-app/id1159626753?mt=8'><b>iOS App</b></a>",
-        "Prize money worth 15000/- Rs.(all may not be in cash)",
-        "<ul><li>1st Prize 3000</li><li>2nd Prize 2000</li><li>3rd Prize 1500</li></ul>",
-        "Other prizes are given in form of goodies.",
+        "Prize money worth 5000 /- Rs.(all may not be in cash)",
+        "<ul><li>1st Prize 3000 Rs./-</li><li>2nd Prize 2000 Rs./-</li></ul>",
+        "Other prizes will be given in form of goodies.",
         ],
     	ps:'',
     	team:1,
@@ -334,20 +334,20 @@ const Db={
     },
     'BULL RIDE':{
     	intro:'Getting on this raging mechanical bull needs courage but staying on it as it raves around is better said than done.',
-    	intropoints:[],
+    	intropoints:["Fee 50 Rs/-. per head.","The fee will be collected during the event.","Advance payment can be made at TerraTechnica office, Room no. 316, NIT Delhi."],
     	ps:'',
     	team:1,
-        fee:50,
+        fee:0,
     	win:'',
     	rules1:[],
     	rules2:[]
     },
     'PAINTBALL':{
     	intro:'Want a good excuse to shoot your classmates? Come along for a session with paintball',
-    	intropoints:[],
+    	intropoints:["Fee 100 Rs/- per head.","The fee will be collected during the event.","Advance payment for group bookings (team of 6,8,10) can be made at TerraTechnica office, Room no. 316, NIT Delhi."],
     	ps:'',
     	team:1,
-        fee:100,
+        fee:0,
     	win:'',
     	rules1:[],
     	rules2:[]

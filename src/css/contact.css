@@ -1,6 +1,6 @@
 .Contact{
 	width:100vw;
-	height:100%;
+	/*height:100%;*/
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	font-family: 'Raleway', sans-serif;
@@ -14,7 +14,10 @@
   	word-spacing:3px;
   	letter-spacing: 2px;
   	line-height:170%;
-	-webkit-touch-callout: inherit !important;
+
+}
+.cmnnContact{
+		-webkit-touch-callout: inherit !important;
     -webkit-user-select: inherit !important;
     -khtml-user-select: inherit !important;
     -moz-user-select: inherit !important;

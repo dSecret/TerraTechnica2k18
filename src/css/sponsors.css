@@ -6,7 +6,7 @@
   /*height:100%;*/
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  /*overflow: hidden;*/
+  overflow-x: hidden;
   width:70vw;
   font-family:'Raleway', cursive;
   color:lightgrey;
@@ -31,7 +31,7 @@
 }
 @media only screen and (max-width:10in){
   .Sponsors{
-    width:97.5vw;
+    width:97vw;
     /*height: initial;*/
   }
 }

@@ -21,12 +21,12 @@ class OpenMenu extends Component {
                         // {tit:'Home',linki:'/'},
                         // {tit:'Timeline',linki:'/timeline'},
                         {tit:'Events',linki:'/events'},
-                        // {tit:'Sponsors',linki:'/sponsors',},
+                        {tit:'Sponsors',linki:'/sponsors',},
                         // {tit:'Pro nite',linki:'/pronite'},
                         {tit:'Lectures',linki:'/lectures'},
                         {tit:'Merchandise',linki:'/merchandise'},
-                        {tit:'Accommodations',linki:'/accommodations'},
-                        {tit:'Team',linki:'/team'},
+                        // {tit:'Accommodations',linki:'/accommodations'},
+                        // {tit:'Team',linki:'/team'},
                         {tit:'ContactUs',linki:'/contactus'},
                       ]
         menuOptions=menuOptions.map((item,index)=>{

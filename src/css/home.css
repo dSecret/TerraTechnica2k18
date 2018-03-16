@@ -8,7 +8,7 @@
   -moz-box-sizing: border-box;
   overflow: hidden;
   width: 100vw;
-  clear:both;
+  /*flex-direction: column;*/
 }
 
 .HomeTTLogo {
@@ -32,7 +32,7 @@
   font-family: 'Roboto', sans-serif;
 }
 .HomeTTLogoimg {
-  width:250px !important;
+  width:195px !important;
   /*height: 180px !important;*/
 
 }

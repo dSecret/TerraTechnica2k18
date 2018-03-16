@@ -33,14 +33,16 @@ class Home extends Component {
     return (
 		<div className="Home">
         	<div className="HomeTTLogo">
+            <div className="wrap-nitdlogo" style={{marginBottom:'20px'}}>
+              <a href="http://nitdelhi.ac.in">
+                  <img className="NitdLogoimg" src={NITDLogo}/>
+                  <div className="NITDText">Presents</div>
+              </a>
+            </div>
 				    <img className="HomeTTLogoimg" src={ TTLogo }/>
             <div className="TTDate">23rd Mar - 24th Mar</div>
-            <div className="wrap-nitdlogo">
-              <a href="http://nitdelhi.ac.in" style={{marginRight:"10px"}}>
-                  <div className="NITDText">Presented by</div>
-                  <img className="NitdLogoimg" src={NITDLogo}/>
-              </a>
-              <a href="" style={{marginLeft:"10px"}}>
+            <div className="wrap-nitdlogo" style={{marginTop:'40px'}}>
+              <a href="">
                   <div className="NITDText">Co-sponsored by</div>
                   <img className="NitdLogoimg" src={Honda}/>
               </a>

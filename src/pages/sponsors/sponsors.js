@@ -11,7 +11,7 @@ class Sponsors extends Component {
       };
     }
   render() {
-  	const spo=['ETS-Logo.jpg','pcm logo.png','IBC Logo.png','Canara-Bank-logo.png',]
+  	const spo=['pcm logo.png','Canara-Bank-logo.png','IBC Logo.png',]
   	let	  spomap=spo.map(e=>{
   		  		return(
   		  			<img 
@@ -52,6 +52,7 @@ class Sponsors extends Component {
         	/>
         </div>
         <div className="co-sponsors">
+        	<span>Prime sponsors</span><br/>
         	{spomap}
         </div>
         {partmap}
