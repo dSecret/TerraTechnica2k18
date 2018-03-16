@@ -67,10 +67,11 @@ class Pronite extends Component {
             </div>*/}
             {/*<img src={require('../../static/sunburn.jpg')} className="image" alt="sunburn"/>*/}
            <div className="sonar-button-wrap"
-                style={{backgroundImage:`url(${Back})`,backgroundPosition: 'center',backgroundRepeat:"no-repeat"}}
+                // style={{backgroundImage:`url(${Back})`,backgroundPosition: 'center',backgroundRepeat:"no-repeat"}}
            >
+              Coming soon...
               {/*<img src={require('../../static/sunburn.jpg')} className="image" alt="sunburn"/>*/}
-              <RaisedButton label="Register" secondary={true} style={style} onClick={this.handleOpen}/>
+              {/*<RaisedButton label="Register" secondary={true} style={style} onClick={this.handleOpen}/>*/}
            </div>
         </div>
       </div>

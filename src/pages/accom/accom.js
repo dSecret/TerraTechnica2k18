@@ -33,9 +33,22 @@ class Accom extends Component {
               Accommodation charges will be Rs 200 for two days.
             </li>
             <li>
+              Accommodation is available for boys only.
+            </li>
+            <li>
+                The below undertaking form has to be signed and submitted to the registration desk.
+                <br/>
+                <a target="_blank"href={require('../../static/Undertaking Form.pdf')}>undertaking_form.pdf</a>
+            </li>
+            <li>
               Please contact +91-87430 68185 (Avtansh Gupta) for further queries.
             </li>
-            <li></li>
+            <li>
+              In case of any ambiguity the decision of the core team will be final.
+            </li>
+            <li>
+              After successful payment, Our hospitality team will contact you soon.
+            </li>
           </ul>
         </div>
         <div className="accom-form">

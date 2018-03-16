@@ -1,13 +1,13 @@
 .Timeline{
   display:flex;
   align-items:center;
-  justify-content: center;
+  /*justify-content: center;*/
   flex-direction: column;
   height:100%;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   overflow: hidden;
-  width:100vw;
+  width:40vw;
   font-family:'Nova Flat', cursive;
   color:lightgrey;
   margin:0 auto;

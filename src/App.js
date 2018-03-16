@@ -57,10 +57,10 @@ class App extends Component {
                            <Route path="/registered" component={Registered}/>
                            <Route path="/error" component={ErrorPage}/>
                            <Route path="/contactus" component={Contact}/>
-                           <Route path="/pronite" component={Pronite}/>
+                           <Route path="/edmnight" component={Pronite}/>
                            <Route path="/lectures" component={Lectures}/>
                            <Route path="/merchandise" component={Merch}/>
-                           {/*<Route path="/accommodations" component={Accom}/>*/}
+                           {<Route path="/accommodations" component={Accom}/>}
                            <Route path="/timeline" component={Timeline}/>
                            <Route path="/sponsors" component={Sponsors}/>
                        </Route>

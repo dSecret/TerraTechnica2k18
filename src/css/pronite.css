@@ -46,7 +46,7 @@
   border-radius: 50%;
   display:flex;
   align-items:center;
-  justify-content: flex-end;
+  justify-content: center;
   flex-direction: column;
   overflow: hidden;
   /*background-image:url('/src/static/sunburn.jpg') 0 0/100vw 100vh;*/
