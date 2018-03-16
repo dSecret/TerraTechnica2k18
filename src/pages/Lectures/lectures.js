@@ -11,15 +11,15 @@ class Lectures extends Component {
             alt="lecture 1"
           />
  		<img 
-            src={require('../../static/gigi_jopesh.png')}
+      		src={require('../../static/lecture.jpg')}
             className="images"
-            alt="lecture 1"
+            alt="lecture 2"
           />
 
     		<img 
-      			src={require('../../static/lecture.jpg')}
+            	src={require('../../static/gigi_jopesh.png')}
       			className="images"
-      			alt="lecture 1"
+      			alt="lecture 3"
       		/>
       </div>
     )
