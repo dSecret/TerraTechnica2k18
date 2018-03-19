@@ -72,7 +72,7 @@ class OpenEvent extends Component {
              <div className="img-cont comOE">
                 <img src="https://image.flaticon.com/icons/svg/237/237416.svg" className="icon"/>
               </div>
-             <div className="intro comOE">"{bar.intro}"</div>
+             <div className="intro comOE">{bar.intro}</div>
               {introoptions}
               {ps}
              <div className="rules">
