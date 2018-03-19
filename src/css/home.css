@@ -50,6 +50,7 @@
   font-family:'Raleway', cursive;
   width:100%;
   color:grey;
+  /*margin-bottom: 20px;*/
   font-weight: bolder;
   font-size:17px;
 }
@@ -62,13 +63,13 @@
 #honda{
   width:initial !important;
 }
-@media only screen and (max-width:7in){
+@media only screen and (max-width:8in){
   .HomeTTLogo{
     padding-top: 0;
   }
   .HomeTTLogoimg{
-    width:195px !important;
-    height: 140px !important;    
+    width:160px !important;
+    height:initial;    
   }
   .wrap-nitdlogo img{
     height: 50px !important;
