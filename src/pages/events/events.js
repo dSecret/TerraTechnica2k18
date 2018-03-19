@@ -5,7 +5,7 @@ import EventsCard from '../../components/eventcard.js'
 import EventsOptions2 from '../../components/eventsoptions2.js'
 
 import Db from '../../static/content.js'
-
+import Coding from '../../static/codingbanner.jpg'
 // From https://github.com/oliviertassinari/react-swipeable-views
 class Events extends Component {
   constructor(props) {
@@ -37,10 +37,10 @@ class Events extends Component {
     return(
       <div className="Events" id="Events">
         <div id="eventsCardCont" className="Events">
-          <EventsCard title={Db.robotics.title} lin="/events/robotics" options={Db.robotics.options} content={Db.robotics.content} action={this.handler}/>
-          <EventsCard title={Db.coding.title} lin="/events/coding" options={Db.coding.options} content={Db.coding.content} action={this.handler}/>
-          <EventsCard title={Db.informal.title} lin="/events/informal" options={Db.informal.options} content={Db.informal.content} action={this.handler}/>
-          <EventsCard title={Db.misc.title} lin="/events/misc" options={Db.misc.options}content={Db.misc.content}  action={this.handler}/>
+          <EventsCard img={require('../../static/ece.png')}title={Db.robotics.title} lin="/events/robotics" options={Db.robotics.options} content={Db.robotics.content} action={this.handler}/>
+          <EventsCard img={require('../../static/codingbanner1.jpg')}title={Db.coding.title} lin="/events/coding" options={Db.coding.options} content={Db.coding.content} action={this.handler}/>
+          <EventsCard img={require('../../static/infbanner.jpeg')}title={Db.informal.title} lin="/events/informal" options={Db.informal.options} content={Db.informal.content} action={this.handler}/>
+          <EventsCard img={require('../../static/unnamed.jpg')}title={Db.misc.title} lin="/events/misc" options={Db.misc.options}content={Db.misc.content}  action={this.handler}/>
         </div>
         <div id="eventsCardDtls" className="Events">
             <EventsOptions2 title={this.state.title} 

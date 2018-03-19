@@ -6,7 +6,7 @@ import '../../css/home.css';
 
 import TTLogo from '../../static/logo.png'
 import NITDLogo from '../../static/nitdd.png'
-import Honda from '../../static/Honda-Logo.jpg'
+import Honda from '../../static/honda1.jpg'
 
 import '../../css/home_simple.css'
 
@@ -44,7 +44,7 @@ class Home extends Component {
             <div className="wrap-nitdlogo" style={{marginTop:'40px'}}>
               <a href="">
                   <div className="NITDText">Co-sponsored by</div>
-                  <img className="NitdLogoimg" src={Honda}/>
+                  <img className="NitdLogoimg" src={Honda} id="honda"/>
               </a>
             </div>
             

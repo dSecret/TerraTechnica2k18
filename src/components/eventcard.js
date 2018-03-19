@@ -11,6 +11,7 @@ import ArrowDown from 'material-ui/svg-icons/maps/near-me';
 const style = {
 };
 
+
 const iconStyle={
   paddingTop:"1px"
 }
@@ -32,8 +33,11 @@ class EventsCard extends Component {
           this.props.action(foo)
   }
   render() {
+    const CardStyle={
+      backgroundImage:`url(${this.props.img})`
+    }
     return (
-        <div className="EventsCard comEC">
+        <div className="EventsCard comEC" style={CardStyle}>
           <div className="layer1 comEC" id="layer2">
                   <div className="layer1-tit comEC" id={this.props.title}>{this.props.title}</div>
                   <Divider inset={true} style={{"backgroundColor":"black",}}/>

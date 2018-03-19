@@ -24,7 +24,7 @@ class OpenMenu extends Component {
                         {tit:'Sponsors',linki:'/sponsors',},
                         {tit:'Lectures',linki:'/lectures'},
                         {tit:'EDM Night',linki:'/edmnight'},
-                        {tit:'Merchandise',linki:'/merchandise'},
+                        // {tit:'Merchandise',linki:'/merchandise'},
                         {tit:'Accommodations',linki:'/accommodations'},
                         // {tit:'Team',linki:'/team'},
                         {tit:'ContactUs',linki:'/contactus'},

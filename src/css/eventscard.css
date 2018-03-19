@@ -8,9 +8,10 @@
 	margin:30px 00px;
 	box-sizing: initial !important;
 	-moz-box-sizing: initial !important;
-	background-image:url('https://image.freepik.com/free-vector/web-programming-background_1300-188.jpg');
+	/*background-image:url('https://image.freepik.com/free-vector/web-programming-background_1300-188.jpg');*/
      background-repeat: no-repeat;
-    background-position: center;
+    background-position:left top;
+    /*border:1px solid grey;*/
   }
 .comEC{
 	box-sizing: border-box;
