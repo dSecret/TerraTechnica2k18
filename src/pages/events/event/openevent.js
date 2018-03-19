@@ -109,6 +109,17 @@ class OpenEvent extends Component {
                 the decision of the coordinating committee shall be binding to all.
              </div>
              <div className="reg-cont">
+                { this.props.location.pathname!=='/events/CODING/CLASH%20OF%20CODES'?
+                  ''
+                :
+                  <a target="_blank" href="http://35.200.168.217">
+                    <RaisedButton 
+                          label="Play" 
+                          secondary={true} 
+                          style={style} 
+                    />
+                  </a>
+                }
                 { this.props.location.pathname!=='/events/CODING/HACKATHON'?
                   <Link to={{pathname:'/register',query:{event:this.props.params.id,category:this.state.category}}}>
                     <RaisedButton 
@@ -116,15 +127,15 @@ class OpenEvent extends Component {
                       primary={true} 
                       style={style} 
                       />
-                </Link>
+                  </Link>
                 :
-                <a href="http://www.tatainnoverse.com/tatacruciblehackathon/index.php">
-                  <RaisedButton 
-                        label="Register" 
-                        primary={true} 
-                        style={style} 
-                  />
-                </a>
+                  <a href="http://www.tatainnoverse.com/tatacruciblehackathon/index.php">
+                    <RaisedButton 
+                          label="Register" 
+                          primary={true} 
+                          style={style} 
+                    />
+                  </a>
                 }
              </div>
              {/*<div>{this.state.data.title}</div>*/}
