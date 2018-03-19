@@ -50,7 +50,6 @@
   font-family:'Raleway', cursive;
   width:100%;
   color:grey;
-  /*margin-bottom: 20px;*/
   font-weight: bolder;
   font-size:17px;
 }
@@ -68,7 +67,7 @@
     padding-top: 0;
   }
   .HomeTTLogoimg{
-    width:250px !important;
+    width:195px !important;
     height: 140px !important;    
   }
   .wrap-nitdlogo img{

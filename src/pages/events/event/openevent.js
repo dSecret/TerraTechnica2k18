@@ -93,7 +93,7 @@ class OpenEvent extends Component {
              {this.props.params.id!=='PAINTBALL'&&this.props.params.id!=='BULL RIDE'?
                <div className="rules">
                   <div>Registration Fee :</div>
-                  <div className="fee"><span>{bar.fee}</span> Rs.</div>
+                  <div className="fee"> <b>₹</b>  <span>{bar.fee}</span></div>
                </div>
                :''
             }

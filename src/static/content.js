@@ -206,7 +206,10 @@ const Db={
     },
     'CLASH OF CODES':{
     	intro:'Outwit, outplay, outlastGet ready for your chance to glory, where you would have to unleash your coding skills but, you would win only if you outlast your competitors.It’s an opportunity to boast your coding skills, but you can’t entirely rely on them…..May the odds always be in your favour.',
-		intropoints:['<b>Contact : </b> +91 88022 20624 (Anurag Giri)'],
+		intropoints:['<b>Contact : </b> +91 88022 20624 (Anurag Giri)',
+            '<a target="_blank" href="http://35.200.168.217"><b>Play</b></a>'
+
+        ],
     	ps:'',
     	team:1,
         fee:0,
@@ -220,7 +223,7 @@ const Db={
     'BLANK CODING':{
     intro:'Got good hands in Coding? Ever thought of writing the codes with MONITOR OFF? Sounds challenging?',
     intropoints:['<b>Contact : </b> +91 88022 20624 (Anurag Giri)',"Individual Event",
-    "The allowed language is C and compiler turbo C /dev c++ /code blocks",
+    "The allowed language is C and compiler Turbo C ",
     "Consists of two rounds",
     "The Judge’s decision is final"],
     ps:'',
