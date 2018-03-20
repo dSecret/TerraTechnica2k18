@@ -22,7 +22,7 @@ const Db = {
 		},
 		{
 			"tit": "1:15PM - 2:00PM",
-			"des": "Guest Lecture by Mr. Chewang Norphel"
+			"des": "Guest Lecture by Mr. Chewang Norphel",
 			"loc": "Auditorium"
 		},
 		{

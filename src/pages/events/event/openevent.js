@@ -112,7 +112,7 @@ class OpenEvent extends Component {
                 { this.props.location.pathname!=='/events/CODING/CLASH%20OF%20CODES'?
                   ''
                 :
-                  <a target="_blank" href="http://35.200.168.217">
+                  <a target="_blank" href="http://35.200.170.45">
                     <RaisedButton 
                           label="Play" 
                           secondary={true} 
