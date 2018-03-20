@@ -3,13 +3,169 @@
   align-items:center;
   /*justify-content: center;*/
   flex-direction: column;
-  height:100%;
+  /*height:100%;*/
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  overflow: hidden;
-  width:40vw;
+  /*overflow: hidden;*/
+  width:60vw;
   font-family:'Nova Flat', cursive;
-  color:lightgrey;
+  /*color:lightgrey;*/
   margin:0 auto;
   /*padding:0;*/
+}
+.Timeline .timeline-main-margin{
+  height:20vh;
+  width:100%;
+}
+.Timeline div{
+    box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+/* The actual timeline (the vertical ruler) */
+.Timeline .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.Timeline .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.Timeline .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 70%;
+}
+
+/* The circles on the timeline */
+.Timeline .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.Timeline .left {
+    left: -20%;
+}
+
+/* Place the container to the right */
+.Timeline .right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.Timeline .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.Timeline .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.Timeline .right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.Timeline .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    width:100%;
+    text-align: left;
+}
+.content div{
+  font-size:20px;
+}
+.content p{
+  word-wrap: normal;
+  /*width:200px;*/
+  /*background-color: red;*/
+  /*word-spacing: 20px;*/
+  /*padding:0 100px;*/
+  text-align: left;
+  display: block;
+  font-family: 'Raleway',cursive;
+
+}
+.content span{
+  margin:0 30px;
+}
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 8in) {
+  .Timeline{
+    width:98vw;
+  }
+  /* Place the timelime to the left */
+  .Timeline .timeline::after {
+    left: 31px;
+  }
+  
+  /* Full-width containers */
+  .Timeline .container {
+    width:90%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .Timeline .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .Timeline .left::after, .Timeline .right::after {
+    left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .Timeline .left {
+    left:0%;
+  }
+  .Timeline .right {
+    left:0%;
+  }
 }
