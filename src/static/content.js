@@ -92,6 +92,7 @@ const Db={
         "Two restarts are allowed in the final round.",
         "In case of a restart, the bot will be started from the starting point (origin).",
         "The organizers reserve the right to change the rules as they deem fit.",
+		"Dimensions of the bot must be <b>less than 25cm x 25cm x 20cm</b>",
         "Teams can make minor changes to their bots between consecutive rounds but any major change would lead to disqualification." ],
 
         ps:'',
@@ -142,7 +143,7 @@ const Db={
         win:'The last standing bot in the arena will be the winner.',
         rules1:[
             "<b>Basic rules :</b><br/><ul><li>Maximum participants per team = 4</li><li>Each new entry will be in 30 seconds on the basis of chit system.</li><li>Maximum of two members of a team are allowed to operate the remote controller.</li><li>If the participants are not present at the arena on the given time slot then that team will be disqualified</li><li>The machines are not allowed to leave any loose parts on any part of the arena.</li><li>Bots immobilized for 15 seconds or more will result in warning. If any machine remains immobilized for 30 seconds it will be treated passive and will be disqualified.</li><li>Damage to arena is not allowed and will lead to disqualification of team.</li><li>Teams should take care of their bot; they will be responsible for the damage to their bots.</li><li>Hopping outside the ring will result in disqualification.</li><li>Flying (using airfoil, helium balloons, ornithopters etc.) is not allowed.</li><li>No rematch will be there.</li><li>Any team that is not ready at the time specified will be eliminated from the competition.</li><li>Co-ordination Committee reserves the right to add or update rules.</li></ul>",
-            "Max Size of robot 20CM x 20CM x 20CM.<br/>Max weight 7kg(tolerance +/- 0.3kg).<br/>Excluding any external controlling device or batteries.",
+            "Max Size of robot <b>30CM x 30CM x 25CM</b>.<br/>Max weight 7kg(tolerance +/- 0.3kg).<br/>Excluding any external controlling device or batteries.",
             "The machine should be controlled by a wireless remote control Mechanism or wired one throughout the war. In case of wireless system, it should have a minimum four Frequency remote control circuit or two dual control circuits or a transmitter-receiver paired module so that the frequency interferences opponent team can be avoided (in case of any interference in the wireless systems, they will not be considered for rematch or in the results).",
             "The machine must not be made from Lego parts, or any readymade Kit, if we find such machine it will be disqualified.",
             "If the machine is wired then the wire should remain slack under all circumstances during the competition. All the wires coming out of the Machine should be stacked as single unit.",
