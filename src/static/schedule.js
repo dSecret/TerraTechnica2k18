@@ -22,7 +22,7 @@ const Db = {
 		},
 		{
 			"tit": "1:15PM - 2:00PM",
-			"des": "Guest Lecture by Mr. Chewang Norphel"
+			"des": "Guest Lecture by Mr. Chewang Norphel",
 			"loc": "Auditorium"
 		},
 		{
@@ -40,12 +40,12 @@ const Db = {
 			"des": "Maze Runner",
 			"loc": "Table Tennis Arena"
 		},
-		{{
+		{
 			"tit": "3:30PM - 5:30PM",
 			"des": "Robo Race",
 			"loc": "Basketball Court"
 		},
-
+		{
 			"tit": "3:45PM - 4:45PM",
 			"des": "Blank Coding",
 			"loc": "Computer Center"
