@@ -11,6 +11,7 @@
   font-family:'Nova Flat', cursive;
   /*color:lightgrey;*/
   margin:0 auto;
+  padding-top:5vh;
   /*padding:0;*/
 }
 .Timeline .timeline-main-margin{
@@ -109,13 +110,17 @@
 .Timeline .content {
     padding: 20px 30px;
     background-color: white;
-    position: relative;
+    /*position: relative;*/
     border-radius: 6px;
     width:100%;
     text-align: left;
 }
 .content div{
   font-size:20px;
+  vertical-align: center;
+}
+.content div span{
+  vertical-align: top;
 }
 .content p{
   word-wrap: normal;
@@ -123,13 +128,27 @@
   /*background-color: red;*/
   /*word-spacing: 20px;*/
   /*padding:0 100px;*/
+  font-family: 'Roboto',sans-serif;
   text-align: left;
   display: block;
   font-family: 'Raleway',cursive;
 
 }
-.content span{
-  margin:0 30px;
+.loc span{
+  vertical-align:top;
+  margin:0 4px !important;
+}
+.schedule-tit{
+  color :white;
+  padding:20px;
+  font-size: 25px;
+  border: 4px solid #FF9F55;
+  border-radius: 50%;
+}
+.des span{
+  margin:0 47px;
+  /*background-color: green;*/
+  visibility: none;
 }
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 8in) {
@@ -167,5 +186,17 @@
   }
   .Timeline .right {
     left:0%;
+  }
+  .content div{
+    font-size:15px;
+  }
+  .schedule-tit{
+    font-size: 25px;
+    width:100%;
+    text-align: left;
+    border:none;
+  }
+  .Timeline .content {
+    padding: 20px 15px;
   }
 }

@@ -209,7 +209,7 @@ const Db={
     'CLASH OF CODES':{
     	intro:'Outwit, outplay, outlastGet ready for your chance to glory, where you would have to unleash your coding skills but, you would win only if you outlast your competitors.It’s an opportunity to boast your coding skills, but you can’t entirely rely on them…..May the odds always be in your favour.',
 		intropoints:['<b>Contact : </b> +91 88022 20624 (Anurag Giri)',
-            '<a target="_blank" href="http://35.200.168.217"><b>Play</b></a>'
+            '<a target="_blank" href="http://35.200.170.45"><b>Play</b></a>'
 
         ],
     	ps:'',
