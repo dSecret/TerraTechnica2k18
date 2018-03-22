@@ -37,6 +37,7 @@ const Db={
                 'Maximum participants per team = 3',
                 'Each round will last for a maximum of 5 minutes in which the participants have to cover the track.',
                 'Limited car size (25 cm width x 25 cm length x 20 cm height).',
+				'Weight of the Car should not exceed 1.5Kg',
                 'Cars can have weapon like mechanisms to hit or push other cars like high torqued industrial motors, protective armour sheets etc.',
                 "Participants can hit each other's cars. They can push opponent's car into trap while avoiding it themselves.",
                 'The organizers reserve the right to change the rules as they deem fit.'
@@ -77,7 +78,7 @@ const Db={
             "Bots should be controlled be designated controller/manual switching and not by physical pushing or pulling.",
             "Any kind of weapon that are intentionally added to harm the opponent would not be accepted.",
             "1Dimensions of bot must follow below mentioned criteria-(30cm x 30cm x 15cm)",
-            "1Weight of bot must not exceed 900g under any circumstance. Weight of external power source would not be considered in weight of bot.",
+            "Weight of bot is limited to 1kg + 0.2kg. Weight of external power source would not be considered in weight of bot.",
             "1Organisers are bound to disqualify any team breaking the rules.",
         ],
         rules2:[]   

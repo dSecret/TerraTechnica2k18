@@ -41,6 +41,11 @@ const Db = {
 			"loc": "Table Tennis Arena"
 		},
 		{
+			"tit": "3:30PM - 5:30PM",
+			"des": "Robo Race",
+			"loc": "Basketball Court"
+		},
+		{
 			"tit": "3:45PM - 4:45PM",
 			"des": "Blank Coding",
 			"loc": "Computer Center"
