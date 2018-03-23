@@ -184,7 +184,7 @@ const Db={
     	intro:'CAPTURE THE FLAG is an event which provides a platform for participants to work out on real world scenarios like malware analysis ¸pretesting , system administration.  The game is played in team of four players where each team is provided with a real world scenario along with an system where they need to seek out a solution which promotes next level. Each level is associated with different kind of scenario of increasing difficulty. This allows the participants to apply various concepts and techniques to reach a solution. The game is entirely based on Command line interface. The team is given secured access to a system to analyse, execute instructions to find the flag. The games assumes players to have knowledge in computer engineering such as files, networking, various tools of system administration. The game duration is estimated to be around 3hrs.',    	intropoints:[],
     	intropoints:['<b>Contact : </b> +91 88022 20624 (Anurag Giri)'],
         ps:'',
-    	team:3,
+    	team:2,
         fee:0,
     	win:'',
     	rules1:[],
@@ -266,7 +266,9 @@ const Db={
     },
     'CODE GOLF':{
     	intro:"CodeGolf is a competitive coding challenge for all the geeks out there, but what makes it different is, you have to code short to fetch more marks. Lesser you code, better you score. Though what's priceless is solving interesting problems and the thrill of competition. To deal with it, you require a level patience and skill that escapes ordinary programmers. Are you ready?",
-    	intropoints:['<b>Contact : </b> +91 88022 20624 (Anurag Giri)'],
+    	intropoints:['<b>Contact : </b> +91 88022 20624 (Anurag Giri)',
+                    'Participants have to register  <a target="_blank" href="http://hck.re/ncg"><b>here</b></a> also.'
+        ],
     	ps:'',
     	team:2,
         fee:0,
@@ -283,7 +285,9 @@ const Db={
     },
     'REVERSE CODING':{
     	intro:"Think you know everything about programming? Well there are many ways to go, let’s see which one you pick. This event looks for the real star that stands up to the ability of creativity and logic. So, be ready to storm out not just by switching systems but switching your brains into the all new arena.",
-    	intropoints:['<b>Contact : </b> +91 88022 20624 (Anurag Giri)'],
+    	intropoints:['<b>Contact : </b> +91 88022 20624 (Anurag Giri)',
+                        'Participants have to register  <a target="_blank" href="http://hck.re/nrcv20"><b>here</b></a> also.'
+        ],
     	ps:'The difference between general competitive programming competition and reverse coding is that you will not be given the exact question statement but you will be provided with some set of sample inputs and outputs which will be sufficient enough to guess the problem and then you have to submit a code for your guessed problem. Interesting... right?',
     	team:3,
         fee:0,

@@ -120,6 +120,28 @@ class OpenEvent extends Component {
                     />
                   </a>
                 }
+                { this.props.location.pathname!=='/events/CODING/CODE%20GOLF'?
+                  ''
+                :
+                  <a target="_blank" href="http://hck.re/ncg">
+                    <RaisedButton 
+                          label="Play" 
+                          secondary={true} 
+                          style={style} 
+                    />
+                  </a>
+                }
+                { this.props.location.pathname!=='/events/CODING/REVERSE%20CODING'?
+                  ''
+                :
+                  <a target="_blank" href="http://hck.re/nrcv20">
+                    <RaisedButton 
+                          label="Play" 
+                          secondary={true} 
+                          style={style} 
+                    />
+                  </a>
+                }
                 { this.props.location.pathname!=='/events/CODING/HACKATHON'?
                   <Link to={{pathname:'/register',query:{event:this.props.params.id,category:this.state.category}}}>
                     <RaisedButton 
