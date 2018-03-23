@@ -60,7 +60,6 @@ class App extends Component {
                            <Route path="/edmnight" component={Pronite}/>
                            <Route path="/lectures" component={Lectures}/>
                            {/*<Route path="/merchandise" component={Merch}/>*/}
-                           {<Route path="/accommodations" component={Accom}/>}
                            <Route path="/timeline" component={Timeline}/>
                            <Route path="/sponsors" component={Sponsors}/>
                        </Route>
