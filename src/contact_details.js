@@ -82,9 +82,6 @@ const Contacts = [
 		"team": "Design",
 		"dp": "arpan_kumar_singh.jpg",
 		"phno": ""
-	},
-	{
-		"name"
 	}
 ]	
 export default Contacts
